@@ -48,7 +48,7 @@ Time.zone = 'Tokyo'
 
 activate :blog do |blog|
   # blog.prefix = "blog"
-  # blog.layout = "layout"
+  blog.layout = 'layouts/post'
   blog.paginate = true
   blog.permalink = 'archives/:year/:month/:day/:title.html'
   blog.sources = 'archives/:year-:month-:day-:title.html'

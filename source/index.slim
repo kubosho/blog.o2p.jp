@@ -12,5 +12,8 @@ per_page: 10
     = article.summary(140)
 
 - if paginate
-  - if next_page
-    p = link_to 'Next page', next_page
+  ul.paginate
+    - if prev_page
+      li.prev = link_to '&lt;&lt;Prev page', prev_page
+    - if next_page
+      li.next = link_to 'Next page&gt;&gt;', next_page
