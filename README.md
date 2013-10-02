@@ -1,4 +1,4 @@
-blog.o2p.jp
+tech.o2p.jp
 ===========
 
 My blog
