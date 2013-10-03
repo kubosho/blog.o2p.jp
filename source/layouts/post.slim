@@ -1,6 +1,5 @@
 - wrap_layout :layout do
-  div.mod-entry
-  article
+  article.mod-entry
     h1
       = current_article.title
     div.body
@@ -9,7 +8,7 @@
   ul.entry-link
     - if prev_article = current_article.previous_article
       li.prev
-        span Prev Entry: #{link_to prev_article.title, prev_article}
+        span Prev entry: #{link_to prev_article.title, prev_article}
     - if next_article = current_article.next_article
       li.next
-        span Next Entry: #{link_to next_article.title, next_article}
+        span Next entry: #{link_to next_article.title, next_article}
