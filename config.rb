@@ -50,7 +50,7 @@ activate :blog do |blog|
   # blog.prefix = "blog"
   blog.layout = 'layouts/post'
   blog.paginate = true
-  blog.permalink = 'archives/:year/:month/:day/:title.html'
+  blog.permalink = ':year/:month/:day/:title.html'
   blog.sources = 'archives/:year-:month-:day-:title.html'
   blog.default_extension = '.md'
   blog.taglink = 'tags/:tag.html'
