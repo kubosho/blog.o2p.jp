@@ -105,18 +105,22 @@ a
     color: #3946eb
 
 p
-  margin: 0.75em 0
+  margin: 1.5em 0
 
 .mod-header,
 .mod-main,
 .mod-footer
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  width: calc(100% - 10em)
+  min-width: 320px
+  max-width: 960px
   margin: 0 auto
-  padding: 0 5em
-  padding: 0 -webkit-calc((100% - 60em) / 2)
-  padding: 0 calc((100% - 60em) / 2)
-  max-width: 50em
+  padding: 0 1em
 
 .mod-header
+  padding: 0
+
   h1
     a
       padding: 10px
@@ -294,7 +298,7 @@ article
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em)
+@media only screen and (min-width: 50em)
 /* Style adjustments for viewports that meet the condition */
 
 
