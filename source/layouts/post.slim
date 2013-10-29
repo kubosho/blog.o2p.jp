@@ -1,10 +1,10 @@
 - wrap_layout :layout do
   article.mod-entry
     header
+      time datetime="#{current_article.date.strftime('%c')}"
+        | #{current_article.date.strftime('%Y/%m/%d')}
       h1
         = current_article.title
-      time datetime="#{current_article.date.strftime('%c')}"
-        | #{current_article.date.strftime('%Y/%m/%d %H:%M:%S')}
     div.body
       == yield
 
@@ -23,10 +23,5 @@
       | <a href="http://disqus.com/?ref_noscript">Disqus</a>提供のコメント機能を有効にするためにJavaScriptを有効にしてください。<br>
         <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
-  ul.entry-link
-    - if prev_article = current_article.previous_article
-      li.prev
-        span Prev entry: #{link_to prev_article.title, prev_article}
-    - if next_article = current_article.next_article
-      li.next
-        span Next entry: #{link_to next_article.title, next_article}
+  p.back-to-top
+    | <a href="/">トップページへ戻る</a>
