@@ -35,6 +35,7 @@ end
 set :markdown, :layout_engine => :slim
 set :blog_layout_engine, :slim
 page '/feed.xml', :layout => false
+page '/no_analytics_report.html', :layout => false
 
 ###
 # GZIP text files
