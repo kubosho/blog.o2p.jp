@@ -47,6 +47,10 @@ activate :gzip
 ###
 Time.zone = 'Tokyo'
 
+activate :syntax, :line_numbers => true
+set :markdown_engine, :redcarpet
+set :markdown, :fenced_code_blocks => true
+
 activate :blog do |blog|
   # blog.prefix = "blog"
   blog.layout = 'layouts/post'
