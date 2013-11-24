@@ -70,6 +70,9 @@ GEM
       sprockets (~> 2.1)
       sprockets-helpers (~> 1.0.0)
       sprockets-sass (~> 1.0.0)
+    middleman-syntax (1.2.1)
+      middleman-core (~> 3.0)
+      rouge (~> 0.3.0)
     mini_portile (0.5.1)
     multi_json (1.7.9)
     nokogiri (1.6.0)
@@ -84,6 +87,9 @@ GEM
       ffi (>= 0.5.0)
     rb-kqueue (0.2.0)
       ffi (>= 0.5.0)
+    redcarpet (3.0.0)
+    rouge (0.3.10)
+      thor
     ruby18_source_location (0.2)
     sass (3.2.10)
     slim (2.0.1)
@@ -115,11 +121,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  builder (~> 3.0.0)
-  middleman (~> 3.1.4)
-  middleman-blog (~> 3.2.0)
-  middleman-livereload (~> 3.1.0)
+  builder
+  middleman
+  middleman-blog
+  middleman-livereload
+  middleman-syntax
   nokogiri
+  redcarpet
   ruby18_source_location
   slim
   susy
