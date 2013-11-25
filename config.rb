@@ -47,7 +47,7 @@ activate :gzip
 ###
 Time.zone = 'Tokyo'
 
-activate :syntax, :line_numbers => true
+activate :syntax
 set :markdown_engine, :redcarpet
 set :markdown, :fenced_code_blocks => true
 
