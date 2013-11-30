@@ -9,12 +9,13 @@
         | #{current_article.date.strftime('%Y/%m/%d')}
       h1
         = current_article.title
+      ul.share
+        li
+          a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"
     div.body
       == yield
 
   ul.share
-    li
-      a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"
     li
       a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja" Tweet
     li
