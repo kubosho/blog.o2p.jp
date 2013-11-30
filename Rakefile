@@ -1,7 +1,7 @@
 MASTER_REPOSITORY = if ENV['GH_TOKEN']
-                      'https://$GH_TOKEN@github.com/o2project/tech.o2p.jp'
+                      'https://$GH_TOKEN@github.com/kubosho/tech.o2p.jp'
                     else
-                      'git@github.com:o2project/tech.o2p.jp.git'
+                      'git@github.com:kubosho/tech.o2p.jp.git'
                     end
 PUBLISH_BRANCH = 'gh-pages'
 DEST_DIR = 'build'
