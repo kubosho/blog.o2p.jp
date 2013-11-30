@@ -139,9 +139,31 @@ p
 .mod-main
   position: relative
   border: 1px solid #e1e1e1
+  border-bottom: 0
   padding-top: 1px
   padding-bottom: 1px
   background: #fcfdfb
+  &:before,
+  &:after
+    z-index: -1
+    position: absolute
+    content: ""
+    bottom: 15px
+    top: 80%
+    left: 10px
+    width: 50%
+    max-width: 300px
+    background: #777
+    box-shadow: 0 15px 10px #777
+    -webkit-transform: rotate(-1.5deg)
+    -ms-transform: rotate(-1.5deg)
+    transform: rotate(-1.5deg)
+  &:after
+    right: 10px
+    left: auto
+    -webkit-transform: rotate(1.5deg)
+    -ms-transform: rotate(1.5deg)
+    transform: rotate(1.5deg)
 
 article
   h1
@@ -166,6 +188,8 @@ article
     margin: 0 0 4px
     font-size: 32px
     font-size: 3.2rem
+  li
+    word-break: break-all
 
 .paginate,
 .back-to-top
