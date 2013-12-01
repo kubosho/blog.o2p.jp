@@ -44,7 +44,7 @@ tags:
 <h1 id="session1">ようこそ、HTML5裏APIの世界へ</h1>
 
 - スピーカー: 羽田野 太巳([@futomi](https://twitter.com/futomi))
-- 資料: 未公開
+- 資料: [http://www.slideshare.net/futomihatano/html5api-28774403](http://www.slideshare.net/futomihatano/html5api-28774403)
 - 感想: 今まで存在を知らないAPIばかりが紹介され、そしてデモもあり、とても分かりやすくかつ何に使えるか実際の使用用途を考えられてよかったなーと思ったセッション。WebAudio API PannerNodeなんかは加工されていない救急車のサイレン音が、APIを通すことによりドップラー効果がついたように聴こえ、本当にすごいと思うとともに、ゲームアプリで使えるかも？と感じました。「真面目なアニメーション」と「WebSocket, WebRTC, Socket API, ... 最新Webプロトコルの傾向と対策で迷ったもの」と当セッションでどれに行くか迷ったけど、自分的にはこれに行って正解でした。
 
 ## マニアなAPIとは
