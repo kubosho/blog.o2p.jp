@@ -5,7 +5,7 @@ tags:
   - Advent Calendar
 ---
 
-[CSS Property Advent Calendar 2013](http://www.adventar.org/calendars/57) 9日目の記事です。
+[CSS Property Advent Calendar 2013](http://www.adventar.org/calendars/57)9日目の記事です。
 
 今日は少し先を見据えて、[Selectors Level 4](http://www.w3.org/TR/2013/WD-selectors4-20130502/)の中から、明日のAdvent Calendar担当でもあるmyakuraさんが書いた文書、[CSS4セレクタ (Selectors Level 4) の新機能](http://myakura.github.io/n/selectors4.html)で触れられていない「:current, :past, :future」の各擬似クラスについて、Working Draftで現在の最新版である2013/5/2版を参照しながら紹介します。
 
@@ -17,7 +17,7 @@ CSS Property Advent Calendarなのにセレクタの話になってしまいま�
 
 1. Time-dimensional擬似クラスについて
 2. :current
-3. :past, :feature
+3. :past, :future
 
 ## Time-dimensional擬似クラスについて
 
@@ -40,10 +40,9 @@ CSS Property Advent Calendarなのにセレクタの話になってしまいま�
 
 ## 使い道を妄想してみる
 
-まず:currentについてですが、これは字幕のどこが読まれているか視覚的にも分かりやすくなるという点ではいいと思います。また、:featureについては、文字色を背景と同化させるようにしてまだ読まれていないということを視覚的に分かるようにするという使い方があると思います。
+まず:currentについてですが、これは字幕のどこが読まれているか視覚的にも分かりやすくなるという点ではいいと思います。また、:futureについては、文字色を背景と同化させるようにしてまだ読まれていないということを視覚的に分かるようにするという使い方があると思います。
 
 :pastは、:currentより過去を示す擬似クラスということで、カラオケの字幕のように使えるのではと思います。
-
 
 というわけで、明日はmyakuraさんです。
 
