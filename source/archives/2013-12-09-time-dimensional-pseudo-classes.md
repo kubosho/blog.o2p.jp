@@ -38,6 +38,17 @@ CSS Property Advent Calendarなのにセレクタの話になってしまいま�
 
 :past, :futureについては、現在の再生位置を元に過去や未来を示す擬似クラスで、WebVTTでも定義されているようですが、それ以上は分からないです。
 
+## :current, :past, :futureが示す部分
+
+文章で書いていても分かりづらいと思うので、現在の自分の認識を画像にしてみました。
+
+<figure>
+    <a href="http://imgur.com/nWDAAsu"><img src="http://i.imgur.com/nWDAAsu.jpg" title="Hosted by imgur.com"/></a>
+    <figcaption><a href="http://www.html5rocks.com/ja/tutorials/track/basics/">track 要素の基礎 - HTML5 Rocks</a>内の動画より画像を作成</figcaption>
+</figure>
+
+上記の画像で、"always"の部分が発音されていた場合、"The Web is"は:past, "always"は:current, "changing"は:futureになるのかなと思います。
+
 ## 使い道を妄想してみる
 
 まず:currentについてですが、これは字幕のどこが読まれているか視覚的にも分かりやすくなるという点ではいいと思います。また、:futureについては、文字色を背景と同化させるようにしてまだ読まれていないということを視覚的に分かるようにするという使い方があると思います。
