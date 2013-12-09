@@ -46,3 +46,12 @@ CSS Property Advent Calendarなのにセレクタの話になってしまいま�
 
 
 というわけで、明日はmyakuraさんです。
+
+## 参照したページ
+
+- [Selectors Level 4](http://www.w3.org/TR/2013/WD-selectors4-20130502/#time-pseudos)
+- [WebVTT: The Web Video Text Tracks Format](http://dev.w3.org/html5/webvtt/#the-past-and-future-pseudo-classes)
+- [WebVTT - HTML | MDN](https://developer.mozilla.org/en-US/docs/HTML/WebVTT)
+- [Selectors Level 4（CSS4セレクタ） - innov-staff-blog](http://www.innov-i.co.jp/innov-staff-blog/2013/0611_200000.html)
+- [CSS4セレクタ (Selectors Level 4) の新機能](http://myakura.github.io/n/selectors4.html)
+- [キャプション メーカーを使った WebVTT ファイルまたは TTML ファイルの作成 (Windows)](http://msdn.microsoft.com/ja-jp/library/ie/jj152136(v=vs.85).aspx)
