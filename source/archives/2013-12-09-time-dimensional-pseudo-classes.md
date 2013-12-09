@@ -1,5 +1,5 @@
 ---
-title: Time-dimensional擬似クラスについて
+title: Time-dimensional擬似クラスについて調べてみた
 date: 2013-12-09 21:30 JST
 tags:
   - Advent Calendar
