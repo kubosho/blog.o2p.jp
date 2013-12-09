@@ -7,7 +7,7 @@ tags:
 
 [CSS Property Advent Calendar 2013](http://www.adventar.org/calendars/57) 9日目の記事です。
 
-今日は少し先を見据えて、Selectors Level 4の中から、明日のAdvent Calendar担当でもあるmyakuraさんが書いた文書、[CSS4セレクタ (Selectors Level 4) の新機能](http://myakura.github.io/n/selectors4.html)内で触れられていない「:current, :past, :future」の各擬似クラスについて、[Working Draftの中で最新版である2013年5月2日版](http://www.w3.org/TR/2013/WD-selectors4-20130502/)を元に紹介します。
+今日は少し先を見据えて、Selectors Level 4の中から、明日のAdvent Calendar担当でもあるmyakuraさんが書いた文書、[CSS4セレクタ (Selectors Level 4) の新機能](http://myakura.github.io/n/selectors4.html)内で触れられていない「:current, :past, :future」の各擬似クラスについて、[Working Draftの最新版である2013年5月2日版](http://www.w3.org/TR/2013/WD-selectors4-20130502/)を元に紹介します。
 
 CSS Property Advent Calendarなのにセレクタの話になってしまいましたが、[すでに](http://dskd.jp/archives/37.html)[2人ほど](https://gist.github.com/azusa-tomita/7829371)セレクタの話をしているようなので、気にしないで3人目になろうと思います。
 
