@@ -1,6 +1,7 @@
 ---
 title: KnockoutJSのtemplete bindingのプロパティにifを使った際、Android 2.xを搭載したSHARP端末の標準ブラウザでSyntax Errorが出る時の対処法
 date: 2013-12-13 17:00 JST
+published: false
 tags:
   - Knockout
   - Android
