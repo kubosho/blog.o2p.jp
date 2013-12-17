@@ -12,6 +12,10 @@ html
   | <!--<![endif]-->
   head
     meta charset="utf-8"
+    meta name="description" content="#{data.site.subtitle}"
+    meta property="og:type" content="blog"
+    meta property="og:description" content="#{data.site.subtitle}"
+    meta property="og:image" content="#{data.site.url}/assets/img/ogp.png"
     - if current_article
       title
         = "#{current_article.title} - " + data.site.title
@@ -22,10 +26,6 @@ html
         = data.site.title
       meta property="og:title" content="#{data.site.title}"
       meta property="og:url" content="#{data.site.url}"
-    meta property="og:type" content="blog"
-    meta property="og:description" content="#{data.site.subtitle}"
-    meta property="og:image" content="#{data.site.url}/assets/img/ogp.png"
-    meta name="description" content="#{data.site.subtitle}"
     meta name="viewport" content="width=device-width"
     meta name="format-detection" content="telephone=no"
     meta name="format-detection" content="address=no"
