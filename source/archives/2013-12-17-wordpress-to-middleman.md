@@ -36,7 +36,7 @@ tags:
 
 MiddlemanのインストールとTravis CIで自動ビルドとGitHubへ自動的にpushする流れを作るのに、[Middleman で作った web サイトを Travis + GitHub pages でお手軽に運用する - tricknotesのぼうけんのしょ](http://tricknotes.hateblo.jp/entry/2013/06/17/020229)を参考にしました。
 
-Middlemanの設定については、@hokacchaの[webtech-walker/source](https://github.com/hokaccha/webtech-walker/tree/master/source)以下を見て参考にしています。
+Middlemanの設定については、[@hokaccha](https://twitter.com/hokaccha)のブログ、[Webtech Walker](http://webtech-walker.com/)の[リポジトリ](https://github.com/hokaccha/webtech-walker)を見て参考にしています。
 
 上の2つのリンクと[公式サイト](http://middlemanapp.com/)のMiddleman Basicsのリンク先を見れば事足りますが、リンクだけ紹介するのも芸がないので、移行にあたり工夫した点を以下に書いていきます。
 
