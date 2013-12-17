@@ -12,12 +12,26 @@ html
   | <!--<![endif]-->
   head
     meta charset="utf-8"
-    title
-      = "#{current_article.title} - " if current_article
-      = data.site.title
+    - if current_article
+      title
+        = "#{current_article.title} - " + data.site.title
+      meta property="og:title" content="#{current_article.title} - #{data.site.title}"
+      meta property="og:url" content="#{data.site.url}#{current_article.url}"
+    - else
+      title
+        = data.site.title
+      meta property="og:title" content="#{data.site.title}"
+      meta property="og:url" content="#{data.site.url}"
+    meta property="og:type" content="blog"
+    meta property="og:description" content="#{data.site.subtitle}"
+    meta property="og:image" content="#{data.site.url}/assets/img/ogp.png"
     meta name="description" content="#{data.site.subtitle}"
     meta name="viewport" content="width=device-width"
+    meta name="format-detection" content="telephone=no"
+    meta name="format-detection" content="address=no"
+    meta name="apple-mobile-web-app-title" content="#{data.site.title}"
     meta http-equiv="X-UA-Compatible" content="IE=edge"
+    link rel="apple-touch-icon-precomposed" href="#{data.site.url}/assets/img/apple-touch-icon.png"
 
     = stylesheet_link_tag 'normalize'
     = stylesheet_link_tag 'main'
