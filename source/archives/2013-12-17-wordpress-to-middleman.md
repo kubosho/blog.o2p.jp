@@ -38,7 +38,7 @@ MiddlemanのインストールとTravis CIで自動ビルドとGitHubへ自動�
 
 Middlemanの設定については、[@hokaccha](https://twitter.com/hokaccha)のブログ、[Webtech Walker](http://webtech-walker.com/)の[リポジトリ](https://github.com/hokaccha/webtech-walker)を見て参考にしています。
 
-上の2つのリンクと[公式サイト](http://middlemanapp.com/)のMiddleman Basicsのリンク先を見れば事足りますが、リンクだけ紹介するのも芸がないので、移行にあたり工夫した点を以下に書いていきます。
+上の2つのリンクと[公式サイト](http://middlemanapp.com/)のMiddleman Basicsのリンク先を見れば、インストールから設定まで事足りますが、リンクだけ紹介するのも芸がないので、移行にあたり工夫した点を以下に書いていきます。
 
 ## テンプレートファイルをSlimにした
 
