@@ -22,8 +22,14 @@ WordPressだと例え普段使っているエディタで記事を書いても�
 4. タイトルと本文、タグなどにそれぞれ書いた内容をコピペしたり、スラッグを決める
 5. 公開ボタンを押す
 
-面倒くさいです。しかしmiddlemanなら、以下の手順で公開できます。
+面倒くさいです。しかしmiddlemanなら、以下の手順で記事が公開できます。
 
 1. 記事をエディタで書く
 2. ターミナルやGitをGUIで扱えるソフト(SourceTree)などを開く
 3. git add . && git commit && git push origin master
+
+手順が2つ減りました。素晴らしいです。
+
+## 編集履歴を公開できる
+
+記事を追記した場合、記事内に「いついつに更新しました」と書くのは面倒です。その点GitHubにpushするようにしていれば、編集履歴が公開されるので[History for source/archives/2013-12-17-wordpress-to-middleman.md - kubosho/tech.o2p.jp](https://github.com/kubosho/tech.o2p.jp/commits/master/source/archives/2013-12-17-wordpress-to-middleman.md)
