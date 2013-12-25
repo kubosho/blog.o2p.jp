@@ -61,8 +61,9 @@ html
       == yield
     footer.mod-footer[role="contentinfo"]
       div.profile
-        p このブログは、日々気づいたことやハマったことを書き残していくブログです。
-        p 主にWebフロントエンドの話題が主になると思います。
-        p 記事の内容には間違いがないように書いていきますが、間違っている時は間違っている旨を教えていただければ幸いです。
+        p このブログは、日々気づいた・ハマったことを書き残すブログです。Webフロントエンドの話題が主になると思います。
+        p 記事の内容には間違いがないようにしますが、間違っている時は間違っている旨を教えていただければ幸いです。
+      div.feed
+        <a href='http://cloud.feedly.com/#subscription%2Ffeed%2Fhttp%3A%2F%2Ftech.o2p.jp%2Ffeed'  target='blank'><img id='feedlyFollow' src='http://s3.feedly.com/img/follows/feedly-follow-rectangle-flat-big_2x.png' alt='follow us in feedly' width='131' height='56'></a>
       p.copyright
         small © 2010-2013 <a href="https://twitter.com/#{data.site.author}">#{data.site.author}</a>
