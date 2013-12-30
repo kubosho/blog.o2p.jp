@@ -8,12 +8,15 @@ doctype html
 /[if gt IE 8]
   | <html class="no-js">
 | <!--[if (gte IE 9)|!(IE)]<!-->
-html
+html lang="ja"
   | <!--<![endif]-->
   head
     meta charset="utf-8"
     meta name="description" content="#{data.site.subtitle}"
-    meta property="og:type" content="blog"
+    - if current_article
+      meta property="og:type" content="article"
+    - else
+      meta property="og:type" content="blog"
     meta property="og:description" content="#{data.site.subtitle}"
     meta property="og:image" content="#{data.site.url}/assets/img/ogp.png"
     - if current_article
