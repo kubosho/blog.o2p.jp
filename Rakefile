@@ -3,7 +3,7 @@ MASTER_REPOSITORY = if ENV['GH_TOKEN']
                     else
                       'git@github.com:o2project/o2project.github.io'
                     end
-PUBLISH_BRANCH = 'gh-pages'
+PUBLISH_BRANCH = 'master'
 DEST_DIR = 'build'
 
 def initialize_repository(repository, branch)
