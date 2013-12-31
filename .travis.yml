@@ -3,11 +3,11 @@ language: ruby
 script: bundle exec middleman build
 
 before_script:
-  - '[ "$TRAVIS_BRANCH" == "master" ] && [ "$GH_TOKEN" ] && rake setup > /dev/null'
+  - '[ "$TRAVIS_BRANCH" == "develop" ] && [ "$GH_TOKEN" ] && rake setup > /dev/null'
 script: rake build
 
 after_success:
-  - '[ "$TRAVIS_BRANCH" == "master" ] && [ "$GH_TOKEN" ] && rake publish > /dev/null'
+  - '[ "$TRAVIS_BRANCH" == "develop" ] && [ "$GH_TOKEN" ] && rake publish > /dev/null'
 
 env:
   global:
