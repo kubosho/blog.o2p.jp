@@ -1,0 +1,376 @@
+<!DOCTYPE html><!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]--><!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]--><!--[if IE 8]><html class="no-js lt-ie9"><![endif]--><!--[if gt IE 8]><html class="no-js"><![endif]--><!--[if (gte IE 9)|!(IE)]<!--><html lang="ja"><!--<![endif]--><head><meta charset="utf-8" /><meta content="kubosho_が日々気づいたことやハマったことを書き残していくブログです。" name="description" /><meta content="article" property="og:type" /><meta content="kubosho_が日々気づいたことやハマったことを書き残していくブログです。" property="og:description" /><meta content="http://tech.o2p.jp/assets/img/ogp.png" property="og:image" /><title>HTML5 Conference 2013に行ってきたので全体の感想と面白かったセッションの情報を公開します - tech.o2p.jp</title><meta content="HTML5 Conference 2013に行ってきたので全体の感想と面白かったセッションの情報を公開します - tech.o2p.jp" property="og:title" /><meta content="http://tech.o2p.jp/2013/12/01/html5-conference.html" property="og:url" /><meta content="width=device-width" name="viewport" /><meta content="telephone=no" name="format-detection" /><meta content="address=no" name="format-detection" /><meta content="tech.o2p.jp" name="apple-mobile-web-app-title" /><meta content="IE=edge" http-equiv="X-UA-Compatible" /><link href="http://tech.o2p.jp/assets/img/favicon.ico" rel="icon" type="image/x-icon" /><link href="http://tech.o2p.jp/assets/img/apple-touch-icon.png" rel="apple-touch-icon-precomposed" /><link href="/assets/css/normalize.css" media="screen" rel="stylesheet" type="text/css" /><link href="/assets/css/main.css" media="screen" rel="stylesheet" type="text/css" /><link href="/assets/css/syntax.css" media="screen" rel="stylesheet" type="text/css" /><link href="http://tech.o2p.jp/feed" rel="alternate" title="tech.o2p.jp RSS(最新記事をお届けします)" type="application/rss+xml" /><script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script><script type="text/javascript">window.jQuery || document.write('<script src="/js/vendor/jquery-1.8.0.min.js"><\/script>')</script><script src="/assets/js/main.js"></script></head><body><script type="text/javascript">var gaOptOutProperty = 'ga-disable-UA-25380313-3';
+if (document.cookie.indexOf(gaOptOutProperty + '=true') > -1) {
+  window[gaOptOutProperty] = true;
+}
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-25380313-3', 'o2p.jp');
+ga('send', 'pageview');</script><header class="mod-header" role="banner"><h1><a href="/">tech.o2p.jp</a></h1></header><div class="mod-main" role="main"><div id="fb-root"></div><script type="text/javascript">(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script><article class="mod-entry"><header><time datetime="Sun Dec  1 02:00:00 2013">2013/12/01</time><h1>HTML5 Conference 2013に行ってきたので全体の感想と面白かったセッションの情報を公開します</h1><ul class="share"><li><a class="pocket-btn" data-lang="en" data-pocket-count="horizontal" data-pocket-label="pocket"></a></li></ul></header><div class="body"><p>去年に引き続き、HTML5 Conference 2013に行ってきました。運営に携わった皆様お疲れさまでした。</p>
+
+<blockquote class="twitter-tweet" lang="ja"><p>HTML5カンファレンスに参加したってあなた! スタッフに感謝!と思うあなた! 参加報告ブログを書いて下さい! 意外かもしれませんが、参加報告エントリーってスタッフの気力・やる気に凄く影響するんですよ! <a href="https://twitter.com/search?q=%23html5j&amp;src=hash">#html5j</a></p>&mdash; You Kinjoh (@youkinjoh) <a href="https://twitter.com/youkinjoh/statuses/406802327488565248">2013, 11月 30</a></blockquote>
+
+<p>ということなので、全体の感想とセッションの感想・アウトラインメモを公開します。</p>
+
+<h2>目次</h2>
+
+<ol>
+<li><a href="#thought">全体の感想</a></li>
+<li>面白かったセッションの感想とアウトラインメモ
+
+<ol>
+<li><a href="#session1">ようこそ、HTML5裏APIの世界へ</a></li>
+<li><a href="#session2">実践的なモバイルHTML5テクニック</a></li>
+</ol></li>
+</ol>
+
+<h1 id="thought">全体の感想</h1>
+
+<p>今回良かったところを挙げると以下の3つかなと思います。</p>
+
+<ul>
+<li>ネットワーク環境の改善</li>
+<li>食べるところが少なすぎるのを補うおにぎりやドーナツ類、そしてレッドブルの提供</li>
+<li>マイクロバスがちゃんと定期的に来ていた気がする</li>
+</ul>
+
+<p>特にネットワーク環境は、前回は提供されたWifiがほとんどつながらず、SSIDの数がカオスな状況になっていましたが、今回は少なくともTwitterをストリーミングさせて見ていても問題ない(サムネイルなども引っかかりなく表示される)感じでした。これは本当にネットワーク担当エンジニアが凄いとしか言いようが無いですね。ありがとうございます。</p>
+
+<p>あと、昼ごはんを食べずに来てしまい、かつバスの中でマックテロを喰らい、お腹が空いて終わりまで持つのかこれという状況になってしまいましたが、おにぎりとドーナツの提供があり、なんとかなりました。ちなみにおにぎりは3個いただきました。あと、1Fの入り口付近でPixelGridの2人と寒い思いをしていたらカイロを提供されて助かりました。ありがとうございます。</p>
+
+<p>なお、今回悪かったところを1つだけ挙げると、最後のクイズが20人限定の参加となってしまったところです。とはいえ、前回全員参加の早押しクイズでカオスになったのと、2000人という規模を考えると、しかたないのかなと思います。特に代案も浮かびませんし…</p>
+
+<hr>
+
+<h1>面白かったセッションの感想とアウトラインメモ</h1>
+
+<p>ここからは自分が面白いと感じたセッションの感想とアウトラインメモを公開します。</p>
+
+<h1 id="session1">ようこそ、HTML5裏APIの世界へ</h1>
+
+<ul>
+<li>スピーカー: 羽田野 太巳(<a href="https://twitter.com/futomi">@futomi</a>)</li>
+<li>資料: <a href="http://www.slideshare.net/futomihatano/html5api-28774403">http://www.slideshare.net/futomihatano/html5api-28774403</a></li>
+<li>感想: 今まで存在を知らないAPIばかりが紹介され、そしてデモもあり、とても分かりやすくかつ何に使えるか実際の使用用途を考えられてよかったなーと思ったセッション。WebAudio API PannerNodeなんかは加工されていない救急車のサイレン音が、APIを通すことによりドップラー効果がついたように聴こえ、本当にすごいと思うとともに、ゲームアプリで使えるかも？と感じました。「真面目なアニメーション」と「WebSocket, WebRTC, Socket API, ... 最新Webプロトコルの傾向と対策で迷ったもの」と当セッションでどれに行くか迷ったけど、自分的にはこれに行って正解でした。</li>
+</ul>
+
+<h2>マニアなAPIとは</h2>
+
+<ul>
+<li>使ってもすごさが分からない</li>
+<li>仕事になるかも分からない</li>
+<li>なくなるかもしれない</li>
+</ul>
+
+<h2>マニアレベル1(割とモテ系)</h2>
+
+<h3>WebRTC DTMF(Dual-Tone Multi-Frequency)</h3>
+
+<ul>
+<li>早い話がSkypeをWebで</li>
+<li>映像/音声/データのP2P接続</li>
+<li>IP電話の知識が必要(特に呼制御)</li>
+<li>ダイヤルトーンを発信できる(自動音声応答装置の代わりになる)</li>
+<li>電話を持たなくても、ブラウザーからコールセンターに電話できるようになるかも</li>
+</ul>
+
+<h3>WebAudio API PannerNode</h3>
+
+<ul>
+<li>音源の生成や合成
+
+<ul>
+<li>ゲーム系コンテンツにいいかも(iOSなどで複数音源の同時再生に重宝する)</li>
+</ul></li>
+<li>高精度な再生タイミング</li>
+<li>各種オーディオエフェクトやアナライザー(楽器のチューナーなど精度重視なところには向いていない)</li>
+</ul>
+
+<h4>本格的なオーディオ信号処理</h4>
+
+<ul>
+<li>立体音響
+
+<ul>
+<li>PannerNode</li>
+<li>ドップラー効果のデモすごい！(音源にドップラー効果を付けてなくてもWebAudio API通すと効果がつく)</li>
+</ul></li>
+</ul>
+
+<h3>Media Source Extensions</h3>
+
+<ul>
+<li>IEのみ？</li>
+<li>HTTPアダプティブストリーミング配信</li>
+<li>セグメントに分割されたビデオデータをvideo要素に流し込むだけのAPI</li>
+<li>MPEG-DASH
+
+<ul>
+<li>HTTPベースのAdaptive Streaming</li>
+<li>普通のウェブサーバーでも動作</li>
+<li>XML baseのメタ情報(MPD)</li>
+<li>プレイヤーは自分で作らないといけない</li>
+<li>エンコーディングの知識が必要</li>
+<li>GPAC MP4Box(セグメントファイルの自動生成)</li>
+</ul></li>
+</ul>
+
+<h3>Media Capture and Streams</h3>
+
+<ul>
+<li>Chromeのみ</li>
+<li>Windowsで実行するとOSごと死ぬらしい</li>
+<li>デモ: スクリーンキャプチャーのなかでスクリーンキャプチャー(合わせ鏡的な)</li>
+<li>サイネージの監視やヘルプデスクでも使えるかも</li>
+</ul>
+
+<h2>マニアレベル2(縁の下の力持ち)</h2>
+
+<h3>Encoding</h3>
+
+<ul>
+<li>文字コードのデコード、エンコード</li>
+</ul>
+
+<h3>Web Cryptography API</h3>
+
+<ul>
+<li>データの暗号化・複合化(公開鍵方式)</li>
+<li>使われているサイトもあるらしい</li>
+</ul>
+
+<h3>DOMMatrix</h3>
+
+<ul>
+<li>行列計算</li>
+<li>グラフィックにおける座標変換</li>
+</ul>
+
+<h3>Transferable objects</h3>
+
+<ul>
+<li>データ転送(WebWorker的な)</li>
+</ul>
+
+<h2>マニアレベル3(使用用途が分からない系)</h2>
+
+<h3>Clipboard API</h3>
+
+<ul>
+<li>どんなものがペーストされたか分かる</li>
+<li>Web上でやる意味 is 分からない</li>
+</ul>
+
+<h3>Base64 utility methods</h3>
+
+<ul>
+<li>エンコードとデコード</li>
+<li>現状対応しているのはASCII文字だけ(バイナリどころか2byte系も入らない)</li>
+</ul>
+
+<h2>マニアレベル4(モテ系になるかも)</h2>
+
+<h3>Screen Orientation</h3>
+
+<ul>
+<li>Firefoxのみ</li>
+<li>オリエンテーションを固定</li>
+<li>つまり画面固定がブラウザのみでできる</li>
+<li>FullScreen APIを使ったときのみ使える</li>
+</ul>
+
+<h3>MediaStream Recoding</h3>
+
+<ul>
+<li>Firefox Auroraのみ</li>
+<li>録画と録音</li>
+<li>Blobオブジェクトとして試せる</li>
+</ul>
+
+<h3>Web Animations 1.0</h3>
+
+<ul>
+<li>実装ブラウザーはない代わりにweb-animations-jsというpolyfilがある</li>
+<li>タイムライン制御フレームワーク</li>
+<li>連続処理と並列処理</li>
+<li>ビデオを扱うかのごとく使える</li>
+</ul>
+
+<h1 id="session2">実践的なモバイルHTML5テクニック</h1>
+
+<ul>
+<li>スピーカー: 紀平 拓男(<a href="https://twitter.com/tkihira">@tkihira</a>)</li>
+<li>資料: <a href="http://www.slideshare.net/takuokihira/html5-conference-2013">http://www.slideshare.net/takuokihira/html5-conference-2013</a></li>
+<li>感想: 紀平さんはインストールが嫌という主張を前からしていて、Webでいろいろ頑張っているイメージなので、日頃Webで出来るゲームアプリを提供している立場上、興味があって話を聞きにいってみましたが、かなり泥臭いことをしていることが伺えて、本当にすごいと思うとともに、この今の状況が少しでも改善されないものかと改めて思ってしまいました…少しでもAndroid 2.xのシェアが減るのと、Android 4.4(KitKat)の対応端末が増えることを祈りたいですね。</li>
+</ul>
+
+<p>※上に挙げている資料を見ることをおすすめいたします。下記のアウトラインメモは概要を掴みたい時にお読みください。</p>
+
+<h2>話す内容</h2>
+
+<p>モバイルブラウザで今できること</p>
+
+<h2>今の状況</h2>
+
+<ul>
+<li>残念ながらネイティブ &gt;&gt;&gt; Webアプリ</li>
+</ul>
+
+<h2>Webアプリの利点と欠点</h2>
+
+<ul>
+<li>遅い、互換性がない、ハードウェアに密着した処理がつらいという欠点が目立ってしまっている状況</li>
+<li>エンジニアもあまりいない…</li>
+<li>しかしインストール不要というメリットは大きい
+
+<ul>
+<li>ゲームをプレイして、URLをシェアするだけで友人の現在のプレイが見られる！</li>
+</ul></li>
+</ul>
+
+<h2>ネイティブアプリでは実現できないメリット</h2>
+
+<ul>
+<li>TwitterのURLや広告をタップで即座にアプリが起動される</li>
+<li>アプリ内でURLを発行することにより、独自のシーンでアプリが起動(Google Spreadsheetがいい例)</li>
+</ul>
+
+<h2>モバイルWebの基礎</h2>
+
+<ul>
+<li>PCにはブラウザがそんなにない(メジャーなので5種類くらい)</li>
+<li>モバイルにはブラウザがもっとない(Safari, Android Legacy Browser, Android Chrome etc..., しかも全てWebkit)</li>
+<li>対応が楽…なんて嘘！</li>
+</ul>
+
+<h2>Androidの互換性</h2>
+
+<ul>
+<li>メーカーが自社端末に合わせて最適化したAndroidを搭載
+
+<ul>
+<li>最適化の末にバグを埋め込む</li>
+</ul></li>
+<li>端末の数だけ独自ブラウザがある状況</li>
+<li>IE6より対応が大変！</li>
+</ul>
+
+<h2>リッチな表現の作り方</h2>
+
+<ul>
+<li>Canvas
+
+<ul>
+<li>互換性のバグを踏みにくい</li>
+<li>細かい最適化を自力で頑張れる</li>
+<li>作りこむならCanvas</li>
+</ul></li>
+<li>CSS(+DOM)
+
+<ul>
+<li>慣れ親しんだ形式、コードが読みやすい</li>
+<li>ブラウザの高速化恩恵を受けられることが多い</li>
+<li>ちょっとしたアプリならCSS</li>
+</ul></li>
+</ul>
+
+<h2>オンメモリCanvasの利用</h2>
+
+<ul>
+<li>何度も描画に利用する部分をメモリ上に退避して、それを描画に利用</li>
+</ul>
+
+<h2>drawImage</h2>
+
+<ul>
+<li>画像を描画する際、小数点の位置に描画しない
+
+<ul>
+<li>小数点の位置に描画するとアンチエイリアシングがかかる</li>
+<li>描画のスピードが遅い</li>
+</ul></li>
+<li>拡大、縮小をせずに描画する</li>
+</ul>
+
+<h2>new Functionによるオーバーヘッドの削減</h2>
+
+<ul>
+<li>同じ図形をパス(moveToやlineTo)を駆使して描画する場合に、描画用データを毎回解析せず、最初に文字列として関数を作成して、それを関数化することでオーバーヘッドを防ぐ</li>
+</ul>
+
+<h2>GPUを意識した高速化</h2>
+
+<ul>
+<li>GPUキャッシュに描画する画像が乗るように意識する
+
+<ul>
+<li>一定時間の間にブラウザに使われる画像を意識</li>
+</ul></li>
+<li>CanvasはGPUキャッシュに乗ることはない。これ以上変更しないというCanvasはimg要素に変換する</li>
+</ul>
+
+<h2>互換性問題の解決</h2>
+
+<ul>
+<li>何か問題が起こったら、ブラウザを過信しない。徹底的に疑う</li>
+<li>ブラウザの気持ちになって考える
+
+<ul>
+<li>内部でどのような処理をしているせいでこうなったか</li>
+<li>全体からコメントアウトしていって問題箇所を発見するか、小さなサンプルを作って、最小単位で問題を探る</li>
+</ul></li>
+</ul>
+
+<h2>メモリの問題</h2>
+
+<ul>
+<li>メモリを使い過ぎない
+
+<ul>
+<li>iOSは落ちる、Androidはサボる</li>
+</ul></li>
+<li>メモリリークをしない
+
+<ul>
+<li>ブラウザのガベージコレクションに回収されるよう気をつける</li>
+<li>メモリを確認して、メモリが微増するところを突き止める</li>
+</ul></li>
+</ul>
+
+<h2>バッテリーの問題</h2>
+
+<ul>
+<li>描画する部分が大きければ大きいほどバッテリーの消費が大きくなる</li>
+<li>描画しないところは描画系のコマンドを呼び出さないようにする</li>
+</ul>
+
+<h2>鉄則</h2>
+
+<ul>
+<li>高速化もメモリ管理も、実際のデータをもとに確認</li>
+<li>どうしようもないこともある。非対応端末に突っ込む勇気</li>
+</ul>
+
+<h2>デモ</h2>
+
+<p><a href="http://www.mbga.jp/_game_intro?game_id=12015394">ダンジョンポッパー - Mobage（モバゲー）by DeNA</a>(Canvasで頑張った例)</p>
+
+<h2>まとめ</h2>
+
+<ul>
+<li>アプリでは絶対に達成できないメリットもブラウザにはありつつ、デメリットが多くある状況</li>
+<li>HTML5らしさを出したWebアプリはほとんど出ていない(日本がモバイルHTML5が一番進んでいる)。なので今がチャンスかも</li>
+<li>将来、ネイティブアプリからWebに置き換わるのはほぼ確実</li>
+<li>HTML5のメリットをフル活用して、欠点の少ないアプリを簡単に作れるようになったら世界を制すことができる</li>
+</ul>
+</div></article><ul class="share"><li><a class="twitter-share-button" data-lang="ja" data-related="kubosho_" data-via="kubosho_" href="https://twitter.com/share">Tweet</a></li><li><div class="fb-like" data-action="recommend" data-layout="button_count" data-share="false" data-show-faces="false"></div></li></ul><div id="disqus_thread"></div><p class="back-to-top"><a href="/">トップページへ戻る</a></p><script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script><script type="text/javascript">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script><script type="text/javascript">/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+var disqus_shortname = 'techo2pjp'; // required: replace example with your forum shortname
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function() {
+var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><noscript><a href="http://disqus.com/?ref_noscript">Disqus</a>提供のコメント機能を有効にするためにJavaScriptを有効にしてください。<br>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a></noscript></div><footer class="mod-footer" role="contentinfo"><div class="profile"><p>このブログは、日々気づいた・ハマったことを書き残すブログです。Webフロントエンドの話題が主になると思います。</p><p>記事の内容には間違いがないようにしますが、間違っている時は間違っている旨を教えていただければ幸いです。</p></div><div class="feed"><a href='http://cloud.feedly.com/#subscription%2Ffeed%2Fhttp%3A%2F%2Ftech.o2p.jp%2Ffeed'  target='blank'><img id='feedlyFollow' src='http://s3.feedly.com/img/follows/feedly-follow-rectangle-flat-big_2x.png' alt='follow us in feedly' width='131' height='56'></a></div><p class="copyright"><small>© 2013-2014 <a href="https://twitter.com/kubosho_">kubosho_</a></small></p></footer></body></html>

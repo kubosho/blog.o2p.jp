@@ -1,0 +1,849 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>tech.o2p.jp</title>
+  <subtitle>kubosho_が日々気づいたことやハマったことを書き残していくブログです。</subtitle>
+  <id>http://tech.o2p.jp/</id>
+  <link href="http://tech.o2p.jp/"/>
+  <link href="http://tech.o2p.jp/feed" rel="self"/>
+  <updated>2013-12-30T07:00:00Z</updated>
+  <author>
+    <name>kubosho_</name>
+  </author>
+  <entry>
+    <title>2013年を振り返ってみる、そして2014年</title>
+    <link rel="alternate" href="/2013/12/30/2013-to-2014.html"/>
+    <id>/2013/12/30/2013-to-2014.html</id>
+    <published>2013-12-30T07:00:00Z</published>
+    <updated>2013-12-30T07:00:00Z</updated>
+    <author>
+      <name>kubosho_</name>
+    </author>
+    <content type="html">&lt;p&gt;今年もいつの間にやら年の瀬の時期になってました。というわけで今年を振りかえってみようかと思います。&lt;/p&gt;
+
+&lt;h2&gt;今年一番の話題: 転職&lt;/h2&gt;
+
+&lt;p&gt;今年の個人的な一番の話題は、2012年の年末に面白法人カヤックを辞めて、4ヶ月ほど潜伏した後、&lt;a href="http://inputxoutput.com/join-grani/"&gt;株式会社グラニ&lt;/a&gt;(別名&lt;a href="http://grani.jp/"&gt;謎社&lt;/a&gt;)に転職したことでしょうか。&lt;/p&gt;
+
+&lt;p&gt;今まで触ったことない、C#やASP.NET MVC(自分が主に触るのはRazorですが)、TypeScript、そしてIDEはVisual Studio 2013と、かなりWindowsに寄った開発現場は初めてですが、入ってから7ヶ月の間に1,586コミットをして、コミット数が1位になるくらい頑張ってます。&lt;/p&gt;
+
+&lt;p&gt;あとはアプリ自体も今のところ好調です。ただそれはけっして自分だけの力ではなくチーム全員が頑張った結果です。&lt;/p&gt;
+
+&lt;p&gt;ただ、まだまだ改善すべきところはあるのと、あとは一時的にランキングで3冠(参考: &lt;a href="http://gamebiz.jp/?p=125582"&gt;グラニの『神獄のヴァルハラゲート』がスマホ版GREEランキングで首位獲得！　大手ゲーム会社を抑えて3冠達成！　谷氏のコメントも掲載 | Social Game Info&lt;/a&gt;)になったりもしましたが、本当に一時的なものだったので、ある程度の期間3冠にいられるようにしたいなとは思います。&lt;/p&gt;
+
+&lt;h2&gt;今年一番買ってよかったもの&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href="http://blog.sou-lab.com/mac-totebag/"&gt;MacBookを持ち運ぶためのかっこいいトートバッグ | Sou-Lablog&lt;/a&gt;を見て買った、&lt;a href="http://www.focal.co.jp/products/detail.php?product_id=679"&gt;HEX ACADEMY TOTE for MacBook Pro&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;デザイン的にもいいし、MacBook AirとNexus 7とNintendo 3DSを入れてもなお余裕があるというのがいいです。次点で&lt;a href="http://dx39.net/"&gt;Xperia feat. HATSUNE MIKU&lt;/a&gt;。端末のサイズがちょうど手に合っているのと、特に不具合もなく快適に使えるのがいいです。&lt;/p&gt;
+
+&lt;h2&gt;なにげにQiitaにも投稿してた&lt;/h2&gt;
+
+&lt;p&gt;今年、このブログ以外にQiitaでも記事を書いてました。使い分け方としては、Qiitaが「ちょっとしたメモ」、ブログが「がっつりしたメモ」という感じで、スクリーンショットの数や載せるソースの数、あとは文章量によって、使い分けをしていました。&lt;/p&gt;
+
+&lt;p&gt;というわけで、以下が今年Qiitaに投稿した8つの記事です。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://qiita.com/kubosho_/items/aeb1c6b0b159f585e91c"&gt;Ruby on Rails+Apacheという組み合わせで「We&amp;apos;re sorry, but something went wrong.」のエラーが出た時の対処法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://qiita.com/kubosho_/items/9dfc8f1085762fc48a2d"&gt;ERROR: Could not find a valid gem &amp;apos;gem名&amp;apos; (&amp;gt;= 0), here is why: Unable to download data from https://rubygems.org/ と出た場合の対処法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://qiita.com/kubosho_/items/ac4d0dee85123393735b"&gt;GoogleAnalytics - Universal Analytics トラッキング コード(analytics.js)でCookieを用いたオプトアウトを行なう方法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://qiita.com/kubosho_/items/2faf94e93a8b2dfe44b6"&gt;Mac OS X Mavericksでgemをインストールしようとした時に ERROR: Failed to build gem native extension と怒られた時の対処法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://qiita.com/kubosho_/items/2887d200f9b5aa738fb1"&gt;QiitaのサイトにBEMを勝手に取り入れてみた&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://qiita.com/kubosho_/items/4f48612e1cec9f9e9638"&gt;「Qiitaのサイトに勝手にBEMを取り入れてみた」の解説&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://qiita.com/kubosho_/items/8b324b5e9aef10b7d04d"&gt;CoffeeScriptで「$ = jQuery」とした時に「jQuery is not defined」というReferenceErrorが出た&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://qiita.com/kubosho_/items/248fd5128366f55513e0"&gt;rbenvで自分が使ったコマンドのメモ&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ruby関連の話題が多めな気がします。どれもちょっとしたメモ(「勝手にBEMを取り入れてみた」シリーズは除く)といった感じで、ブログに載せるほどでもないかなーと思ってQiitaに載せました。あとはメモ程度でも載せないよりかは載せたほうがいいと思ったのもQiitaに載せた理由です。&lt;/p&gt;
+
+&lt;p&gt;エラーを解決した系の記事はエラーメッセージをタイトルに入れることで、検索に引っかかって多く見られることを期待していたりします(それで自分が解決したやり方で直ればなおさらいいですね)。&lt;/p&gt;
+
+&lt;p&gt;来年もQiitaには引き続きちょっとしたメモ系の記事を上げていこうと思います。&lt;/p&gt;
+
+&lt;h2&gt;そして2014年&lt;/h2&gt;
+
+&lt;p&gt;個人的な目標として掲げるのは以下の5つ。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ライブラリを3個以上作る&lt;/li&gt;
+&lt;li&gt;Webサービスを3個以上作る&lt;/li&gt;
+&lt;li&gt;ブログの記事を50個以上書く&lt;/li&gt;
+&lt;li&gt;勉強会で2回以上発表する&lt;/li&gt;
+&lt;li&gt;冬コミ(C87)サークル参加&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;どれも不可能ではないと考えていて、数的に一番多いブログの記事も週に1個かけば達成できる範囲なので出来ると思います。来年はいい意味で目立つ年にしたいな。&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>WordPressからGitHub Pages+Middleman+Travis CIに移行したらブログを書く気になれた話</title>
+    <link rel="alternate" href="/2013/12/17/wordpress-to-middleman.html"/>
+    <id>/2013/12/17/wordpress-to-middleman.html</id>
+    <published>2013-12-17T14:59:00Z</published>
+    <updated>2013-12-17T14:59:00Z</updated>
+    <author>
+      <name>kubosho_</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;a href="http://www.adventar.org/calendars/167"&gt;Blog #blogadvent Advent Calendar 2013&lt;/a&gt; 17日目の記事です。&lt;/p&gt;
+
+&lt;p&gt;かつて、&lt;a href="http://inputxoutput.com/"&gt;WordPressでブログを運営&lt;/a&gt;していましたが、&lt;a href="http://pages.github.com/"&gt;GitHub Pages&lt;/a&gt;+&lt;a href="http://middlemanapp.com/"&gt;Middleman&lt;/a&gt;(&lt;a href="http://middlemanjp.github.io/"&gt;日本語&lt;/a&gt;)+&lt;a href="https://travis-ci.org/"&gt;Travis CI&lt;/a&gt;に移行してみたら捗るようになったので、その移行話を書いてみます。&lt;/p&gt;
+
+&lt;p&gt;(&lt;a href="https://github.com/kubosho/tech.o2p.jp"&gt;ちなみに移行先のリポジトリはこれです&lt;/a&gt;)&lt;/p&gt;
+
+&lt;h2&gt;なぜ移行したか&lt;/h2&gt;
+
+&lt;p&gt;移行した理由ですが、簡潔に言うと「記事を公開するまでの流れを楽にしたかった」ということです。そして実際に移行したことによるメリットが2つあります。&lt;/p&gt;
+
+&lt;p&gt;1つめは、記事公開するまでの手順を減らせたことです。例えばWordPressの場合、普段使っているエディタで記事を書いた場合、以下の5つの手間が発生してとても面倒くさいものでした。&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;記事をエディタで書く&lt;/li&gt;
+&lt;li&gt;ブラウザでWordPressのダッシュボードを開く&lt;/li&gt;
+&lt;li&gt;投稿から新規追加を押す&lt;/li&gt;
+&lt;li&gt;タイトルと本文、タグなどにそれぞれ書いた内容をコピペしたり、スラッグを決める&lt;/li&gt;
+&lt;li&gt;公開ボタンを押す&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;しかしmiddlemanに移行後、手順が以下の通り2つ減り、よりブログの記事を書こうという気になっています。&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;記事をエディタで書く&lt;/li&gt;
+&lt;li&gt;ターミナルやGitをGUIで扱えるソフト(SourceTree)などを開く&lt;/li&gt;
+&lt;li&gt;git add . &amp;amp;&amp;amp; git commit &amp;amp;&amp;amp; git push origin master&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;2つめは、普段使っているエディタとmarkdown形式が使えるようになったということです。markdown形式については、&lt;a href="http://wordpress.org/plugins/markdown-on-save/"&gt;Markdown on Save&lt;/a&gt;というWordPressのプラグインを使っていましたが、プラグインを追加しなくても標準で対応しているというのが良いと思いました。&lt;/p&gt;
+
+&lt;p&gt;とはいえメリットだけでなく、GitHub Pages+Middleman+Travis CIの連携がちょっと面倒というデメリットはあります(参考までに、下記の移行までの流れの章で移行にあたって参考にしたサイトを載せています)。&lt;/p&gt;
+
+&lt;p&gt;とはいえそれも最初だけで、ブログを書いて公開する時間のほうが移行する準備の時間より長いので、元は取れるかなという感じです。&lt;/p&gt;
+
+&lt;h2&gt;移行までの流れ&lt;/h2&gt;
+
+&lt;p&gt;MiddlemanのインストールとTravis CIで自動ビルドとGitHubへ自動的にpushする流れを作るのに、&lt;a href="http://tricknotes.hateblo.jp/entry/2013/06/17/020229"&gt;Middleman で作った web サイトを Travis + GitHub pages でお手軽に運用する - tricknotesのぼうけんのしょ&lt;/a&gt;を参考にしました。&lt;/p&gt;
+
+&lt;p&gt;Middlemanの設定については、&lt;a href="https://twitter.com/hokaccha"&gt;@hokaccha&lt;/a&gt;のブログ、&lt;a href="http://webtech-walker.com/"&gt;Webtech Walker&lt;/a&gt;の&lt;a href="https://github.com/hokaccha/webtech-walker"&gt;リポジトリ&lt;/a&gt;を見て参考にしています。&lt;/p&gt;
+
+&lt;p&gt;上の2つのリンクと&lt;a href="http://middlemanapp.com/"&gt;公式サイト&lt;/a&gt;のMiddleman Basicsのリンク先を見れば、インストールから設定まで事足りますが、リンクだけ紹介するのも芸がないので、移行にあたり工夫した点を以下に書いていきます。&lt;/p&gt;
+
+&lt;h2&gt;テンプレートファイルをSlimにした&lt;/h2&gt;
+
+&lt;p&gt;ERB形式のテンプレートファイルの場合、Rubyをテンプレートファイルの中に組み込みたいという場合に&amp;lt;% ... %&amp;gt;みたいな感じで、いちいち&amp;lt;&amp;gt;や%を書かないといけなかったり、HTMLの要素を書くときにも&amp;lt;と&amp;gt;を打たないといけないというのが面倒だと感じました(HTMLに関してはEmmetを使えばいい話ですが)。&lt;/p&gt;
+
+&lt;p&gt;なので、Slim形式にテンプレートを書き換え、config.rbで以下の2行を追記し、Slimを使うようにしています。&lt;/p&gt;
+&lt;pre class="highlight ruby"&gt;&lt;span class="n"&gt;set&lt;/span&gt; &lt;span class="ss"&gt;:markdown&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;:layout_engine&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="ss"&gt;:slim&lt;/span&gt;
+&lt;span class="n"&gt;set&lt;/span&gt; &lt;span class="ss"&gt;:blog_layout_engine&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;:slim&lt;/span&gt;
+&lt;/pre&gt;
+&lt;h2&gt;URLにyyyy/mm/ddの形式で年月日を含めるようにした&lt;/h2&gt;
+
+&lt;p&gt;Middleman固有の話ではないのですが、URLに年月日を含めるようにしました。というのもこのブログで扱うのがWebの技術に関することという以上、更新しない限り情報は古くなります。&lt;/p&gt;
+
+&lt;p&gt;そうなった場合、例えば情報を探している人が検索エンジンなどから自分が書いた古くなった情報が載っている記事にアクセスして、かつその情報を参考にしてしまった場合、その時点で正しくない情報に誘導(して|されて)しまったということでお互いもやっとした気持ちになると思います。&lt;/p&gt;
+
+&lt;p&gt;なので、そういうことが減るようURLに年月日を含めることで、もしかしたらこの情報は古いかもしれないという事に気づいてくれたらという期待をこめて、URLに年月日を含めるようにしました。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;ということで、WordPressからMiddlemanに移行したらブログを書く気になれた話でした。これからもここで記事を書けるよう技術的に精進していきたいと思います。&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Time-dimensional擬似クラスについて調べてみた</title>
+    <link rel="alternate" href="/2013/12/09/time-dimensional-pseudo-classes.html"/>
+    <id>/2013/12/09/time-dimensional-pseudo-classes.html</id>
+    <published>2013-12-09T12:30:00Z</published>
+    <updated>2013-12-09T12:30:00Z</updated>
+    <author>
+      <name>kubosho_</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;a href="http://www.adventar.org/calendars/57"&gt;CSS Property Advent Calendar 2013&lt;/a&gt; 9日目の記事です。&lt;/p&gt;
+
+&lt;p&gt;今日は少し先を見据えて、Selectors Level 4の中から、明日のAdvent Calendar担当でもあるmyakuraさんが書いた文書、&lt;a href="http://myakura.github.io/n/selectors4.html"&gt;CSS4セレクタ (Selectors Level 4) の新機能&lt;/a&gt;内で触れられていない「:current, :past, :future」の各擬似クラスについて、&lt;a href="http://www.w3.org/TR/2013/WD-selectors4-20130502/"&gt;Working Draftの最新版である2013年5月2日版&lt;/a&gt;を元に紹介します。&lt;/p&gt;
+
+&lt;p&gt;CSS Property Advent Calendarなのにセレクタの話になってしまいましたが、&lt;a href="http://dskd.jp/archives/37.html"&gt;すでに&lt;/a&gt;&lt;a href="https://gist.github.com/azusa-tomita/7829371"&gt;2人ほど&lt;/a&gt;セレクタの話をしているようなので、気にしないで3人目になろうと思います。&lt;/p&gt;
+
+&lt;h2&gt;Time-dimensional擬似クラスについて&lt;/h2&gt;
+
+&lt;p&gt;文書が音声で読まれているときや、&lt;a href="http://dev.w3.org/html5/webvtt/"&gt;WebVTT&lt;/a&gt;というWeb上の動画に付けられる字幕に使われるようです。&lt;a href="http://www.w3.org/TR/2013/WD-selectors4-20130502/#time-pseudos"&gt;Time-dimensional Pseudo-classes - Selectors Level 4&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2&gt;:current&lt;/h2&gt;
+
+&lt;p&gt;文書内で現在読まれているものを示した擬似クラスです。
+:matchsと同じように単体セレクタの連なり(compound selectors)を引数に指定できます。以下のように指定した場合、文書内で現在読まれているものの中に引数に指定したセレクタのどれかが含まれていれば、強調して表示されるようです。&lt;/p&gt;
+&lt;pre class="highlight css"&gt;&lt;span class="nd"&gt;:current&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;p&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;li&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;dt&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;dd&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nl"&gt;background&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="no"&gt;yellow&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;
+&lt;h2&gt;:past, :future&lt;/h2&gt;
+
+&lt;p&gt;:past, :futureについては、現在の再生位置を元に過去や未来を示す擬似クラスで、WebVTTでも定義されているようですが、それ以上は分からないです。&lt;/p&gt;
+
+&lt;h2&gt;:current, :past, :futureが示す部分&lt;/h2&gt;
+
+&lt;p&gt;文章で書いていても分かりづらいと思うので、現在の自分の認識を画像にしてみました。&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href="http://imgur.com/nWDAAsu"&gt;&lt;img src="http://i.imgur.com/nWDAAsu.jpg" title="Hosted by imgur.com"/&gt;&lt;/a&gt;
+    &lt;figcaption&gt;&lt;a href="http://www.html5rocks.com/ja/tutorials/track/basics/"&gt;track 要素の基礎 - HTML5 Rocks&lt;/a&gt;内の動画より画像を作成&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;上記の画像で、&amp;quot;always&amp;quot;の部分が発音されていた場合、&amp;quot;The Web is&amp;quot;は:past, &amp;quot;always&amp;quot;は:current, &amp;quot;changing&amp;quot;は:futureになるのかなと思います。&lt;/p&gt;
+
+&lt;h2&gt;使い道を妄想してみる&lt;/h2&gt;
+
+&lt;p&gt;まず:currentについてですが、これは字幕のどこが読まれているか視覚的にも分かりやすくなるという点ではいいと思います。また、:futureについては、文字色を背景と同化させるようにしてまだ読まれていないということを視覚的に分かるようにするという使い方があると思います。&lt;/p&gt;
+
+&lt;p&gt;:pastは、:currentより過去を示す擬似クラスということで、カラオケの字幕のように使えるのではと思います。&lt;/p&gt;
+
+&lt;p&gt;以上で紹介は終わりです。曖昧なところがあるので、ここはこうだ！というところがありましたら、指摘していただけるとありがたいです。というわけで、明日の担当はmyakuraさんです。&lt;/p&gt;
+
+&lt;h2&gt;参照したページ&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.w3.org/TR/2013/WD-selectors4-20130502/#time-pseudos"&gt;Selectors Level 4&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://dev.w3.org/html5/webvtt/#the-past-and-future-pseudo-classes"&gt;WebVTT: The Web Video Text Tracks Format&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://developer.mozilla.org/en-US/docs/HTML/WebVTT"&gt;WebVTT - HTML | MDN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.innov-i.co.jp/innov-staff-blog/2013/0611_200000.html"&gt;Selectors Level 4（CSS4セレクタ） - innov-staff-blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://myakura.github.io/n/selectors4.html"&gt;CSS4セレクタ (Selectors Level 4) の新機能&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <title>HTML5 Conference 2013に行ってきたので全体の感想と面白かったセッションの情報を公開します</title>
+    <link rel="alternate" href="/2013/12/01/html5-conference.html"/>
+    <id>/2013/12/01/html5-conference.html</id>
+    <published>2013-11-30T17:00:00Z</published>
+    <updated>2013-11-30T17:00:00Z</updated>
+    <author>
+      <name>kubosho_</name>
+    </author>
+    <content type="html">&lt;p&gt;去年に引き続き、HTML5 Conference 2013に行ってきました。運営に携わった皆様お疲れさまでした。&lt;/p&gt;
+
+&lt;blockquote class="twitter-tweet" lang="ja"&gt;&lt;p&gt;HTML5カンファレンスに参加したってあなた! スタッフに感謝!と思うあなた! 参加報告ブログを書いて下さい! 意外かもしれませんが、参加報告エントリーってスタッフの気力・やる気に凄く影響するんですよ! &lt;a href="https://twitter.com/search?q=%23html5j&amp;amp;src=hash"&gt;#html5j&lt;/a&gt;&lt;/p&gt;&amp;mdash; You Kinjoh (@youkinjoh) &lt;a href="https://twitter.com/youkinjoh/statuses/406802327488565248"&gt;2013, 11月 30&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;ということなので、全体の感想とセッションの感想・アウトラインメモを公開します。&lt;/p&gt;
+
+&lt;h2&gt;目次&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="#thought"&gt;全体の感想&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;面白かったセッションの感想とアウトラインメモ
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="#session1"&gt;ようこそ、HTML5裏APIの世界へ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#session2"&gt;実践的なモバイルHTML5テクニック&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id="thought"&gt;全体の感想&lt;/h1&gt;
+
+&lt;p&gt;今回良かったところを挙げると以下の3つかなと思います。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ネットワーク環境の改善&lt;/li&gt;
+&lt;li&gt;食べるところが少なすぎるのを補うおにぎりやドーナツ類、そしてレッドブルの提供&lt;/li&gt;
+&lt;li&gt;マイクロバスがちゃんと定期的に来ていた気がする&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;特にネットワーク環境は、前回は提供されたWifiがほとんどつながらず、SSIDの数がカオスな状況になっていましたが、今回は少なくともTwitterをストリーミングさせて見ていても問題ない(サムネイルなども引っかかりなく表示される)感じでした。これは本当にネットワーク担当エンジニアが凄いとしか言いようが無いですね。ありがとうございます。&lt;/p&gt;
+
+&lt;p&gt;あと、昼ごはんを食べずに来てしまい、かつバスの中でマックテロを喰らい、お腹が空いて終わりまで持つのかこれという状況になってしまいましたが、おにぎりとドーナツの提供があり、なんとかなりました。ちなみにおにぎりは3個いただきました。あと、1Fの入り口付近でPixelGridの2人と寒い思いをしていたらカイロを提供されて助かりました。ありがとうございます。&lt;/p&gt;
+
+&lt;p&gt;なお、今回悪かったところを1つだけ挙げると、最後のクイズが20人限定の参加となってしまったところです。とはいえ、前回全員参加の早押しクイズでカオスになったのと、2000人という規模を考えると、しかたないのかなと思います。特に代案も浮かびませんし…&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h1&gt;面白かったセッションの感想とアウトラインメモ&lt;/h1&gt;
+
+&lt;p&gt;ここからは自分が面白いと感じたセッションの感想とアウトラインメモを公開します。&lt;/p&gt;
+
+&lt;h1 id="session1"&gt;ようこそ、HTML5裏APIの世界へ&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;スピーカー: 羽田野 太巳(&lt;a href="https://twitter.com/futomi"&gt;@futomi&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;資料: &lt;a href="http://www.slideshare.net/futomihatano/html5api-28774403"&gt;http://www.slideshare.net/futomihatano/html5api-28774403&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;感想: 今まで存在を知らないAPIばかりが紹介され、そしてデモもあり、とても分かりやすくかつ何に使えるか実際の使用用途を考えられてよかったなーと思ったセッション。WebAudio API PannerNodeなんかは加工されていない救急車のサイレン音が、APIを通すことによりドップラー効果がついたように聴こえ、本当にすごいと思うとともに、ゲームアプリで使えるかも？と感じました。「真面目なアニメーション」と「WebSocket, WebRTC, Socket API, ... 最新Webプロトコルの傾向と対策で迷ったもの」と当セッションでどれに行くか迷ったけど、自分的にはこれに行って正解でした。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;マニアなAPIとは&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;使ってもすごさが分からない&lt;/li&gt;
+&lt;li&gt;仕事になるかも分からない&lt;/li&gt;
+&lt;li&gt;なくなるかもしれない&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;マニアレベル1(割とモテ系)&lt;/h2&gt;
+
+&lt;h3&gt;WebRTC DTMF(Dual-Tone Multi-Frequency)&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;早い話がSkypeをWebで&lt;/li&gt;
+&lt;li&gt;映像/音声/データのP2P接続&lt;/li&gt;
+&lt;li&gt;IP電話の知識が必要(特に呼制御)&lt;/li&gt;
+&lt;li&gt;ダイヤルトーンを発信できる(自動音声応答装置の代わりになる)&lt;/li&gt;
+&lt;li&gt;電話を持たなくても、ブラウザーからコールセンターに電話できるようになるかも&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;WebAudio API PannerNode&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;音源の生成や合成
+
+&lt;ul&gt;
+&lt;li&gt;ゲーム系コンテンツにいいかも(iOSなどで複数音源の同時再生に重宝する)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;高精度な再生タイミング&lt;/li&gt;
+&lt;li&gt;各種オーディオエフェクトやアナライザー(楽器のチューナーなど精度重視なところには向いていない)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;本格的なオーディオ信号処理&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;立体音響
+
+&lt;ul&gt;
+&lt;li&gt;PannerNode&lt;/li&gt;
+&lt;li&gt;ドップラー効果のデモすごい！(音源にドップラー効果を付けてなくてもWebAudio API通すと効果がつく)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Media Source Extensions&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;IEのみ？&lt;/li&gt;
+&lt;li&gt;HTTPアダプティブストリーミング配信&lt;/li&gt;
+&lt;li&gt;セグメントに分割されたビデオデータをvideo要素に流し込むだけのAPI&lt;/li&gt;
+&lt;li&gt;MPEG-DASH
+
+&lt;ul&gt;
+&lt;li&gt;HTTPベースのAdaptive Streaming&lt;/li&gt;
+&lt;li&gt;普通のウェブサーバーでも動作&lt;/li&gt;
+&lt;li&gt;XML baseのメタ情報(MPD)&lt;/li&gt;
+&lt;li&gt;プレイヤーは自分で作らないといけない&lt;/li&gt;
+&lt;li&gt;エンコーディングの知識が必要&lt;/li&gt;
+&lt;li&gt;GPAC MP4Box(セグメントファイルの自動生成)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Media Capture and Streams&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Chromeのみ&lt;/li&gt;
+&lt;li&gt;Windowsで実行するとOSごと死ぬらしい&lt;/li&gt;
+&lt;li&gt;デモ: スクリーンキャプチャーのなかでスクリーンキャプチャー(合わせ鏡的な)&lt;/li&gt;
+&lt;li&gt;サイネージの監視やヘルプデスクでも使えるかも&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;マニアレベル2(縁の下の力持ち)&lt;/h2&gt;
+
+&lt;h3&gt;Encoding&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;文字コードのデコード、エンコード&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Web Cryptography API&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;データの暗号化・複合化(公開鍵方式)&lt;/li&gt;
+&lt;li&gt;使われているサイトもあるらしい&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;DOMMatrix&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;行列計算&lt;/li&gt;
+&lt;li&gt;グラフィックにおける座標変換&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Transferable objects&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;データ転送(WebWorker的な)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;マニアレベル3(使用用途が分からない系)&lt;/h2&gt;
+
+&lt;h3&gt;Clipboard API&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;どんなものがペーストされたか分かる&lt;/li&gt;
+&lt;li&gt;Web上でやる意味 is 分からない&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Base64 utility methods&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;エンコードとデコード&lt;/li&gt;
+&lt;li&gt;現状対応しているのはASCII文字だけ(バイナリどころか2byte系も入らない)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;マニアレベル4(モテ系になるかも)&lt;/h2&gt;
+
+&lt;h3&gt;Screen Orientation&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Firefoxのみ&lt;/li&gt;
+&lt;li&gt;オリエンテーションを固定&lt;/li&gt;
+&lt;li&gt;つまり画面固定がブラウザのみでできる&lt;/li&gt;
+&lt;li&gt;FullScreen APIを使ったときのみ使える&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;MediaStream Recoding&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Firefox Auroraのみ&lt;/li&gt;
+&lt;li&gt;録画と録音&lt;/li&gt;
+&lt;li&gt;Blobオブジェクトとして試せる&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Web Animations 1.0&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;実装ブラウザーはない代わりにweb-animations-jsというpolyfilがある&lt;/li&gt;
+&lt;li&gt;タイムライン制御フレームワーク&lt;/li&gt;
+&lt;li&gt;連続処理と並列処理&lt;/li&gt;
+&lt;li&gt;ビデオを扱うかのごとく使える&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id="session2"&gt;実践的なモバイルHTML5テクニック&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;スピーカー: 紀平 拓男(&lt;a href="https://twitter.com/tkihira"&gt;@tkihira&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;資料: &lt;a href="http://www.slideshare.net/takuokihira/html5-conference-2013"&gt;http://www.slideshare.net/takuokihira/html5-conference-2013&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;感想: 紀平さんはインストールが嫌という主張を前からしていて、Webでいろいろ頑張っているイメージなので、日頃Webで出来るゲームアプリを提供している立場上、興味があって話を聞きにいってみましたが、かなり泥臭いことをしていることが伺えて、本当にすごいと思うとともに、この今の状況が少しでも改善されないものかと改めて思ってしまいました…少しでもAndroid 2.xのシェアが減るのと、Android 4.4(KitKat)の対応端末が増えることを祈りたいですね。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;※上に挙げている資料を見ることをおすすめいたします。下記のアウトラインメモは概要を掴みたい時にお読みください。&lt;/p&gt;
+
+&lt;h2&gt;話す内容&lt;/h2&gt;
+
+&lt;p&gt;モバイルブラウザで今できること&lt;/p&gt;
+
+&lt;h2&gt;今の状況&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;残念ながらネイティブ &amp;gt;&amp;gt;&amp;gt; Webアプリ&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Webアプリの利点と欠点&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;遅い、互換性がない、ハードウェアに密着した処理がつらいという欠点が目立ってしまっている状況&lt;/li&gt;
+&lt;li&gt;エンジニアもあまりいない…&lt;/li&gt;
+&lt;li&gt;しかしインストール不要というメリットは大きい
+
+&lt;ul&gt;
+&lt;li&gt;ゲームをプレイして、URLをシェアするだけで友人の現在のプレイが見られる！&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;ネイティブアプリでは実現できないメリット&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;TwitterのURLや広告をタップで即座にアプリが起動される&lt;/li&gt;
+&lt;li&gt;アプリ内でURLを発行することにより、独自のシーンでアプリが起動(Google Spreadsheetがいい例)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;モバイルWebの基礎&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;PCにはブラウザがそんなにない(メジャーなので5種類くらい)&lt;/li&gt;
+&lt;li&gt;モバイルにはブラウザがもっとない(Safari, Android Legacy Browser, Android Chrome etc..., しかも全てWebkit)&lt;/li&gt;
+&lt;li&gt;対応が楽…なんて嘘！&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Androidの互換性&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;メーカーが自社端末に合わせて最適化したAndroidを搭載
+
+&lt;ul&gt;
+&lt;li&gt;最適化の末にバグを埋め込む&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;端末の数だけ独自ブラウザがある状況&lt;/li&gt;
+&lt;li&gt;IE6より対応が大変！&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;リッチな表現の作り方&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Canvas
+
+&lt;ul&gt;
+&lt;li&gt;互換性のバグを踏みにくい&lt;/li&gt;
+&lt;li&gt;細かい最適化を自力で頑張れる&lt;/li&gt;
+&lt;li&gt;作りこむならCanvas&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;CSS(+DOM)
+
+&lt;ul&gt;
+&lt;li&gt;慣れ親しんだ形式、コードが読みやすい&lt;/li&gt;
+&lt;li&gt;ブラウザの高速化恩恵を受けられることが多い&lt;/li&gt;
+&lt;li&gt;ちょっとしたアプリならCSS&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;オンメモリCanvasの利用&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;何度も描画に利用する部分をメモリ上に退避して、それを描画に利用&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;drawImage&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;画像を描画する際、小数点の位置に描画しない
+
+&lt;ul&gt;
+&lt;li&gt;小数点の位置に描画するとアンチエイリアシングがかかる&lt;/li&gt;
+&lt;li&gt;描画のスピードが遅い&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;拡大、縮小をせずに描画する&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;new Functionによるオーバーヘッドの削減&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;同じ図形をパス(moveToやlineTo)を駆使して描画する場合に、描画用データを毎回解析せず、最初に文字列として関数を作成して、それを関数化することでオーバーヘッドを防ぐ&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;GPUを意識した高速化&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;GPUキャッシュに描画する画像が乗るように意識する
+
+&lt;ul&gt;
+&lt;li&gt;一定時間の間にブラウザに使われる画像を意識&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;CanvasはGPUキャッシュに乗ることはない。これ以上変更しないというCanvasはimg要素に変換する&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;互換性問題の解決&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;何か問題が起こったら、ブラウザを過信しない。徹底的に疑う&lt;/li&gt;
+&lt;li&gt;ブラウザの気持ちになって考える
+
+&lt;ul&gt;
+&lt;li&gt;内部でどのような処理をしているせいでこうなったか&lt;/li&gt;
+&lt;li&gt;全体からコメントアウトしていって問題箇所を発見するか、小さなサンプルを作って、最小単位で問題を探る&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;メモリの問題&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;メモリを使い過ぎない
+
+&lt;ul&gt;
+&lt;li&gt;iOSは落ちる、Androidはサボる&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;メモリリークをしない
+
+&lt;ul&gt;
+&lt;li&gt;ブラウザのガベージコレクションに回収されるよう気をつける&lt;/li&gt;
+&lt;li&gt;メモリを確認して、メモリが微増するところを突き止める&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;バッテリーの問題&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;描画する部分が大きければ大きいほどバッテリーの消費が大きくなる&lt;/li&gt;
+&lt;li&gt;描画しないところは描画系のコマンドを呼び出さないようにする&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;鉄則&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;高速化もメモリ管理も、実際のデータをもとに確認&lt;/li&gt;
+&lt;li&gt;どうしようもないこともある。非対応端末に突っ込む勇気&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;デモ&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href="http://www.mbga.jp/_game_intro?game_id=12015394"&gt;ダンジョンポッパー - Mobage（モバゲー）by DeNA&lt;/a&gt;(Canvasで頑張った例)&lt;/p&gt;
+
+&lt;h2&gt;まとめ&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;アプリでは絶対に達成できないメリットもブラウザにはありつつ、デメリットが多くある状況&lt;/li&gt;
+&lt;li&gt;HTML5らしさを出したWebアプリはほとんど出ていない(日本がモバイルHTML5が一番進んでいる)。なので今がチャンスかも&lt;/li&gt;
+&lt;li&gt;将来、ネイティブアプリからWebに置き換わるのはほぼ確実&lt;/li&gt;
+&lt;li&gt;HTML5のメリットをフル活用して、欠点の少ないアプリを簡単に作れるようになったら世界を制すことができる&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <title>LESSのextend機能の使い方について</title>
+    <link rel="alternate" href="/2013/11/25/less-extend.html"/>
+    <id>/2013/11/25/less-extend.html</id>
+    <published>2013-11-25T00:00:00Z</published>
+    <updated>2013-11-25T00:00:00Z</updated>
+    <author>
+      <name>kubosho_</name>
+    </author>
+    <content type="html">&lt;p&gt;LESSのバージョン1.4.0 Beta 1 &amp;amp; 2から実装された「extend」について、サンプルコードを交えながら使い方を紹介します。&lt;/p&gt;
+
+&lt;h2&gt;extendとは&lt;/h2&gt;
+
+&lt;p&gt;その前にextendという機能についておさらいします。これについては&lt;a href="http://terkel.jp/archives/2011/12/sass-extend/"&gt;Sass の @extend はどこがすごいのか – terkel.jp&lt;/a&gt;という記事で短く分かりやすい説明がされていたので引用します。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;@extend される側として一連のスタイルを定義したセレクタがあり、そのセレクタを @extend で継承しつつプロパティを追加したりして、新しいセレクタを作ります&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2&gt;サンプルコード&lt;/h2&gt;
+&lt;pre class="highlight text"&gt;.test-base {
+    background-color: #393939;
+
+    div {
+        color: #f0f0f0;
+    }
+}
+
+.test-01 {
+    // 指定したセレクタを継承。内包されているセレクタは継承されない。
+    &amp;amp;:extend(.test-base);
+}
+
+.test-02 {
+    // 指定したセレクタを内包されているセレクタも含め継承。
+    &amp;amp;:extend(.test-base all);
+}
+
+.test-03 {
+    // 指定したセレクタに内包されているセレクタを指定しそれを継承。
+    &amp;amp;:extend(.test-base div);
+}
+
+.test-04 {
+    // 指定したセレクタを継承し、新たにプロパティと値、内包されるルールセットを指定。
+    &amp;amp;:extend(.test-base);
+    background-color: #666;
+
+    div {
+        color: #ccc;
+    }
+}
+&lt;/pre&gt;
+&lt;p&gt;これをCSSにコンパイルすると以下のようなコードになります。&lt;/p&gt;
+&lt;pre class="highlight css"&gt;&lt;span class="nc"&gt;.test-base&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;
+&lt;span class="nc"&gt;.test-01&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;
+&lt;span class="nc"&gt;.test-02&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;
+&lt;span class="nc"&gt;.test-04&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nl"&gt;background-color&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="m"&gt;#393939&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="nc"&gt;.test-base&lt;/span&gt; &lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;
+&lt;span class="nc"&gt;.test-02&lt;/span&gt; &lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;
+&lt;span class="nc"&gt;.test-03&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nl"&gt;color&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="m"&gt;#f0f0f0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="nc"&gt;.test-04&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nl"&gt;background-color&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="m"&gt;#666&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="nc"&gt;.test-04&lt;/span&gt; &lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nl"&gt;color&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="m"&gt;#ccc&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;とこんな感じに、共通のプロパティと値の指定は1つのルールセットにまとまり、セレクタごとに独自に指定したプロパティと値は別になるといういい感じのコードが生成されます。&lt;/p&gt;
+
+&lt;p&gt;LESSのextendの記法については、&lt;a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#extend"&gt;Sassのドキュメント&lt;/a&gt;を見ればなんとなく把握できると思います(ただし、@extend-Only Selectorsみたいに対応していない記法もありますが)。&lt;/p&gt;
+
+&lt;h2&gt;マメ知識&lt;/h2&gt;
+
+&lt;p&gt;LESSのextend機能は&lt;a href="https://twitter.com/hokaccha"&gt;@hokaccha&lt;/a&gt;により、&lt;a href="https://github.com/less/less.js/pull/509"&gt;less.jsのリポジトリにPull Request&lt;/a&gt;され、その時の記法は「+」を使ったものでした。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;pre class="highlight text"&gt;.foo {
+  width: 100px;
+}
+.bar {
+  +.foo;
+}
+&lt;/pre&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;ただこの記法だと、&lt;a href="https://github.com/less/less.js/pull/509#issuecomment-9153449"&gt;隣接セレクタみたいで分かりにくい&lt;/a&gt;という意見が出て、いったん「++」を使った記法になり、その後上記で説明した「&amp;amp;:extend(selector)」という記法に落ち着いたようです。&lt;/p&gt;
+
+&lt;p&gt;(このマメ知識部分は&lt;a href="http://webtech-walker.com/archive/2012/12/less_extend.html"&gt;最近のLessのextendの進捗 - Webtech Walker&lt;/a&gt;を参考にしつつ書きました)&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>スマホUI勉強会 -実装×UI/UX×ガイドラインのメモ</title>
+    <link rel="alternate" href="/2013/11/25/ui-ux-study.html"/>
+    <id>/2013/11/25/ui-ux-study.html</id>
+    <published>2013-11-25T00:00:00Z</published>
+    <updated>2013-11-25T00:00:00Z</updated>
+    <author>
+      <name>kubosho_</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;a href="http://atnd.org/events/45197"&gt;スマホUI勉強会 -実装×UI/UX×ガイドライン-&lt;/a&gt;に行ってきたので、自分が気になってメモしたところを公開します。&lt;/p&gt;
+
+&lt;h2&gt;『ユーザーファーストってなんやねん』インタビューとか簡易ユーザーテストとか&lt;/h2&gt;
+
+&lt;h3&gt;物事を作るひとが考えるのは考えるとつくる&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;インタビュー・観察
+
+&lt;ul&gt;
+&lt;li&gt;隣の人もユーザー「右隣の人の好きなものを知っているか？」&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;分析・ブレスト&lt;/li&gt;
+&lt;li&gt;スケッチ・プロトタイピング
+
+&lt;ul&gt;
+&lt;li&gt;プロトタイピングは「かもしれない」→「これどう？」を検証&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;ユーザーテスト
+
+&lt;ul&gt;
+&lt;li&gt;ユーザーテストは「実際の所どうなの？」を検証&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;履歴を話のネタに。「最近どんな検索しました？」&lt;/li&gt;
+&lt;li&gt;課題の重みは現場で感じ取らないと分からない
+
+&lt;ul&gt;
+&lt;li&gt;ユーザーはオブラートに包まずストレートに意見を言う&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;人のことを知るのが楽しい！&lt;/li&gt;
+&lt;li&gt;ユーザーは「革新のヒント」を知っている&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;コミュニティアプリのUIリニューアルから学ぶ、iOSとAndroidのUIお作法(仮)&lt;/h2&gt;
+
+&lt;h3&gt;UXをUIに落としこむ際に考えたいこと&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;1つずつタスクに落とし込む
+
+&lt;ul&gt;
+&lt;li&gt;開始地点があり、完了がある、この流れをいかにスムーズにするか&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;活動の連続性を検討する
+
+&lt;ul&gt;
+&lt;li&gt;フローを考える時に提供するサービスでの体験とユーザーの心の状態を記述する&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;ユーザーはいつか飽きる、それは止められない。それを遅くするために新たな刺激などを提供するかどうするか&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;smartphoneのsass導入フレームワーク化について&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;リブセンスではデザイナーがワイヤーフレーム作成している
+
+&lt;ul&gt;
+&lt;li&gt;デザインに直結するので爆速&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;共通部品を探してまとめる&lt;/li&gt;
+&lt;li&gt;似ている部品は1つにしてもらったりする&lt;/li&gt;
+&lt;li&gt;設計思想を前もって共有
+
+&lt;ul&gt;
+&lt;li&gt;意見交換を活発に、意見相違をなくす&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;セレクタ名について&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;.redとかいうセレクタ名はイケてない！&lt;/li&gt;
+&lt;li&gt;意味が分かるセレクタでも他のページで使えないものはイケてない！&lt;/li&gt;
+&lt;li&gt;共通で使うセレクタは名前を難しくしすぎない
+
+&lt;ul&gt;
+&lt;li&gt;.btn-min, .btn-wide的な感じ&lt;/li&gt;
+&lt;li&gt;ここらへんは最近自分も心がけているので間違ってなかったことが分かった&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;まとめ&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;ソースを見なくても直感的になんとなく判断できそうなクラス名を心がける&lt;/li&gt;
+&lt;li&gt;管理するパーツを最小限に抑える&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3&gt;変数, mixinについて&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;なんでもかんでも変数にしない&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;フロントエンドエンジニアとして心がけていること&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ページサイズを減らし、HTTPリクエストを減らす&lt;/li&gt;
+&lt;li&gt;デザイナーとの情報共有、コミュニケーションが大事&lt;/li&gt;
+&lt;li&gt;Android2系はDOMレンダリング遅い、リフローとリペイントは極力減らす&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;ガイドラインから考察するスマホ/タブレットUIデザインパターンとGMOの取組み(仮)&lt;/h2&gt;
+
+&lt;h3&gt;優れたUI/UXとは&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;使いやすさのデザイン
+
+&lt;ul&gt;
+&lt;li&gt;優れた機能でも使いにくいものは見向きされない&lt;/li&gt;
+&lt;li&gt;しかし使いやすいデザインを0から作るのは難しい&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;メニューUIの改善のためにUIパターンの調査
+
+&lt;ol&gt;
+&lt;li&gt;スタンダード並列&lt;/li&gt;
+&lt;li&gt;カテゴリー表示&lt;/li&gt;
+&lt;li&gt;バナー表示&lt;/li&gt;
+&lt;li&gt;特殊型&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;li&gt;メリット
+
+&lt;ol&gt;
+&lt;li&gt;使いやすいUI/UXを比較検討できる&lt;/li&gt;
+&lt;li&gt;ホームランは打てないけどヒットなら打てる&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;デメリット&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;時間コスト&lt;/li&gt;
+&lt;li&gt;流行り廃りが激しい &lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;SNSアプリで表示が遅いと苦情 -&gt; アプリ起動時のロゴ表示を少し伸ばした(2秒から2.8秒に)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;バナーをフェードインで表示したらバナーのCTRが上がった&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ページを表示したら0.5秒後に表示&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;まとめ&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;理論の上にセンスを乗せよう&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;デザインデータと実装の間でギャップが起こるので、いまさらだけどピクセルパーフェクトとかそこら辺について調べてみた@転職会議flameworkDesign&lt;/h2&gt;
+
+&lt;h3&gt;フレームワーク化を進めている&lt;/h3&gt;
+
+&lt;p&gt;以下のメリットを見込んでとの事。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;実装時間短縮&lt;/li&gt;
+&lt;li&gt;デザイン製作時間の短縮&lt;/li&gt;
+&lt;li&gt;デザインテイスト統一&lt;/li&gt;
+&lt;li&gt;売上の向上&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;まとめ&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ギャップを埋めるためにエンジニアとデザイナーのコミュニケーションが重要&lt;/li&gt;
+&lt;li&gt;最終アウトプットは実機で見た状態なので、最適な実装をお互い探る&lt;br&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+</feed>

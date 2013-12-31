@@ -1,0 +1,185 @@
+<!DOCTYPE html><!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]--><!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]--><!--[if IE 8]><html class="no-js lt-ie9"><![endif]--><!--[if gt IE 8]><html class="no-js"><![endif]--><!--[if (gte IE 9)|!(IE)]<!--><html lang="ja"><!--<![endif]--><head><meta charset="utf-8" /><meta content="kubosho_が日々気づいたことやハマったことを書き残していくブログです。" name="description" /><meta content="article" property="og:type" /><meta content="kubosho_が日々気づいたことやハマったことを書き残していくブログです。" property="og:description" /><meta content="http://tech.o2p.jp/assets/img/ogp.png" property="og:image" /><title>スマホUI勉強会 -実装×UI/UX×ガイドラインのメモ - tech.o2p.jp</title><meta content="スマホUI勉強会 -実装×UI/UX×ガイドラインのメモ - tech.o2p.jp" property="og:title" /><meta content="http://tech.o2p.jp/2013/11/25/ui-ux-study.html" property="og:url" /><meta content="width=device-width" name="viewport" /><meta content="telephone=no" name="format-detection" /><meta content="address=no" name="format-detection" /><meta content="tech.o2p.jp" name="apple-mobile-web-app-title" /><meta content="IE=edge" http-equiv="X-UA-Compatible" /><link href="http://tech.o2p.jp/assets/img/favicon.ico" rel="icon" type="image/x-icon" /><link href="http://tech.o2p.jp/assets/img/apple-touch-icon.png" rel="apple-touch-icon-precomposed" /><link href="/assets/css/normalize.css" media="screen" rel="stylesheet" type="text/css" /><link href="/assets/css/main.css" media="screen" rel="stylesheet" type="text/css" /><link href="/assets/css/syntax.css" media="screen" rel="stylesheet" type="text/css" /><link href="http://tech.o2p.jp/feed" rel="alternate" title="tech.o2p.jp RSS(最新記事をお届けします)" type="application/rss+xml" /><script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script><script type="text/javascript">window.jQuery || document.write('<script src="/js/vendor/jquery-1.8.0.min.js"><\/script>')</script><script src="/assets/js/main.js"></script></head><body><script type="text/javascript">var gaOptOutProperty = 'ga-disable-UA-25380313-3';
+if (document.cookie.indexOf(gaOptOutProperty + '=true') > -1) {
+  window[gaOptOutProperty] = true;
+}
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-25380313-3', 'o2p.jp');
+ga('send', 'pageview');</script><header class="mod-header" role="banner"><h1><a href="/">tech.o2p.jp</a></h1></header><div class="mod-main" role="main"><div id="fb-root"></div><script type="text/javascript">(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script><article class="mod-entry"><header><time datetime="Mon Nov 25 09:00:00 2013">2013/11/25</time><h1>スマホUI勉強会 -実装×UI/UX×ガイドラインのメモ</h1><ul class="share"><li><a class="pocket-btn" data-lang="en" data-pocket-count="horizontal" data-pocket-label="pocket"></a></li></ul></header><div class="body"><p><a href="http://atnd.org/events/45197">スマホUI勉強会 -実装×UI/UX×ガイドライン-</a>に行ってきたので、自分が気になってメモしたところを公開します。</p>
+
+<h2>『ユーザーファーストってなんやねん』インタビューとか簡易ユーザーテストとか</h2>
+
+<h3>物事を作るひとが考えるのは考えるとつくる</h3>
+
+<ul>
+<li>インタビュー・観察
+
+<ul>
+<li>隣の人もユーザー「右隣の人の好きなものを知っているか？」</li>
+</ul></li>
+<li>分析・ブレスト</li>
+<li>スケッチ・プロトタイピング
+
+<ul>
+<li>プロトタイピングは「かもしれない」→「これどう？」を検証</li>
+</ul></li>
+<li>ユーザーテスト
+
+<ul>
+<li>ユーザーテストは「実際の所どうなの？」を検証</li>
+</ul></li>
+<li>履歴を話のネタに。「最近どんな検索しました？」</li>
+<li>課題の重みは現場で感じ取らないと分からない
+
+<ul>
+<li>ユーザーはオブラートに包まずストレートに意見を言う</li>
+</ul></li>
+<li>人のことを知るのが楽しい！</li>
+<li>ユーザーは「革新のヒント」を知っている</li>
+</ul>
+
+<h2>コミュニティアプリのUIリニューアルから学ぶ、iOSとAndroidのUIお作法(仮)</h2>
+
+<h3>UXをUIに落としこむ際に考えたいこと</h3>
+
+<ul>
+<li>1つずつタスクに落とし込む
+
+<ul>
+<li>開始地点があり、完了がある、この流れをいかにスムーズにするか</li>
+</ul></li>
+<li>活動の連続性を検討する
+
+<ul>
+<li>フローを考える時に提供するサービスでの体験とユーザーの心の状態を記述する</li>
+</ul></li>
+<li>ユーザーはいつか飽きる、それは止められない。それを遅くするために新たな刺激などを提供するかどうするか</li>
+</ul>
+
+<h2>smartphoneのsass導入フレームワーク化について</h2>
+
+<ul>
+<li>リブセンスではデザイナーがワイヤーフレーム作成している
+
+<ul>
+<li>デザインに直結するので爆速</li>
+</ul></li>
+<li>共通部品を探してまとめる</li>
+<li>似ている部品は1つにしてもらったりする</li>
+<li>設計思想を前もって共有
+
+<ul>
+<li>意見交換を活発に、意見相違をなくす</li>
+</ul></li>
+</ul>
+
+<h3>セレクタ名について</h3>
+
+<ul>
+<li>.redとかいうセレクタ名はイケてない！</li>
+<li>意味が分かるセレクタでも他のページで使えないものはイケてない！</li>
+<li>共通で使うセレクタは名前を難しくしすぎない
+
+<ul>
+<li>.btn-min, .btn-wide的な感じ</li>
+<li>ここらへんは最近自分も心がけているので間違ってなかったことが分かった</li>
+</ul></li>
+</ul>
+
+<h3>まとめ</h3>
+
+<ol>
+<li>ソースを見なくても直感的になんとなく判断できそうなクラス名を心がける</li>
+<li>管理するパーツを最小限に抑える</li>
+</ol>
+
+<h3>変数, mixinについて</h3>
+
+<ul>
+<li>なんでもかんでも変数にしない</li>
+</ul>
+
+<h3>フロントエンドエンジニアとして心がけていること</h3>
+
+<ul>
+<li>ページサイズを減らし、HTTPリクエストを減らす</li>
+<li>デザイナーとの情報共有、コミュニケーションが大事</li>
+<li>Android2系はDOMレンダリング遅い、リフローとリペイントは極力減らす</li>
+</ul>
+
+<h2>ガイドラインから考察するスマホ/タブレットUIデザインパターンとGMOの取組み(仮)</h2>
+
+<h3>優れたUI/UXとは</h3>
+
+<ul>
+<li>使いやすさのデザイン
+
+<ul>
+<li>優れた機能でも使いにくいものは見向きされない</li>
+<li>しかし使いやすいデザインを0から作るのは難しい</li>
+</ul></li>
+<li>メニューUIの改善のためにUIパターンの調査
+
+<ol>
+<li>スタンダード並列</li>
+<li>カテゴリー表示</li>
+<li>バナー表示</li>
+<li>特殊型</li>
+</ol></li>
+<li>メリット
+
+<ol>
+<li>使いやすいUI/UXを比較検討できる</li>
+<li>ホームランは打てないけどヒットなら打てる</li>
+</ol></li>
+<li><p>デメリット</p>
+
+<ol>
+<li>時間コスト</li>
+<li>流行り廃りが激しい </li>
+</ol></li>
+<li><p>SNSアプリで表示が遅いと苦情 -> アプリ起動時のロゴ表示を少し伸ばした(2秒から2.8秒に)</p></li>
+<li><p>バナーをフェードインで表示したらバナーのCTRが上がった</p>
+
+<ul>
+<li>ページを表示したら0.5秒後に表示</li>
+</ul></li>
+</ul>
+
+<h3>まとめ</h3>
+
+<ul>
+<li>理論の上にセンスを乗せよう</li>
+</ul>
+
+<h2>デザインデータと実装の間でギャップが起こるので、いまさらだけどピクセルパーフェクトとかそこら辺について調べてみた@転職会議flameworkDesign</h2>
+
+<h3>フレームワーク化を進めている</h3>
+
+<p>以下のメリットを見込んでとの事。</p>
+
+<ul>
+<li>実装時間短縮</li>
+<li>デザイン製作時間の短縮</li>
+<li>デザインテイスト統一</li>
+<li>売上の向上</li>
+</ul>
+
+<h3>まとめ</h3>
+
+<ul>
+<li>ギャップを埋めるためにエンジニアとデザイナーのコミュニケーションが重要</li>
+<li>最終アウトプットは実機で見た状態なので、最適な実装をお互い探る<br></li>
+</ul>
+</div></article><ul class="share"><li><a class="twitter-share-button" data-lang="ja" data-related="kubosho_" data-via="kubosho_" href="https://twitter.com/share">Tweet</a></li><li><div class="fb-like" data-action="recommend" data-layout="button_count" data-share="false" data-show-faces="false"></div></li></ul><div id="disqus_thread"></div><p class="back-to-top"><a href="/">トップページへ戻る</a></p><script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script><script type="text/javascript">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script><script type="text/javascript">/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+var disqus_shortname = 'techo2pjp'; // required: replace example with your forum shortname
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function() {
+var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><noscript><a href="http://disqus.com/?ref_noscript">Disqus</a>提供のコメント機能を有効にするためにJavaScriptを有効にしてください。<br>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a></noscript></div><footer class="mod-footer" role="contentinfo"><div class="profile"><p>このブログは、日々気づいた・ハマったことを書き残すブログです。Webフロントエンドの話題が主になると思います。</p><p>記事の内容には間違いがないようにしますが、間違っている時は間違っている旨を教えていただければ幸いです。</p></div><div class="feed"><a href='http://cloud.feedly.com/#subscription%2Ffeed%2Fhttp%3A%2F%2Ftech.o2p.jp%2Ffeed'  target='blank'><img id='feedlyFollow' src='http://s3.feedly.com/img/follows/feedly-follow-rectangle-flat-big_2x.png' alt='follow us in feedly' width='131' height='56'></a></div><p class="copyright"><small>© 2013-2014 <a href="https://twitter.com/kubosho_">kubosho_</a></small></p></footer></body></html>
