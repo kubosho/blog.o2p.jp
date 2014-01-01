@@ -5,10 +5,73 @@
   <id>http://tech.o2p.jp/</id>
   <link href="http://tech.o2p.jp/"/>
   <link href="http://tech.o2p.jp/feed" rel="self"/>
-  <updated>2013-12-30T07:00:00Z</updated>
+  <updated>2014-01-01T15:50:00Z</updated>
   <author>
     <name>kubosho_</name>
   </author>
+  <entry>
+    <title>package.jsonとKarmaの設定を行う</title>
+    <link rel="alternate" href="/2014/01/02/try-packagejson-and-karma.html"/>
+    <id>/2014/01/02/try-packagejson-and-karma.html</id>
+    <published>2014-01-01T15:50:00Z</published>
+    <updated>2014-01-01T15:50:00Z</updated>
+    <author>
+      <name>kubosho_</name>
+    </author>
+    <content type="html">&lt;p&gt;あけましておめでとうございます。今年もよろしくお願いします。&lt;/p&gt;
+
+&lt;p&gt;さて、今年最初に何をやろうかと考えたところ、今までほとんどやってこなかったJavaScriptのテスト周りを触れてみようという結論に達し、&lt;a href="http://visionmedia.github.io/mocha/"&gt;Mocha&lt;/a&gt;+&lt;a href="https://github.com/karma-runner/karma"&gt;Karma&lt;/a&gt;という組み合わせを構築しようとしています。&lt;/p&gt;
+
+&lt;p&gt;まだ構築は完了していないですが、ここまでやったことを書いていきます。&lt;/p&gt;
+
+&lt;h2&gt;package.jsonの設定&lt;/h2&gt;
+
+&lt;p&gt;おもむろに&lt;code&gt;npm init&lt;/code&gt;を実行すると以下のことを聞かれます。ちなみに、&lt;a href="http://kokudori.hatenablog.com/entry/2013/04/04/025521"&gt;npmとpackage.json使い方 - Kokudoriing&lt;/a&gt;がよくまとまっていて分からない設定項目があった時に参考にしました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;name&lt;/li&gt;
+&lt;li&gt;version&lt;/li&gt;
+&lt;li&gt;description&lt;/li&gt;
+&lt;li&gt;entry point&lt;/li&gt;
+&lt;li&gt;test command&lt;/li&gt;
+&lt;li&gt;git repository&lt;/li&gt;
+&lt;li&gt;keywords&lt;/li&gt;
+&lt;li&gt;author&lt;/li&gt;
+&lt;li&gt;license&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;答えると、&lt;q&gt;About to write to /path/to/package.json:&lt;/q&gt;と表示され、package.jsonの内容が表示されます。&lt;/p&gt;
+
+&lt;p&gt;その後、&lt;q&gt;Is this ok? (yes)&lt;/q&gt;と聞かれるのでOKならそのままEnterを押してしまいましょう。&lt;/p&gt;
+
+&lt;p&gt;今回は自動生成されたpackage.jsonにKarmaのために以下の記述を追加しています。具体例は&lt;a href="https://github.com/kubosho/jquery-gameText/blob/master/package.json"&gt;jquery-gameText/package.json at master · kubosho/jquery-gameText&lt;/a&gt;になります。&lt;/p&gt;
+&lt;pre class="highlight json"&gt;&lt;span class="s2"&gt;&amp;quot;devDependencies&amp;quot;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;karma&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;~0.10&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;karma-mocha&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;~0.1&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/pre&gt;
+&lt;h2&gt;Karmaの設定&lt;/h2&gt;
+
+&lt;p&gt;KarmaのReadmeに書かれているように、&lt;code&gt;karma init&lt;/code&gt;を実行すると以下のことを聞かれます。デフォルト値が設定されている質問についてはだいたいそのままで大丈夫だと思います。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Which testing framework do you want to use ?&lt;/li&gt;
+&lt;li&gt;Do you want to use Require.js ?&lt;/li&gt;
+&lt;li&gt;Do you want to capture a browser automatically ?
+
+&lt;ul&gt;
+&lt;li&gt;なおSafariを選ぶと、karma-safari-launcherがインストールされていない場合は、無いというWarningメッセージが出ます。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;What is the location of your source and test files ? You can use glob patterns, eg. &amp;quot;js/&lt;em&gt;.js&amp;quot; or &amp;quot;test/&lt;/em&gt;&lt;em&gt;/&lt;/em&gt;Spec.js&amp;quot;.&lt;/li&gt;
+&lt;li&gt;Should any of the files included by the previous patterns be excluded ? You can use glob patterns, eg. &amp;quot;*&lt;em&gt;/&lt;/em&gt;.swp&amp;quot;.&lt;/li&gt;
+&lt;li&gt;Do you want Karma to watch all the files and run the tests on change ?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;これらの質問に答えると、&lt;q&gt;Config file generated at &amp;quot;/path/to/karma.conf.js&amp;quot;.&lt;/q&gt;というメッセージが表示され、karma.conf.jsが作成されています。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/karma-runner/karma/blob/master/test/client/karma.conf.js"&gt;karma/test/client/karma.conf.js at master · karma-runner/karma&lt;/a&gt;を見つつ、karma.conf.jsを自分で作成・設定するという手もあると思いますが、&lt;code&gt;karma init&lt;/code&gt;を実行するほうが楽だと思います。&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>2013年を振り返ってみる、そして2014年</title>
     <link rel="alternate" href="/2013/12/30/2013-to-2014.html"/>
@@ -572,183 +635,6 @@
 &lt;li&gt;HTML5らしさを出したWebアプリはほとんど出ていない(日本がモバイルHTML5が一番進んでいる)。なので今がチャンスかも&lt;/li&gt;
 &lt;li&gt;将来、ネイティブアプリからWebに置き換わるのはほぼ確実&lt;/li&gt;
 &lt;li&gt;HTML5のメリットをフル活用して、欠点の少ないアプリを簡単に作れるようになったら世界を制すことができる&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-  </entry>
-  <entry>
-    <title>スマホUI勉強会 -実装×UI/UX×ガイドラインのメモ</title>
-    <link rel="alternate" href="/2013/11/25/ui-ux-study.html"/>
-    <id>/2013/11/25/ui-ux-study.html</id>
-    <published>2013-11-25T00:00:00Z</published>
-    <updated>2013-11-25T00:00:00Z</updated>
-    <author>
-      <name>kubosho_</name>
-    </author>
-    <content type="html">&lt;p&gt;&lt;a href="http://atnd.org/events/45197"&gt;スマホUI勉強会 -実装×UI/UX×ガイドライン-&lt;/a&gt;に行ってきたので、自分が気になってメモしたところを公開します。&lt;/p&gt;
-
-&lt;h2&gt;『ユーザーファーストってなんやねん』インタビューとか簡易ユーザーテストとか&lt;/h2&gt;
-
-&lt;h3&gt;物事を作るひとが考えるのは考えるとつくる&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;インタビュー・観察
-
-&lt;ul&gt;
-&lt;li&gt;隣の人もユーザー「右隣の人の好きなものを知っているか？」&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;分析・ブレスト&lt;/li&gt;
-&lt;li&gt;スケッチ・プロトタイピング
-
-&lt;ul&gt;
-&lt;li&gt;プロトタイピングは「かもしれない」→「これどう？」を検証&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;ユーザーテスト
-
-&lt;ul&gt;
-&lt;li&gt;ユーザーテストは「実際の所どうなの？」を検証&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;履歴を話のネタに。「最近どんな検索しました？」&lt;/li&gt;
-&lt;li&gt;課題の重みは現場で感じ取らないと分からない
-
-&lt;ul&gt;
-&lt;li&gt;ユーザーはオブラートに包まずストレートに意見を言う&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;人のことを知るのが楽しい！&lt;/li&gt;
-&lt;li&gt;ユーザーは「革新のヒント」を知っている&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;コミュニティアプリのUIリニューアルから学ぶ、iOSとAndroidのUIお作法(仮)&lt;/h2&gt;
-
-&lt;h3&gt;UXをUIに落としこむ際に考えたいこと&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;1つずつタスクに落とし込む
-
-&lt;ul&gt;
-&lt;li&gt;開始地点があり、完了がある、この流れをいかにスムーズにするか&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;活動の連続性を検討する
-
-&lt;ul&gt;
-&lt;li&gt;フローを考える時に提供するサービスでの体験とユーザーの心の状態を記述する&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;ユーザーはいつか飽きる、それは止められない。それを遅くするために新たな刺激などを提供するかどうするか&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;smartphoneのsass導入フレームワーク化について&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;リブセンスではデザイナーがワイヤーフレーム作成している
-
-&lt;ul&gt;
-&lt;li&gt;デザインに直結するので爆速&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;共通部品を探してまとめる&lt;/li&gt;
-&lt;li&gt;似ている部品は1つにしてもらったりする&lt;/li&gt;
-&lt;li&gt;設計思想を前もって共有
-
-&lt;ul&gt;
-&lt;li&gt;意見交換を活発に、意見相違をなくす&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;セレクタ名について&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;.redとかいうセレクタ名はイケてない！&lt;/li&gt;
-&lt;li&gt;意味が分かるセレクタでも他のページで使えないものはイケてない！&lt;/li&gt;
-&lt;li&gt;共通で使うセレクタは名前を難しくしすぎない
-
-&lt;ul&gt;
-&lt;li&gt;.btn-min, .btn-wide的な感じ&lt;/li&gt;
-&lt;li&gt;ここらへんは最近自分も心がけているので間違ってなかったことが分かった&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;まとめ&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;ソースを見なくても直感的になんとなく判断できそうなクラス名を心がける&lt;/li&gt;
-&lt;li&gt;管理するパーツを最小限に抑える&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3&gt;変数, mixinについて&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;なんでもかんでも変数にしない&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;フロントエンドエンジニアとして心がけていること&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;ページサイズを減らし、HTTPリクエストを減らす&lt;/li&gt;
-&lt;li&gt;デザイナーとの情報共有、コミュニケーションが大事&lt;/li&gt;
-&lt;li&gt;Android2系はDOMレンダリング遅い、リフローとリペイントは極力減らす&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;ガイドラインから考察するスマホ/タブレットUIデザインパターンとGMOの取組み(仮)&lt;/h2&gt;
-
-&lt;h3&gt;優れたUI/UXとは&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;使いやすさのデザイン
-
-&lt;ul&gt;
-&lt;li&gt;優れた機能でも使いにくいものは見向きされない&lt;/li&gt;
-&lt;li&gt;しかし使いやすいデザインを0から作るのは難しい&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;メニューUIの改善のためにUIパターンの調査
-
-&lt;ol&gt;
-&lt;li&gt;スタンダード並列&lt;/li&gt;
-&lt;li&gt;カテゴリー表示&lt;/li&gt;
-&lt;li&gt;バナー表示&lt;/li&gt;
-&lt;li&gt;特殊型&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
-&lt;li&gt;メリット
-
-&lt;ol&gt;
-&lt;li&gt;使いやすいUI/UXを比較検討できる&lt;/li&gt;
-&lt;li&gt;ホームランは打てないけどヒットなら打てる&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;デメリット&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;時間コスト&lt;/li&gt;
-&lt;li&gt;流行り廃りが激しい &lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;SNSアプリで表示が遅いと苦情 -&gt; アプリ起動時のロゴ表示を少し伸ばした(2秒から2.8秒に)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;バナーをフェードインで表示したらバナーのCTRが上がった&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;ページを表示したら0.5秒後に表示&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;まとめ&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;理論の上にセンスを乗せよう&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;デザインデータと実装の間でギャップが起こるので、いまさらだけどピクセルパーフェクトとかそこら辺について調べてみた@転職会議flameworkDesign&lt;/h2&gt;
-
-&lt;h3&gt;フレームワーク化を進めている&lt;/h3&gt;
-
-&lt;p&gt;以下のメリットを見込んでとの事。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;実装時間短縮&lt;/li&gt;
-&lt;li&gt;デザイン製作時間の短縮&lt;/li&gt;
-&lt;li&gt;デザインテイスト統一&lt;/li&gt;
-&lt;li&gt;売上の向上&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;まとめ&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;ギャップを埋めるためにエンジニアとデザイナーのコミュニケーションが重要&lt;/li&gt;
-&lt;li&gt;最終アウトプットは実機で見た状態なので、最適な実装をお互い探る&lt;br&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
   </entry>
