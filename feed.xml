@@ -639,180 +639,97 @@
 </content>
   </entry>
   <entry>
-    <title>スマホUI勉強会 -実装×UI/UX×ガイドラインのメモ</title>
-    <link rel="alternate" href="/2013/11/25/ui-ux-study.html"/>
-    <id>/2013/11/25/ui-ux-study.html</id>
+    <title>LESSのextend機能の使い方について</title>
+    <link rel="alternate" href="/2013/11/25/less-extend.html"/>
+    <id>/2013/11/25/less-extend.html</id>
     <published>2013-11-25T00:00:00Z</published>
     <updated>2013-11-25T00:00:00Z</updated>
     <author>
       <name>kubosho_</name>
     </author>
-    <content type="html">&lt;p&gt;&lt;a href="http://atnd.org/events/45197"&gt;スマホUI勉強会 -実装×UI/UX×ガイドライン-&lt;/a&gt;に行ってきたので、自分が気になってメモしたところを公開します。&lt;/p&gt;
+    <content type="html">&lt;p&gt;LESSのバージョン1.4.0 Beta 1 &amp;amp; 2から実装された「extend」について、サンプルコードを交えながら使い方を紹介します。&lt;/p&gt;
 
-&lt;h2&gt;『ユーザーファーストってなんやねん』インタビューとか簡易ユーザーテストとか&lt;/h2&gt;
+&lt;h2&gt;extendとは&lt;/h2&gt;
 
-&lt;h3&gt;物事を作るひとが考えるのは考えるとつくる&lt;/h3&gt;
+&lt;p&gt;その前にextendという機能についておさらいします。これについては&lt;a href="http://terkel.jp/archives/2011/12/sass-extend/"&gt;Sass の @extend はどこがすごいのか – terkel.jp&lt;/a&gt;という記事で短く分かりやすい説明がされていたので引用します。&lt;/p&gt;
 
-&lt;ul&gt;
-&lt;li&gt;インタビュー・観察
+&lt;blockquote&gt;
+&lt;p&gt;@extend される側として一連のスタイルを定義したセレクタがあり、そのセレクタを @extend で継承しつつプロパティを追加したりして、新しいセレクタを作ります&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;ul&gt;
-&lt;li&gt;隣の人もユーザー「右隣の人の好きなものを知っているか？」&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;分析・ブレスト&lt;/li&gt;
-&lt;li&gt;スケッチ・プロトタイピング
+&lt;h2&gt;サンプルコード&lt;/h2&gt;
+&lt;pre class="highlight text"&gt;.test-base {
+    background-color: #393939;
 
-&lt;ul&gt;
-&lt;li&gt;プロトタイピングは「かもしれない」→「これどう？」を検証&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;ユーザーテスト
+    div {
+        color: #f0f0f0;
+    }
+}
 
-&lt;ul&gt;
-&lt;li&gt;ユーザーテストは「実際の所どうなの？」を検証&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;履歴を話のネタに。「最近どんな検索しました？」&lt;/li&gt;
-&lt;li&gt;課題の重みは現場で感じ取らないと分からない
+.test-01 {
+    // 指定したセレクタを継承。内包されているセレクタは継承されない。
+    &amp;amp;:extend(.test-base);
+}
 
-&lt;ul&gt;
-&lt;li&gt;ユーザーはオブラートに包まずストレートに意見を言う&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;人のことを知るのが楽しい！&lt;/li&gt;
-&lt;li&gt;ユーザーは「革新のヒント」を知っている&lt;/li&gt;
-&lt;/ul&gt;
+.test-02 {
+    // 指定したセレクタを内包されているセレクタも含め継承。
+    &amp;amp;:extend(.test-base all);
+}
 
-&lt;h2&gt;コミュニティアプリのUIリニューアルから学ぶ、iOSとAndroidのUIお作法(仮)&lt;/h2&gt;
+.test-03 {
+    // 指定したセレクタに内包されているセレクタを指定しそれを継承。
+    &amp;amp;:extend(.test-base div);
+}
 
-&lt;h3&gt;UXをUIに落としこむ際に考えたいこと&lt;/h3&gt;
+.test-04 {
+    // 指定したセレクタを継承し、新たにプロパティと値、内包されるルールセットを指定。
+    &amp;amp;:extend(.test-base);
+    background-color: #666;
 
-&lt;ul&gt;
-&lt;li&gt;1つずつタスクに落とし込む
+    div {
+        color: #ccc;
+    }
+}
+&lt;/pre&gt;
+&lt;p&gt;これをCSSにコンパイルすると以下のようなコードになります。&lt;/p&gt;
+&lt;pre class="highlight css"&gt;&lt;span class="nc"&gt;.test-base&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;
+&lt;span class="nc"&gt;.test-01&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;
+&lt;span class="nc"&gt;.test-02&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;
+&lt;span class="nc"&gt;.test-04&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nl"&gt;background-color&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="m"&gt;#393939&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="nc"&gt;.test-base&lt;/span&gt; &lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;
+&lt;span class="nc"&gt;.test-02&lt;/span&gt; &lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;
+&lt;span class="nc"&gt;.test-03&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nl"&gt;color&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="m"&gt;#f0f0f0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="nc"&gt;.test-04&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nl"&gt;background-color&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="m"&gt;#666&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="nc"&gt;.test-04&lt;/span&gt; &lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nl"&gt;color&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="m"&gt;#ccc&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;とこんな感じに、共通のプロパティと値の指定は1つのルールセットにまとまり、セレクタごとに独自に指定したプロパティと値は別になるといういい感じのコードが生成されます。&lt;/p&gt;
 
-&lt;ul&gt;
-&lt;li&gt;開始地点があり、完了がある、この流れをいかにスムーズにするか&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;活動の連続性を検討する
+&lt;p&gt;LESSのextendの記法については、&lt;a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#extend"&gt;Sassのドキュメント&lt;/a&gt;を見ればなんとなく把握できると思います(ただし、@extend-Only Selectorsみたいに対応していない記法もありますが)。&lt;/p&gt;
 
-&lt;ul&gt;
-&lt;li&gt;フローを考える時に提供するサービスでの体験とユーザーの心の状態を記述する&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;ユーザーはいつか飽きる、それは止められない。それを遅くするために新たな刺激などを提供するかどうするか&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h2&gt;マメ知識&lt;/h2&gt;
 
-&lt;h2&gt;smartphoneのsass導入フレームワーク化について&lt;/h2&gt;
+&lt;p&gt;LESSのextend機能は&lt;a href="https://twitter.com/hokaccha"&gt;@hokaccha&lt;/a&gt;により、&lt;a href="https://github.com/less/less.js/pull/509"&gt;less.jsのリポジトリにPull Request&lt;/a&gt;され、その時の記法は「+」を使ったものでした。&lt;/p&gt;
 
-&lt;ul&gt;
-&lt;li&gt;リブセンスではデザイナーがワイヤーフレーム作成している
+&lt;blockquote&gt;
+&lt;pre class="highlight text"&gt;.foo {
+  width: 100px;
+}
+.bar {
+  +.foo;
+}
+&lt;/pre&gt;&lt;/blockquote&gt;
 
-&lt;ul&gt;
-&lt;li&gt;デザインに直結するので爆速&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;共通部品を探してまとめる&lt;/li&gt;
-&lt;li&gt;似ている部品は1つにしてもらったりする&lt;/li&gt;
-&lt;li&gt;設計思想を前もって共有
+&lt;p&gt;ただこの記法だと、&lt;a href="https://github.com/less/less.js/pull/509#issuecomment-9153449"&gt;隣接セレクタみたいで分かりにくい&lt;/a&gt;という意見が出て、いったん「++」を使った記法になり、その後上記で説明した「&amp;amp;:extend(selector)」という記法に落ち着いたようです。&lt;/p&gt;
 
-&lt;ul&gt;
-&lt;li&gt;意見交換を活発に、意見相違をなくす&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;セレクタ名について&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;.redとかいうセレクタ名はイケてない！&lt;/li&gt;
-&lt;li&gt;意味が分かるセレクタでも他のページで使えないものはイケてない！&lt;/li&gt;
-&lt;li&gt;共通で使うセレクタは名前を難しくしすぎない
-
-&lt;ul&gt;
-&lt;li&gt;.btn-min, .btn-wide的な感じ&lt;/li&gt;
-&lt;li&gt;ここらへんは最近自分も心がけているので間違ってなかったことが分かった&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;まとめ&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;ソースを見なくても直感的になんとなく判断できそうなクラス名を心がける&lt;/li&gt;
-&lt;li&gt;管理するパーツを最小限に抑える&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3&gt;変数, mixinについて&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;なんでもかんでも変数にしない&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;フロントエンドエンジニアとして心がけていること&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;ページサイズを減らし、HTTPリクエストを減らす&lt;/li&gt;
-&lt;li&gt;デザイナーとの情報共有、コミュニケーションが大事&lt;/li&gt;
-&lt;li&gt;Android2系はDOMレンダリング遅い、リフローとリペイントは極力減らす&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;ガイドラインから考察するスマホ/タブレットUIデザインパターンとGMOの取組み(仮)&lt;/h2&gt;
-
-&lt;h3&gt;優れたUI/UXとは&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;使いやすさのデザイン
-
-&lt;ul&gt;
-&lt;li&gt;優れた機能でも使いにくいものは見向きされない&lt;/li&gt;
-&lt;li&gt;しかし使いやすいデザインを0から作るのは難しい&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;メニューUIの改善のためにUIパターンの調査
-
-&lt;ol&gt;
-&lt;li&gt;スタンダード並列&lt;/li&gt;
-&lt;li&gt;カテゴリー表示&lt;/li&gt;
-&lt;li&gt;バナー表示&lt;/li&gt;
-&lt;li&gt;特殊型&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
-&lt;li&gt;メリット
-
-&lt;ol&gt;
-&lt;li&gt;使いやすいUI/UXを比較検討できる&lt;/li&gt;
-&lt;li&gt;ホームランは打てないけどヒットなら打てる&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;デメリット&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;時間コスト&lt;/li&gt;
-&lt;li&gt;流行り廃りが激しい &lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;SNSアプリで表示が遅いと苦情 -&gt; アプリ起動時のロゴ表示を少し伸ばした(2秒から2.8秒に)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;バナーをフェードインで表示したらバナーのCTRが上がった&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;ページを表示したら0.5秒後に表示&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;まとめ&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;理論の上にセンスを乗せよう&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;デザインデータと実装の間でギャップが起こるので、いまさらだけどピクセルパーフェクトとかそこら辺について調べてみた@転職会議flameworkDesign&lt;/h2&gt;
-
-&lt;h3&gt;フレームワーク化を進めている&lt;/h3&gt;
-
-&lt;p&gt;以下のメリットを見込んでとの事。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;実装時間短縮&lt;/li&gt;
-&lt;li&gt;デザイン製作時間の短縮&lt;/li&gt;
-&lt;li&gt;デザインテイスト統一&lt;/li&gt;
-&lt;li&gt;売上の向上&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;まとめ&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;ギャップを埋めるためにエンジニアとデザイナーのコミュニケーションが重要&lt;/li&gt;
-&lt;li&gt;最終アウトプットは実機で見た状態なので、最適な実装をお互い探る&lt;br&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;(このマメ知識部分は&lt;a href="http://webtech-walker.com/archive/2012/12/less_extend.html"&gt;最近のLessのextendの進捗 - Webtech Walker&lt;/a&gt;を参考にしつつ書きました)&lt;/p&gt;
 </content>
   </entry>
 </feed>
