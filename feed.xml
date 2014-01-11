@@ -32,7 +32,7 @@
 &lt;li&gt;胸をBlockとする&lt;/li&gt;
 &lt;li&gt;左右の胸をElementとして分けるかどうか？&lt;/li&gt;
 &lt;li&gt;乳首の色や形はModifier？&lt;/li&gt;
-&lt;li&gt;乳輪の中に乳首が入っている感じ。block&lt;strong&gt;element&lt;/strong&gt;elementという感じになってしまうのでは&lt;/li&gt;
+&lt;li&gt;乳輪の中に乳首が入っている感じ。&lt;code&gt;block__element__element&lt;/code&gt;という感じになってしまうのでは&lt;/li&gt;
 &lt;li&gt;哺乳類の中には単乳や複乳もいるので、左か右かはModifierとする&lt;/li&gt;
 &lt;li&gt;乳首の初期スタイルシートは&lt;a href="http://dskd.jp/archives/35.html"&gt;&amp;quot;TRBL&amp;quot; method&lt;/a&gt;がいいのでは&lt;/li&gt;
 &lt;li&gt;問題は:activeと:hoverといった疑似クラスに当てられたスタイルが似ているせいで、感じてもいないのに誤解されるということが起きることであり、このことからも全く違う状態に同じスタイルを適用されるのはまずいということが分かる&lt;/li&gt;
