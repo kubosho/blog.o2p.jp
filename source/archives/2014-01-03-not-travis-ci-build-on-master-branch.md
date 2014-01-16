@@ -10,7 +10,7 @@ published: false
 
 とある事情により、このブログのリポジトリを[Organizationアカウント](https://github.com/o2project/o2project.github.io)のほうに移行しました。
 
-GitHub PagesのUserやOrganizationページは、masterブランチに内容をpushする必要があるため、developというブランチを作成し、TravisCI側でビルドした後masterにcommitするようにしました。
+GitHub PagesのuserやOrganizationページは、masterブランチに内容をpushする必要があるため、developというブランチを作成し、TravisCI側でビルドした後masterにcommitするようにしました。
 
 しかし、masterへの自動commitをTravisCIがした時に、そのcommitにもTravisCIが反応する事態となってしまいました。
 
@@ -20,4 +20,6 @@ GitHub PagesのUserやOrganizationページは、masterブランチに内容をp
 
 しかし、問題解決できないのかというと、回避する方法はあり、それがコミットメッセージに`[ci skip]`を含めるというものです。
 
-[Add comment(ci skip), for auto commit to master branch · c2de72f · o2project/o2project.github.io](https://github.com/o2project/o2project.github.io/commit/c2de72f5a08ac2c8cc45780ce11ccd027e5a6974)
+具体的には[こんな感じ](https://github.com/o2project/o2project.github.io/commit/c2de72f5a08ac2c8cc45780ce11ccd027e5a6974)です。
+
+教えてくださった[@yo_waka](https://twitter.com/yo_waka)には感謝です。
