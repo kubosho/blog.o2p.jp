@@ -3,7 +3,6 @@ title: masterブランチへの自動コミット時にTravisCIにbuildさせな
 date: 2014-01-03 17:50 JST
 tags:
   - TravisCI
-published: false
 ---
 
 ## はじめに
