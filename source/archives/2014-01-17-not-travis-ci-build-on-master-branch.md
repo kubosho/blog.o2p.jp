@@ -5,8 +5,6 @@ tags:
   - TravisCI
 ---
 
-## はじめに
-
 とある事情により、このブログのリポジトリを[Organizationアカウント](https://github.com/o2project/o2project.github.io)のほうに移行しました。
 
 GitHub PagesのuserやOrganizationページは、masterブランチに内容をpushする必要があるため、developというブランチを作成し、Travis CI側でビルドした後masterにcommitするようにしました。
