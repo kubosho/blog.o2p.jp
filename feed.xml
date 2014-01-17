@@ -18,9 +18,7 @@
     <author>
       <name>kubosho_</name>
     </author>
-    <content type="html">&lt;h2&gt;はじめに&lt;/h2&gt;
-
-&lt;p&gt;とある事情により、このブログのリポジトリを&lt;a href="https://github.com/o2project/o2project.github.io"&gt;Organizationアカウント&lt;/a&gt;のほうに移行しました。&lt;/p&gt;
+    <content type="html">&lt;p&gt;とある事情により、このブログのリポジトリを&lt;a href="https://github.com/o2project/o2project.github.io"&gt;Organizationアカウント&lt;/a&gt;のほうに移行しました。&lt;/p&gt;
 
 &lt;p&gt;GitHub PagesのuserやOrganizationページは、masterブランチに内容をpushする必要があるため、developというブランチを作成し、Travis CI側でビルドした後masterにcommitするようにしました。&lt;/p&gt;
 
