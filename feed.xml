@@ -66,6 +66,34 @@
 </content>
   </entry>
   <entry>
+    <title>masterブランチへの自動コミット時にTravisCIにbuildさせない</title>
+    <link rel="alternate" href="/2014/01/03/not-travis-ci-build-on-master-branch.html"/>
+    <id>/2014/01/03/not-travis-ci-build-on-master-branch.html</id>
+    <published>2014-01-03T08:50:00Z</published>
+    <updated>2014-01-03T08:50:00Z</updated>
+    <author>
+      <name>kubosho_</name>
+    </author>
+    <content type="html">&lt;h2&gt;はじめに&lt;/h2&gt;
+
+&lt;p&gt;とある事情により、このブログのリポジトリを&lt;a href="https://github.com/o2project/o2project.github.io"&gt;Organizationアカウント&lt;/a&gt;のほうに移行しました。&lt;/p&gt;
+
+&lt;p&gt;GitHub PagesのuserやOrganizationページは、masterブランチに内容をpushする必要があるため、developというブランチを作成し、TravisCI側でビルドした後masterにcommitするようにしました。&lt;/p&gt;
+
+&lt;p&gt;しかし、masterへの自動commitをTravisCIがした時に、そのcommitにもTravisCIが反応する事態となってしまいました。&lt;/p&gt;
+
+&lt;p&gt;そして開発者曰く、その挙動は抑止できないということです。&lt;/p&gt;
+
+&lt;blockquote class="twitter-tweet" lang="ja"&gt;&lt;p&gt;&lt;a href="https://twitter.com/kubosho_"&gt;@kubosho_&lt;/a&gt; 今のところその挙動は抑止できません。申し訳ありません。問題自体は熟知していますので出来るだけ早いうちに修正したいとは考えています。&lt;/p&gt;&amp;mdash; あさり (@hiro_asari) &lt;a href="https://twitter.com/hiro_asari/statuses/418587151748845569"&gt;2014, 1月 2&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;しかし、問題解決できないのかというと、回避する方法はあり、それがコミットメッセージに&lt;code&gt;[ci skip]&lt;/code&gt;を含めるというものです。&lt;/p&gt;
+
+&lt;p&gt;具体的には&lt;a href="https://github.com/o2project/o2project.github.io/commit/c2de72f5a08ac2c8cc45780ce11ccd027e5a6974"&gt;こんな感じ&lt;/a&gt;です。&lt;/p&gt;
+
+&lt;p&gt;教えてくださった&lt;a href="https://twitter.com/yo_waka"&gt;@yo_waka&lt;/a&gt;には感謝です。&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
     <title>package.jsonとKarmaの設定を行う</title>
     <link rel="alternate" href="/2014/01/02/try-packagejson-and-karma.html"/>
     <id>/2014/01/02/try-packagejson-and-karma.html</id>
@@ -323,374 +351,6 @@
 &lt;li&gt;&lt;a href="https://developer.mozilla.org/en-US/docs/HTML/WebVTT"&gt;WebVTT - HTML | MDN&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.innov-i.co.jp/innov-staff-blog/2013/0611_200000.html"&gt;Selectors Level 4（CSS4セレクタ） - innov-staff-blog&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://myakura.github.io/n/selectors4.html"&gt;CSS4セレクタ (Selectors Level 4) の新機能&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-  </entry>
-  <entry>
-    <title>HTML5 Conference 2013に行ってきたので全体の感想と面白かったセッションの情報を公開します</title>
-    <link rel="alternate" href="/2013/12/01/html5-conference.html"/>
-    <id>/2013/12/01/html5-conference.html</id>
-    <published>2013-11-30T17:00:00Z</published>
-    <updated>2013-11-30T17:00:00Z</updated>
-    <author>
-      <name>kubosho_</name>
-    </author>
-    <content type="html">&lt;p&gt;去年に引き続き、HTML5 Conference 2013に行ってきました。運営に携わった皆様お疲れさまでした。&lt;/p&gt;
-
-&lt;blockquote class="twitter-tweet" lang="ja"&gt;&lt;p&gt;HTML5カンファレンスに参加したってあなた! スタッフに感謝!と思うあなた! 参加報告ブログを書いて下さい! 意外かもしれませんが、参加報告エントリーってスタッフの気力・やる気に凄く影響するんですよ! &lt;a href="https://twitter.com/search?q=%23html5j&amp;amp;src=hash"&gt;#html5j&lt;/a&gt;&lt;/p&gt;&amp;mdash; You Kinjoh (@youkinjoh) &lt;a href="https://twitter.com/youkinjoh/statuses/406802327488565248"&gt;2013, 11月 30&lt;/a&gt;&lt;/blockquote&gt;
-
-&lt;p&gt;ということなので、全体の感想とセッションの感想・アウトラインメモを公開します。&lt;/p&gt;
-
-&lt;h2&gt;目次&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href="#thought"&gt;全体の感想&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;面白かったセッションの感想とアウトラインメモ
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href="#session1"&gt;ようこそ、HTML5裏APIの世界へ&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#session2"&gt;実践的なモバイルHTML5テクニック&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id="thought"&gt;全体の感想&lt;/h1&gt;
-
-&lt;p&gt;今回良かったところを挙げると以下の3つかなと思います。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;ネットワーク環境の改善&lt;/li&gt;
-&lt;li&gt;食べるところが少なすぎるのを補うおにぎりやドーナツ類、そしてレッドブルの提供&lt;/li&gt;
-&lt;li&gt;マイクロバスがちゃんと定期的に来ていた気がする&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;特にネットワーク環境は、前回は提供されたWifiがほとんどつながらず、SSIDの数がカオスな状況になっていましたが、今回は少なくともTwitterをストリーミングさせて見ていても問題ない(サムネイルなども引っかかりなく表示される)感じでした。これは本当にネットワーク担当エンジニアが凄いとしか言いようが無いですね。ありがとうございます。&lt;/p&gt;
-
-&lt;p&gt;あと、昼ごはんを食べずに来てしまい、かつバスの中でマックテロを喰らい、お腹が空いて終わりまで持つのかこれという状況になってしまいましたが、おにぎりとドーナツの提供があり、なんとかなりました。ちなみにおにぎりは3個いただきました。あと、1Fの入り口付近でPixelGridの2人と寒い思いをしていたらカイロを提供されて助かりました。ありがとうございます。&lt;/p&gt;
-
-&lt;p&gt;なお、今回悪かったところを1つだけ挙げると、最後のクイズが20人限定の参加となってしまったところです。とはいえ、前回全員参加の早押しクイズでカオスになったのと、2000人という規模を考えると、しかたないのかなと思います。特に代案も浮かびませんし…&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h1&gt;面白かったセッションの感想とアウトラインメモ&lt;/h1&gt;
-
-&lt;p&gt;ここからは自分が面白いと感じたセッションの感想とアウトラインメモを公開します。&lt;/p&gt;
-
-&lt;h1 id="session1"&gt;ようこそ、HTML5裏APIの世界へ&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;スピーカー: 羽田野 太巳(&lt;a href="https://twitter.com/futomi"&gt;@futomi&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;資料: &lt;a href="http://www.slideshare.net/futomihatano/html5api-28774403"&gt;http://www.slideshare.net/futomihatano/html5api-28774403&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;感想: 今まで存在を知らないAPIばかりが紹介され、そしてデモもあり、とても分かりやすくかつ何に使えるか実際の使用用途を考えられてよかったなーと思ったセッション。WebAudio API PannerNodeなんかは加工されていない救急車のサイレン音が、APIを通すことによりドップラー効果がついたように聴こえ、本当にすごいと思うとともに、ゲームアプリで使えるかも？と感じました。「真面目なアニメーション」と「WebSocket, WebRTC, Socket API, ... 最新Webプロトコルの傾向と対策で迷ったもの」と当セッションでどれに行くか迷ったけど、自分的にはこれに行って正解でした。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;マニアなAPIとは&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;使ってもすごさが分からない&lt;/li&gt;
-&lt;li&gt;仕事になるかも分からない&lt;/li&gt;
-&lt;li&gt;なくなるかもしれない&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;マニアレベル1(割とモテ系)&lt;/h2&gt;
-
-&lt;h3&gt;WebRTC DTMF(Dual-Tone Multi-Frequency)&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;早い話がSkypeをWebで&lt;/li&gt;
-&lt;li&gt;映像/音声/データのP2P接続&lt;/li&gt;
-&lt;li&gt;IP電話の知識が必要(特に呼制御)&lt;/li&gt;
-&lt;li&gt;ダイヤルトーンを発信できる(自動音声応答装置の代わりになる)&lt;/li&gt;
-&lt;li&gt;電話を持たなくても、ブラウザーからコールセンターに電話できるようになるかも&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;WebAudio API PannerNode&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;音源の生成や合成
-
-&lt;ul&gt;
-&lt;li&gt;ゲーム系コンテンツにいいかも(iOSなどで複数音源の同時再生に重宝する)&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;高精度な再生タイミング&lt;/li&gt;
-&lt;li&gt;各種オーディオエフェクトやアナライザー(楽器のチューナーなど精度重視なところには向いていない)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4&gt;本格的なオーディオ信号処理&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;立体音響
-
-&lt;ul&gt;
-&lt;li&gt;PannerNode&lt;/li&gt;
-&lt;li&gt;ドップラー効果のデモすごい！(音源にドップラー効果を付けてなくてもWebAudio API通すと効果がつく)&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;Media Source Extensions&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;IEのみ？&lt;/li&gt;
-&lt;li&gt;HTTPアダプティブストリーミング配信&lt;/li&gt;
-&lt;li&gt;セグメントに分割されたビデオデータをvideo要素に流し込むだけのAPI&lt;/li&gt;
-&lt;li&gt;MPEG-DASH
-
-&lt;ul&gt;
-&lt;li&gt;HTTPベースのAdaptive Streaming&lt;/li&gt;
-&lt;li&gt;普通のウェブサーバーでも動作&lt;/li&gt;
-&lt;li&gt;XML baseのメタ情報(MPD)&lt;/li&gt;
-&lt;li&gt;プレイヤーは自分で作らないといけない&lt;/li&gt;
-&lt;li&gt;エンコーディングの知識が必要&lt;/li&gt;
-&lt;li&gt;GPAC MP4Box(セグメントファイルの自動生成)&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;Media Capture and Streams&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Chromeのみ&lt;/li&gt;
-&lt;li&gt;Windowsで実行するとOSごと死ぬらしい&lt;/li&gt;
-&lt;li&gt;デモ: スクリーンキャプチャーのなかでスクリーンキャプチャー(合わせ鏡的な)&lt;/li&gt;
-&lt;li&gt;サイネージの監視やヘルプデスクでも使えるかも&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;マニアレベル2(縁の下の力持ち)&lt;/h2&gt;
-
-&lt;h3&gt;Encoding&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;文字コードのデコード、エンコード&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;Web Cryptography API&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;データの暗号化・複合化(公開鍵方式)&lt;/li&gt;
-&lt;li&gt;使われているサイトもあるらしい&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;DOMMatrix&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;行列計算&lt;/li&gt;
-&lt;li&gt;グラフィックにおける座標変換&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;Transferable objects&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;データ転送(WebWorker的な)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;マニアレベル3(使用用途が分からない系)&lt;/h2&gt;
-
-&lt;h3&gt;Clipboard API&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;どんなものがペーストされたか分かる&lt;/li&gt;
-&lt;li&gt;Web上でやる意味 is 分からない&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;Base64 utility methods&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;エンコードとデコード&lt;/li&gt;
-&lt;li&gt;現状対応しているのはASCII文字だけ(バイナリどころか2byte系も入らない)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;マニアレベル4(モテ系になるかも)&lt;/h2&gt;
-
-&lt;h3&gt;Screen Orientation&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Firefoxのみ&lt;/li&gt;
-&lt;li&gt;オリエンテーションを固定&lt;/li&gt;
-&lt;li&gt;つまり画面固定がブラウザのみでできる&lt;/li&gt;
-&lt;li&gt;FullScreen APIを使ったときのみ使える&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;MediaStream Recoding&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Firefox Auroraのみ&lt;/li&gt;
-&lt;li&gt;録画と録音&lt;/li&gt;
-&lt;li&gt;Blobオブジェクトとして試せる&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;Web Animations 1.0&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;実装ブラウザーはない代わりにweb-animations-jsというpolyfilがある&lt;/li&gt;
-&lt;li&gt;タイムライン制御フレームワーク&lt;/li&gt;
-&lt;li&gt;連続処理と並列処理&lt;/li&gt;
-&lt;li&gt;ビデオを扱うかのごとく使える&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id="session2"&gt;実践的なモバイルHTML5テクニック&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;スピーカー: 紀平 拓男(&lt;a href="https://twitter.com/tkihira"&gt;@tkihira&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;資料: &lt;a href="http://www.slideshare.net/takuokihira/html5-conference-2013"&gt;http://www.slideshare.net/takuokihira/html5-conference-2013&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;感想: 紀平さんはインストールが嫌という主張を前からしていて、Webでいろいろ頑張っているイメージなので、日頃Webで出来るゲームアプリを提供している立場上、興味があって話を聞きにいってみましたが、かなり泥臭いことをしていることが伺えて、本当にすごいと思うとともに、この今の状況が少しでも改善されないものかと改めて思ってしまいました…少しでもAndroid 2.xのシェアが減るのと、Android 4.4(KitKat)の対応端末が増えることを祈りたいですね。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;※上に挙げている資料を見ることをおすすめいたします。下記のアウトラインメモは概要を掴みたい時にお読みください。&lt;/p&gt;
-
-&lt;h2&gt;話す内容&lt;/h2&gt;
-
-&lt;p&gt;モバイルブラウザで今できること&lt;/p&gt;
-
-&lt;h2&gt;今の状況&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;残念ながらネイティブ &amp;gt;&amp;gt;&amp;gt; Webアプリ&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;Webアプリの利点と欠点&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;遅い、互換性がない、ハードウェアに密着した処理がつらいという欠点が目立ってしまっている状況&lt;/li&gt;
-&lt;li&gt;エンジニアもあまりいない…&lt;/li&gt;
-&lt;li&gt;しかしインストール不要というメリットは大きい
-
-&lt;ul&gt;
-&lt;li&gt;ゲームをプレイして、URLをシェアするだけで友人の現在のプレイが見られる！&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;ネイティブアプリでは実現できないメリット&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;TwitterのURLや広告をタップで即座にアプリが起動される&lt;/li&gt;
-&lt;li&gt;アプリ内でURLを発行することにより、独自のシーンでアプリが起動(Google Spreadsheetがいい例)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;モバイルWebの基礎&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;PCにはブラウザがそんなにない(メジャーなので5種類くらい)&lt;/li&gt;
-&lt;li&gt;モバイルにはブラウザがもっとない(Safari, Android Legacy Browser, Android Chrome etc..., しかも全てWebkit)&lt;/li&gt;
-&lt;li&gt;対応が楽…なんて嘘！&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;Androidの互換性&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;メーカーが自社端末に合わせて最適化したAndroidを搭載
-
-&lt;ul&gt;
-&lt;li&gt;最適化の末にバグを埋め込む&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;端末の数だけ独自ブラウザがある状況&lt;/li&gt;
-&lt;li&gt;IE6より対応が大変！&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;リッチな表現の作り方&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Canvas
-
-&lt;ul&gt;
-&lt;li&gt;互換性のバグを踏みにくい&lt;/li&gt;
-&lt;li&gt;細かい最適化を自力で頑張れる&lt;/li&gt;
-&lt;li&gt;作りこむならCanvas&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;CSS(+DOM)
-
-&lt;ul&gt;
-&lt;li&gt;慣れ親しんだ形式、コードが読みやすい&lt;/li&gt;
-&lt;li&gt;ブラウザの高速化恩恵を受けられることが多い&lt;/li&gt;
-&lt;li&gt;ちょっとしたアプリならCSS&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;オンメモリCanvasの利用&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;何度も描画に利用する部分をメモリ上に退避して、それを描画に利用&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;drawImage&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;画像を描画する際、小数点の位置に描画しない
-
-&lt;ul&gt;
-&lt;li&gt;小数点の位置に描画するとアンチエイリアシングがかかる&lt;/li&gt;
-&lt;li&gt;描画のスピードが遅い&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;拡大、縮小をせずに描画する&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;new Functionによるオーバーヘッドの削減&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;同じ図形をパス(moveToやlineTo)を駆使して描画する場合に、描画用データを毎回解析せず、最初に文字列として関数を作成して、それを関数化することでオーバーヘッドを防ぐ&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;GPUを意識した高速化&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;GPUキャッシュに描画する画像が乗るように意識する
-
-&lt;ul&gt;
-&lt;li&gt;一定時間の間にブラウザに使われる画像を意識&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;CanvasはGPUキャッシュに乗ることはない。これ以上変更しないというCanvasはimg要素に変換する&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;互換性問題の解決&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;何か問題が起こったら、ブラウザを過信しない。徹底的に疑う&lt;/li&gt;
-&lt;li&gt;ブラウザの気持ちになって考える
-
-&lt;ul&gt;
-&lt;li&gt;内部でどのような処理をしているせいでこうなったか&lt;/li&gt;
-&lt;li&gt;全体からコメントアウトしていって問題箇所を発見するか、小さなサンプルを作って、最小単位で問題を探る&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;メモリの問題&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;メモリを使い過ぎない
-
-&lt;ul&gt;
-&lt;li&gt;iOSは落ちる、Androidはサボる&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;メモリリークをしない
-
-&lt;ul&gt;
-&lt;li&gt;ブラウザのガベージコレクションに回収されるよう気をつける&lt;/li&gt;
-&lt;li&gt;メモリを確認して、メモリが微増するところを突き止める&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;バッテリーの問題&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;描画する部分が大きければ大きいほどバッテリーの消費が大きくなる&lt;/li&gt;
-&lt;li&gt;描画しないところは描画系のコマンドを呼び出さないようにする&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;鉄則&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;高速化もメモリ管理も、実際のデータをもとに確認&lt;/li&gt;
-&lt;li&gt;どうしようもないこともある。非対応端末に突っ込む勇気&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;デモ&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href="http://www.mbga.jp/_game_intro?game_id=12015394"&gt;ダンジョンポッパー - Mobage（モバゲー）by DeNA&lt;/a&gt;(Canvasで頑張った例)&lt;/p&gt;
-
-&lt;h2&gt;まとめ&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;アプリでは絶対に達成できないメリットもブラウザにはありつつ、デメリットが多くある状況&lt;/li&gt;
-&lt;li&gt;HTML5らしさを出したWebアプリはほとんど出ていない(日本がモバイルHTML5が一番進んでいる)。なので今がチャンスかも&lt;/li&gt;
-&lt;li&gt;将来、ネイティブアプリからWebに置き換わるのはほぼ確実&lt;/li&gt;
-&lt;li&gt;HTML5のメリットをフル活用して、欠点の少ないアプリを簡単に作れるようになったら世界を制すことができる&lt;/li&gt;
 &lt;/ul&gt;
 </content>
   </entry>
