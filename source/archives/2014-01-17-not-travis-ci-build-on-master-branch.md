@@ -1,5 +1,5 @@
 ---
-title: masterブランチへの自動コミット時にTravisCIにbuildさせない
+title: masterブランチへの自動コミット時にTravis CIにbuildさせないようにする設定
 date: 2014-01-17 11:00 JST
 tags:
   - TravisCI
@@ -9,9 +9,9 @@ tags:
 
 とある事情により、このブログのリポジトリを[Organizationアカウント](https://github.com/o2project/o2project.github.io)のほうに移行しました。
 
-GitHub PagesのuserやOrganizationページは、masterブランチに内容をpushする必要があるため、developというブランチを作成し、TravisCI側でビルドした後masterにcommitするようにしました。
+GitHub PagesのuserやOrganizationページは、masterブランチに内容をpushする必要があるため、developというブランチを作成し、Travis CI側でビルドした後masterにcommitするようにしました。
 
-しかし、masterへの自動commitをTravisCIがした時に、そのcommitにもTravisCIが反応する事態となってしまいました。
+しかし、masterへの自動commitをTravis CIがした時に、そのcommitにもTravis CIが反応する事態となってしまいました。
 
 そして開発者曰く、その挙動は抑止できないということです。
 
@@ -19,6 +19,10 @@ GitHub PagesのuserやOrganizationページは、masterブランチに内容をp
 
 しかし、問題解決できないのかというと、回避する方法はあり、それがコミットメッセージに`[ci skip]`を含めるというものです。
 
-具体的には[こんな感じ](https://github.com/o2project/o2project.github.io/commit/c2de72f5a08ac2c8cc45780ce11ccd027e5a6974)です。
+```
+git commit -m '[ci skip] Update by Travis CI
+```
+
+具体的には[こんな感じ](https://github.com/o2project/o2project.github.io/blob/c2de72f5a08ac2c8cc45780ce11ccd027e5a6974/Rakefile#L46)です。
 
 教えてくださった[@yo_waka](https://twitter.com/yo_waka)には感謝です。
