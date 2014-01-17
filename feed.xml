@@ -5,10 +5,38 @@
   <id>http://tech.o2p.jp/</id>
   <link href="http://tech.o2p.jp/"/>
   <link href="http://tech.o2p.jp/feed" rel="self"/>
-  <updated>2014-01-11T15:30:00Z</updated>
+  <updated>2014-01-17T02:00:00Z</updated>
   <author>
     <name>kubosho_</name>
   </author>
+  <entry>
+    <title>masterブランチへの自動コミット時にTravisCIにbuildさせない</title>
+    <link rel="alternate" href="/2014/01/17/not-travis-ci-build-on-master-branch.html"/>
+    <id>/2014/01/17/not-travis-ci-build-on-master-branch.html</id>
+    <published>2014-01-17T02:00:00Z</published>
+    <updated>2014-01-17T02:00:00Z</updated>
+    <author>
+      <name>kubosho_</name>
+    </author>
+    <content type="html">&lt;h2&gt;はじめに&lt;/h2&gt;
+
+&lt;p&gt;とある事情により、このブログのリポジトリを&lt;a href="https://github.com/o2project/o2project.github.io"&gt;Organizationアカウント&lt;/a&gt;のほうに移行しました。&lt;/p&gt;
+
+&lt;p&gt;GitHub PagesのuserやOrganizationページは、masterブランチに内容をpushする必要があるため、developというブランチを作成し、TravisCI側でビルドした後masterにcommitするようにしました。&lt;/p&gt;
+
+&lt;p&gt;しかし、masterへの自動commitをTravisCIがした時に、そのcommitにもTravisCIが反応する事態となってしまいました。&lt;/p&gt;
+
+&lt;p&gt;そして開発者曰く、その挙動は抑止できないということです。&lt;/p&gt;
+
+&lt;blockquote class="twitter-tweet" lang="ja"&gt;&lt;p&gt;&lt;a href="https://twitter.com/kubosho_"&gt;@kubosho_&lt;/a&gt; 今のところその挙動は抑止できません。申し訳ありません。問題自体は熟知していますので出来るだけ早いうちに修正したいとは考えています。&lt;/p&gt;&amp;mdash; あさり (@hiro_asari) &lt;a href="https://twitter.com/hiro_asari/statuses/418587151748845569"&gt;2014, 1月 2&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;しかし、問題解決できないのかというと、回避する方法はあり、それがコミットメッセージに&lt;code&gt;[ci skip]&lt;/code&gt;を含めるというものです。&lt;/p&gt;
+
+&lt;p&gt;具体的には&lt;a href="https://github.com/o2project/o2project.github.io/commit/c2de72f5a08ac2c8cc45780ce11ccd027e5a6974"&gt;こんな感じ&lt;/a&gt;です。&lt;/p&gt;
+
+&lt;p&gt;教えてくださった&lt;a href="https://twitter.com/yo_waka"&gt;@yo_waka&lt;/a&gt;には感謝です。&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>胸をBEMで例えるとどうなるか？</title>
     <link rel="alternate" href="/2014/01/12/oppai.html"/>
@@ -63,34 +91,6 @@
 &lt;p&gt;今回、胸をマークアップしてみましたが、胸に関して言えば状態の数がかなりあると思います(例えば乳輪の色とか乳首の形とか)。&lt;/p&gt;
 
 &lt;p&gt;そうなるとModifierの管理が大変そうな感じがしますが、そこは運用していって最適な形にするのがいいのかなと思います。&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>masterブランチへの自動コミット時にTravisCIにbuildさせない</title>
-    <link rel="alternate" href="/2014/01/03/not-travis-ci-build-on-master-branch.html"/>
-    <id>/2014/01/03/not-travis-ci-build-on-master-branch.html</id>
-    <published>2014-01-03T08:50:00Z</published>
-    <updated>2014-01-03T08:50:00Z</updated>
-    <author>
-      <name>kubosho_</name>
-    </author>
-    <content type="html">&lt;h2&gt;はじめに&lt;/h2&gt;
-
-&lt;p&gt;とある事情により、このブログのリポジトリを&lt;a href="https://github.com/o2project/o2project.github.io"&gt;Organizationアカウント&lt;/a&gt;のほうに移行しました。&lt;/p&gt;
-
-&lt;p&gt;GitHub PagesのuserやOrganizationページは、masterブランチに内容をpushする必要があるため、developというブランチを作成し、TravisCI側でビルドした後masterにcommitするようにしました。&lt;/p&gt;
-
-&lt;p&gt;しかし、masterへの自動commitをTravisCIがした時に、そのcommitにもTravisCIが反応する事態となってしまいました。&lt;/p&gt;
-
-&lt;p&gt;そして開発者曰く、その挙動は抑止できないということです。&lt;/p&gt;
-
-&lt;blockquote class="twitter-tweet" lang="ja"&gt;&lt;p&gt;&lt;a href="https://twitter.com/kubosho_"&gt;@kubosho_&lt;/a&gt; 今のところその挙動は抑止できません。申し訳ありません。問題自体は熟知していますので出来るだけ早いうちに修正したいとは考えています。&lt;/p&gt;&amp;mdash; あさり (@hiro_asari) &lt;a href="https://twitter.com/hiro_asari/statuses/418587151748845569"&gt;2014, 1月 2&lt;/a&gt;&lt;/blockquote&gt;
-
-&lt;p&gt;しかし、問題解決できないのかというと、回避する方法はあり、それがコミットメッセージに&lt;code&gt;[ci skip]&lt;/code&gt;を含めるというものです。&lt;/p&gt;
-
-&lt;p&gt;具体的には&lt;a href="https://github.com/o2project/o2project.github.io/commit/c2de72f5a08ac2c8cc45780ce11ccd027e5a6974"&gt;こんな感じ&lt;/a&gt;です。&lt;/p&gt;
-
-&lt;p&gt;教えてくださった&lt;a href="https://twitter.com/yo_waka"&gt;@yo_waka&lt;/a&gt;には感謝です。&lt;/p&gt;
 </content>
   </entry>
   <entry>
