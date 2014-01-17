@@ -1,6 +1,6 @@
 ---
 title: masterブランチへの自動コミット時にTravisCIにbuildさせない
-date: 2014-01-03 17:50 JST
+date: 2014-01-17 11:00 JST
 tags:
   - TravisCI
 ---
