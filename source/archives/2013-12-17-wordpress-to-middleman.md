@@ -10,7 +10,7 @@ tags:
 
 かつて、[WordPressでブログを運営](http://inputxoutput.com/)していましたが、[GitHub Pages](http://pages.github.com/)+[Middleman](http://middlemanapp.com/)([日本語](http://middlemanjp.github.io/))+[Travis CI](https://travis-ci.org/)に移行してみたら捗るようになったので、その移行話を書いてみます。
 
-([ちなみに移行先のリポジトリはこれです](https://github.com/kubosho/blog.o2p.jp))
+([ちなみに移行先のリポジトリはこれです](https://github.com/o2project/o2project.github.io))
 
 ## なぜ移行したか
 
