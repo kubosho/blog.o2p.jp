@@ -233,7 +233,7 @@
 
 &lt;p&gt;かつて、&lt;a href="http://inputxoutput.com/"&gt;WordPressでブログを運営&lt;/a&gt;していましたが、&lt;a href="http://pages.github.com/"&gt;GitHub Pages&lt;/a&gt;+&lt;a href="http://middlemanapp.com/"&gt;Middleman&lt;/a&gt;(&lt;a href="http://middlemanjp.github.io/"&gt;日本語&lt;/a&gt;)+&lt;a href="https://travis-ci.org/"&gt;Travis CI&lt;/a&gt;に移行してみたら捗るようになったので、その移行話を書いてみます。&lt;/p&gt;
 
-&lt;p&gt;(&lt;a href="https://github.com/kubosho/blog.o2p.jp"&gt;ちなみに移行先のリポジトリはこれです&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;(&lt;a href="https://github.com/o2project/o2project.github.io"&gt;ちなみに移行先のリポジトリはこれです&lt;/a&gt;)&lt;/p&gt;
 
 &lt;h2&gt;なぜ移行したか&lt;/h2&gt;
 
