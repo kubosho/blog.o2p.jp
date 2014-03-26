@@ -3,22 +3,22 @@
   javascript:
     (function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));
 
-  article.mod-entry
-    header
+  article.entry
+    header.entry_header
       time datetime="#{current_article.date.strftime('%c')}"
         | #{current_article.date.strftime('%Y/%m/%d')}
-      h1
+      h1.entry_title
         = current_article.title
-      ul.share
-        li
+      ul.entry_shares
+        li.entry_share
           a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"
-    div.body
+    div.entry_body
       == yield
 
-  ul.share
-    li
+  ul.entry_shares
+    li.entry_share
       a href="https://twitter.com/share" class="twitter-share-button" data-via="kubosho_" data-lang="ja" data-related="kubosho_" Tweet
-    li
+    li.entry_share
       div class="fb-like" data-layout="button_count" data-action="recommend" data-show-faces="false" data-share="false"
 
   div#disqus_thread

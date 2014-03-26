@@ -57,12 +57,12 @@ html lang="ja"
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
       ga('create', 'UA-25380313-3', 'o2p.jp');
       ga('send', 'pageview');
-    header.mod-header[role="banner"]
+    header.global-header[role="banner"]
       h1
         a[href="/"] #{data.site.title}
-    div.mod-main[role="main"]
+    div.global-contents[role="main"]
       == yield
-    footer.mod-footer[role="contentinfo"]
+    footer.global-footer[role="contentinfo"]
       div.profile
         p このブログは、日々気づいた・ハマったことを書き残すブログです。Webフロントエンドの話題が主になると思います。
         p 記事の内容には間違いがないようにしますが、間違っている時は間違っている旨を教えていただければ幸いです。
