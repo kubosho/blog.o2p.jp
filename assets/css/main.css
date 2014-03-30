@@ -1,1 +1,136 @@
-html,button,input,select,textarea{color:#393939}html{font-size:62.5%}body{font-size:16px;font-size:1.6rem;font-family:"Lucida Grande","Hiragino Kaku Gothic ProN",Meiryo,"Droid Sans",sans-serif;line-height:1.4;background-color:#ececec}::-moz-selection{background:#b3d4fc;text-shadow:none}::selection{background:#b3d4fc;text-shadow:none}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}img{vertical-align:middle}fieldset{border:0;margin:0;padding:0}textarea{resize:vertical}.chromeframe{margin:0.2em 0;background:#ccc;color:#000;padding:0.2em 0}a:link{color:#3946eb}blockquote{border-left:5px solid #ccc;margin-right:0;margin-left:0;padding-left:20px}p{margin:1.5em 0}.mod-header,.mod-main,.mod-footer{-moz-box-sizing:border-box;box-sizing:border-box;min-width:320px;max-width:960px;margin:0 auto;padding:0 1em}.mod-header{padding:0}.mod-header h1 a{padding:10px;background:#003760;color:#fcfdfb;font-size:20px;font-size:2rem;font-weight:normal;text-decoration:none}.mod-main{position:relative;border:1px solid #e1e1e1;padding-top:1px;padding-bottom:1px;background:#fcfdfb}article h1{font-size:24px;font-size:2.4rem;font-weight:normal}.mod-entries{border-bottom:1px solid #ccc;padding-top:16px}.mod-entries h1{margin:5px 0 16px;word-break:break-all}.mod-entry time{display:inline-block;margin:16px 0 6px;color:#666;font-size:14px;font-size:1.4rem}.mod-entry h1{margin:0 0 4px;font-size:32px;font-size:3.2rem;word-break:break-all}.mod-entry li{word-break:break-all}.mod-entry .body img{max-width:100%}.paginate,.back-to-top{list-style:none;margin:0;padding-left:0}.paginate a,.back-to-top a{display:block;margin-top:0;border-top:1px solid #030303;padding:10px;text-align:center}.feed{margin:1em 0;text-align:center}.profile{margin-top:1.5em}.profile p{margin:0}.copyright{text-align:center}.lineno{padding:0 10px;border-right:1px solid #ccc;color:#393939;text-align:right}.code{padding:0 10px}.highlight{border:1px solid #ccc}.share{border-top:1px solid #ccc;border-bottom:1px solid #ccc;padding-left:0}.share li{list-style:none;display:inline-block;padding:10px 0}.mod-entry header .share{margin-bottom:0}.ir{background-color:transparent;border:0;overflow:hidden;*text-indent:-9999px}.ir:before{content:"";display:block;width:0;height:100%}.hidden{display:none !important;visibility:hidden}.visuallyhidden{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.visuallyhidden.focusable:active,.visuallyhidden.focusable:focus{clip:auto;height:auto;margin:0;overflow:visible;position:static;width:auto}.invisible{visibility:hidden}.clearfix:before,.clearfix:after{content:" ";display:table}.clearfix:after{clear:both}.clearfix{*zoom:1}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a,a:visited{text-decoration:underline}a[href]:after{content:" (" attr(href) ")"}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}p,h2,h3{orphans:3;widows:3}h2,h3{page-break-after:avoid}}
+/* HTML5 Boilerplate  What follows is the result of much research on cross-browser styling. Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal, Kroc Camen, and the H5BP dev community and team. */
+/* ========================================================================== Base styles: opinionated defaults ========================================================================== */
+/* Remove text-shadow in selection highlight: h5bp.com/i These selection declarations have to be separate. Customize the background color to match your design. */
+/* line 24, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+::-moz-selection { background: #b3d4fc; text-shadow: none; }
+
+/* line 29, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+::selection { background: #b3d4fc; text-shadow: none; }
+
+/* A better looking default horizontal rule */
+/* line 38, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #cccccc; margin: 1em 0; padding: 0; }
+
+/* Remove the gap between images and the bottom of their containers: h5bp.com/i/440 */
+/* line 51, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+img { vertical-align: middle; }
+
+/* Remove default fieldset styles. */
+/* line 59, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+fieldset { border: 0; margin: 0; padding: 0; }
+
+/* Allow only vertical resizing of textareas. */
+/* line 69, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+textarea { resize: vertical; }
+
+/* ========================================================================== Author's custom styles ========================================================================== */
+/* line 76, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+html, button, input, select, textarea { color: #393939; }
+
+/* line 83, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+html { font-size: 62.5%; }
+
+/* line 86, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+body { margin: 0 auto; max-width: 60em; background: #ececec; font-size: 16px; font-size: 1.6rem; font-family: "Lucida Grande", "Hiragino Kaku Gothic ProN", Meiryo, "Droid Sans", sans-serif; line-height: 1.4; }
+
+/* line 96, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+a:link { color: #3946eb; }
+
+/* line 99, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+blockquote { border-left: 5px solid #cccccc; margin-right: 0; margin-left: 0; padding-left: 20px; }
+
+/* line 105, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+p { margin: 1.5em 0; }
+
+/* Global header */
+/* line 112, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+.logo { font-size: 36px; font-size: 3.6rem; font-weight: normal; }
+/* line 117, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+.logo a { color: #003760; text-decoration: none; }
+
+/* Entries */
+/* line 124, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+.entries_entry { display: flex; align-items: center; margin-bottom: 20px; }
+/* line 129, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+.entries_entry:last-child { margin: 0; }
+
+/* line 132, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+.entries_entry_time { padding-right: 10px; }
+
+/* line 135, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+.entries_entry_title { margin: 0; }
+
+/* Entry */
+/* line 142, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+.entry_title { font-size: 24px; font-size: 2.4rem; font-weight: normal; }
+
+/* Code */
+/* line 151, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+.code { padding: 0 10px; }
+
+/* line 154, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+.highlight { padding: 10px; border: 1px solid #cccccc; }
+
+/* ========================================================================== Helper classes ========================================================================== */
+/* Image replacement */
+/* line 166, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+.ir { background-color: transparent; border: 0; overflow: hidden; /* IE 6/7 fallback */ *text-indent: -9999px; }
+
+/* line 174, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+.ir:before { content: ""; display: block; width: 0; height: 100%; }
+
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+/* line 185, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+.hidden { display: none !important; visibility: hidden; }
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+/* line 194, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+/* line 210, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+/* Hide visually and from screenreaders, but maintain layout */
+/* line 224, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+.invisible { visibility: hidden; }
+
+/* Clearfix: contain floats  For modern browsers 1. The space content is one way to avoid an Opera bug when the `contenteditable` attribute is included anywhere else in the document. Otherwise it causes space to appear at the top and bottom of elements that receive the `clearfix` class. 2. The use of `table` rather than `block` is only necessary if using `:before` to contain the top-margins of child elements. */
+/* line 240, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+
+/* line 246, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+.clearfix:after { clear: both; }
+
+/* For IE 6/7 only Include this rule to trigger hasLayout and contain floats. */
+/* line 255, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+.clearfix { *zoom: 1; }
+
+/* ========================================================================== EXAMPLE Media Queries for Responsive Design. Theses examples override the primary ('mobile first') styles. Modify as content requires. ========================================================================== */
+@media only screen and (max-width: 60em) { /* line 266, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+  .entries_entry { display: block; } }
+/* Style adjustments for high resolution devices */
+/* ========================================================================== Print styles. Inlined to avoid required HTTP connection: h5bp.com/r ========================================================================== */
+@media print { /* line 280, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+  * { background: transparent !important; color: black !important; box-shadow: none !important; text-shadow: none !important; }
+  /* line 287, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+  a, a:visited { text-decoration: underline; }
+  /* line 292, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+  a[href]:after { content: " (" attr(href) ")"; }
+  /* line 296, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  /* Don't show links for images, or javascript/internal links */
+  /* line 304, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
+  /* line 310, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+  pre, blockquote { border: 1px solid #999999; page-break-inside: avoid; }
+  /* line 316, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+  thead { display: table-header-group; }
+  /* line 320, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+  tr, img { page-break-inside: avoid; }
+  /* line 325, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+  img { max-width: 100% !important; }
+  /* line 328, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+  p, h2, h3 { orphans: 3; widows: 3; }
+  /* line 335, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+  h2, h3 { page-break-after: avoid; } }

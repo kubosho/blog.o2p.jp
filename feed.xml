@@ -29,8 +29,9 @@
 &lt;blockquote class="twitter-tweet" lang="ja"&gt;&lt;p&gt;&lt;a href="https://twitter.com/kubosho_"&gt;@kubosho_&lt;/a&gt; 今のところその挙動は抑止できません。申し訳ありません。問題自体は熟知していますので出来るだけ早いうちに修正したいとは考えています。&lt;/p&gt;&amp;mdash; あさり (@hiro_asari) &lt;a href="https://twitter.com/hiro_asari/statuses/418587151748845569"&gt;2014, 1月 2&lt;/a&gt;&lt;/blockquote&gt;
 
 &lt;p&gt;しかし、問題解決できないのかというと、回避する方法はあり、それがコミットメッセージに&lt;code&gt;[ci skip]&lt;/code&gt;を含めるというものです。&lt;/p&gt;
-&lt;pre class="highlight text"&gt;git commit -m '[ci skip] Update by Travis CI
+&lt;pre class="highlight plaintext"&gt;git commit -m '[ci skip] Update by Travis CI
 &lt;/pre&gt;
+
 &lt;p&gt;具体的には&lt;a href="https://github.com/o2project/o2project.github.io/blob/c2de72f5a08ac2c8cc45780ce11ccd027e5a6974/Rakefile#L46"&gt;こんな感じ&lt;/a&gt;です。&lt;/p&gt;
 
 &lt;p&gt;教えてくださった&lt;a href="https://twitter.com/yo_waka"&gt;@yo_waka&lt;/a&gt;には感謝です。&lt;/p&gt;
@@ -70,21 +71,22 @@
 &lt;p&gt;ただ、上のことを踏まえて胸をマークアップするなら以下のような感じになるのではないでしょうか(なおルールは&lt;a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/"&gt;MindBEMding&lt;/a&gt;に沿っています)。&lt;/p&gt;
 
 &lt;h3&gt;サンプルコード&lt;/h3&gt;
-&lt;pre class="highlight html"&gt;&lt;span class="nt"&gt;&amp;lt;main&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;body&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;breast&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
-        &lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;breast--left&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
-            &lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;breast--left__areola&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
-                &lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;breast--left__nipple&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;pre class="highlight html"&gt;&lt;span class="nt"&gt;&amp;lt;main&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;"body"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;"breast"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;"breast--left"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;"breast--left__areola"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+                &lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;"breast--left__nipple"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
             &lt;span class="nt"&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
         &lt;span class="nt"&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-        &lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;breast--right&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
-            &lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;breast--right__areola&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
-                &lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;breast--right__nipple&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;"breast--right"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;"breast--right__areola"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+                &lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;"breast--right__nipple"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
             &lt;span class="nt"&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
         &lt;span class="nt"&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
     &lt;span class="nt"&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
 &lt;span class="nt"&gt;&amp;lt;/main&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;
+
 &lt;h3&gt;終わりに&lt;/h3&gt;
 
 &lt;p&gt;今回、胸をマークアップしてみましたが、胸に関して言えば状態の数がかなりあると思います(例えば乳輪の色とか乳首の形とか)。&lt;/p&gt;
@@ -128,11 +130,12 @@
 &lt;p&gt;その後、&lt;q&gt;Is this ok? (yes)&lt;/q&gt;と聞かれるのでOKならそのままEnterを押してしまいましょう。&lt;/p&gt;
 
 &lt;p&gt;今回は自動生成されたpackage.jsonにKarmaのために以下の記述を追加しています。具体例は&lt;a href="https://github.com/kubosho/jquery-gameText/blob/master/package.json"&gt;jquery-gameText/package.json at master · kubosho/jquery-gameText&lt;/a&gt;になります。&lt;/p&gt;
-&lt;pre class="highlight json"&gt;&lt;span class="s2"&gt;&amp;quot;devDependencies&amp;quot;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
-  &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;karma&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;~0.10&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
-  &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;karma-mocha&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;~0.1&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;pre class="highlight json"&gt;&lt;span class="s2"&gt;"devDependencies"&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="s2"&gt;"karma"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"~0.10"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="s2"&gt;"karma-mocha"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"~0.1"&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/pre&gt;
+
 &lt;h2&gt;Karmaの設定&lt;/h2&gt;
 
 &lt;p&gt;KarmaのReadmeに書かれているように、&lt;code&gt;karma init&lt;/code&gt;を実行すると以下のことを聞かれます。デフォルト値が設定されている質問についてはだいたいそのままで大丈夫だと思います。&lt;/p&gt;
@@ -279,6 +282,7 @@
 &lt;pre class="highlight ruby"&gt;&lt;span class="n"&gt;set&lt;/span&gt; &lt;span class="ss"&gt;:markdown&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;:layout_engine&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="ss"&gt;:slim&lt;/span&gt;
 &lt;span class="n"&gt;set&lt;/span&gt; &lt;span class="ss"&gt;:blog_layout_engine&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;:slim&lt;/span&gt;
 &lt;/pre&gt;
+
 &lt;h2&gt;URLにyyyy/mm/ddの形式で年月日を含めるようにした&lt;/h2&gt;
 
 &lt;p&gt;Middleman固有の話ではないのですが、URLに年月日を含めるようにしました。というのもこのブログで扱うのがWebの技術に関することという以上、更新しない限り情報は古くなります。&lt;/p&gt;
@@ -319,6 +323,7 @@
     &lt;span class="nl"&gt;background&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="no"&gt;yellow&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;
+
 &lt;h2&gt;:past, :future&lt;/h2&gt;
 
 &lt;p&gt;:past, :futureについては、現在の再生位置を元に過去や未来を示す擬似クラスで、WebVTTでも定義されているようですが、それ以上は分からないです。&lt;/p&gt;

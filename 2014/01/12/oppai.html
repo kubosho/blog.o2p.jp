@@ -7,7 +7,7 @@ if (document.cookie.indexOf(gaOptOutProperty + '=true') > -1) {
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 ga('create', 'UA-25380313-3', 'o2p.jp');
-ga('send', 'pageview');</script><header class="mod-header" role="banner"><h1><a href="/">blog.o2p.jp</a></h1></header><div class="mod-main" role="main"><div id="fb-root"></div><script type="text/javascript">(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script><article class="mod-entry"><header><time datetime="Sun Jan 12 00:30:00 2014">2014/01/12</time><h1>胸をBEMで例えるとどうなるか？</h1><ul class="share"><li><a class="pocket-btn" data-lang="en" data-pocket-count="horizontal" data-pocket-label="pocket"></a></li></ul></header><div class="body"><p><a href="https://www.facebook.com/events/1446181535605105/">第二回Web屋乳談義 〜新年だよ( ﾟ∀ﾟ)o彡°おっぱいおっぱい〜</a>という新年会に参加してきました。</p>
+ga('send', 'pageview');</script><header role="banner"><h1 class="logo"><a href="/">blog.o2p.jp</a></h1></header><main role="main"><div id="fb-root"></div><script type="text/javascript">(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script><article class="entry"><header class="entry_header"><time class="entry_time" datetime="Sun Jan 12 00:30:00 2014">2014/01/12</time><h1 class="entry_title">胸をBEMで例えるとどうなるか？</h1><ul class="entry_shares"><li class="entry_share"><a class="pocket-btn" data-lang="en" data-pocket-count="horizontal" data-pocket-label="pocket"></a></li></ul></header><div class="entry_body"><p><a href="https://www.facebook.com/events/1446181535605105/">第二回Web屋乳談義 〜新年だよ( ﾟ∀ﾟ)o彡°おっぱいおっぱい〜</a>という新年会に参加してきました。</p>
 
 <p>そこで、最近流行りのBEMで胸を表現する話を皆でして面白かったので酒の勢いを借りて公開しようと思います。</p>
 
@@ -32,27 +32,28 @@ ga('send', 'pageview');</script><header class="mod-header" role="banner"><h1><a 
 <p>ただ、上のことを踏まえて胸をマークアップするなら以下のような感じになるのではないでしょうか(なおルールは<a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">MindBEMding</a>に沿っています)。</p>
 
 <h3>サンプルコード</h3>
-<pre class="highlight html"><span class="nt">&lt;main</span> <span class="na">class=</span><span class="s">&quot;body&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;breast&quot;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;breast--left&quot;</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;breast--left__areola&quot;</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;breast--left__nipple&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+<pre class="highlight html"><span class="nt">&lt;main</span> <span class="na">class=</span><span class="s">"body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"breast"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"breast--left"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"breast--left__areola"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"breast--left__nipple"</span><span class="nt">&gt;&lt;/div&gt;</span>
             <span class="nt">&lt;/div&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;breast--right&quot;</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;breast--right__areola&quot;</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;breast--right__nipple&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"breast--right"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"breast--right__areola"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"breast--right__nipple"</span><span class="nt">&gt;&lt;/div&gt;</span>
             <span class="nt">&lt;/div&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/main&gt;</span>
 </pre>
+
 <h3>終わりに</h3>
 
 <p>今回、胸をマークアップしてみましたが、胸に関して言えば状態の数がかなりあると思います(例えば乳輪の色とか乳首の形とか)。</p>
 
 <p>そうなるとModifierの管理が大変そうな感じがしますが、そこは運用していって最適な形にするのがいいのかなと思います。</p>
-</div></article><ul class="share"><li><a class="twitter-share-button" data-lang="ja" data-related="kubosho_" data-via="kubosho_" href="https://twitter.com/share">Tweet</a></li><li><div class="fb-like" data-action="recommend" data-layout="button_count" data-share="false" data-show-faces="false"></div></li></ul><div id="disqus_thread"></div><p class="back-to-top"><a href="/">トップページへ戻る</a></p><script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script><script type="text/javascript">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script><script type="text/javascript">/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+</div></article><ul class="entry_shares"><li class="entry_share"><a class="twitter-share-button" data-lang="ja" data-related="kubosho_" data-via="kubosho_" href="https://twitter.com/share">Tweet</a></li><li class="entry_share"><div class="fb-like" data-action="recommend" data-layout="button_count" data-share="false" data-show-faces="false"></div></li></ul><div id="disqus_thread"></div><p class="back-to-top"><a href="/">トップページへ戻る</a></p><script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script><script type="text/javascript">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script><script type="text/javascript">/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
 var disqus_shortname = 'techo2pjp'; // required: replace example with your forum shortname
 
 /* * * DON'T EDIT BELOW THIS LINE * * */
@@ -61,4 +62,4 @@ var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.as
 dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 })();</script><noscript><a href="http://disqus.com/?ref_noscript">Disqus</a>提供のコメント機能を有効にするためにJavaScriptを有効にしてください。<br>
-<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a></noscript></div><footer class="mod-footer" role="contentinfo"><div class="profile"><p>このブログは、日々気づいた・ハマったことを書き残すブログです。Webフロントエンドの話題が主になると思います。</p><p>記事の内容には間違いがないようにしますが、間違っている時は間違っている旨を教えていただければ幸いです。</p></div><div class="feed"><a href='http://cloud.feedly.com/#subscription%2Ffeed%2Fhttp%3A%2F%2Fblog.o2p.jp%2Ffeed'  target='blank'><img id='feedlyFollow' src='http://s3.feedly.com/img/follows/feedly-follow-rectangle-flat-big_2x.png' alt='follow us in feedly' width='131' height='56'></a></div><p class="copyright"><small>© 2013-2014 <a href="https://twitter.com/kubosho_">kubosho_</a></small></p></footer></body></html>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a></noscript></main><footer role="contentinfo"><div class="profile"><p>このブログは、日々気づいた・ハマったことを書き残すブログです。Webフロントエンドの話題が主になると思います。</p><p>記事の内容には間違いがないようにしますが、間違っている時は間違っている旨を教えていただければ幸いです。</p></div><div class="feed"><a href='http://cloud.feedly.com/#subscription%2Ffeed%2Fhttp%3A%2F%2Fblog.o2p.jp%2Ffeed'  target='blank'><img id='feedlyFollow' src='http://s3.feedly.com/img/follows/feedly-follow-rectangle-flat-big_2x.png' alt='follow us in feedly' width='131' height='56'></a></div><p class="copyright"><small>© 2013-2014 <a href="https://twitter.com/kubosho_">kubosho_</a></small></p></footer></body></html>
