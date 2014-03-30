@@ -5,7 +5,7 @@
 
   article.entry
     header.entry_header
-      time datetime="#{current_article.date.strftime('%c')}"
+      time.entry_time datetime="#{current_article.date.strftime('%c')}"
         | #{current_article.date.strftime('%Y/%m/%d')}
       h1.entry_title
         = current_article.title
