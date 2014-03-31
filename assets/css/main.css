@@ -27,125 +27,127 @@ textarea { resize: vertical; }
 /* line 75, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 html, button, input, select, textarea { color: #393939; }
 
-/* line 82, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+/* line 83, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 html { font-size: 62.5%; }
 
-/* line 85, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+/* line 87, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 body { margin: 0 auto; max-width: 60em; background: #ececec; font-size: 16px; font-size: 1.6rem; font-family: "Lucida Grande", "Hiragino Kaku Gothic ProN", Meiryo, "Droid Sans", sans-serif; line-height: 1.4; }
 
-/* line 94, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
-a { text-decoration: none; }
 /* line 97, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+a { text-decoration: none; }
+/* line 100, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 a:link { color: #3946eb; }
-/* line 99, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+/* line 102, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 a:visited { color: #003760; }
-/* line 101, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+/* line 104, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 a:hover { color: #0074d9; text-decoration: underline; }
 
-/* line 105, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+@media only screen and (max-width: 60em) { /* line 109, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+  a { text-decoration: underline; } }
+/* line 113, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 blockquote { border-left: 5px solid #cccccc; margin-right: 0; margin-left: 0; padding-left: 20px; }
 
-/* line 111, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+/* line 120, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 p { margin: 1.5em 0; }
 
 /* Global header */
-/* line 118, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+/* line 128, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 .logo { font-size: 36px; font-size: 3.6rem; font-weight: normal; }
-/* line 123, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+/* line 133, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 .logo a { color: #003760; text-decoration: none; }
 
 /* Entries */
-/* line 131, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+/* line 142, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 .entries_entry { display: flex; align-items: center; margin-bottom: 20px; }
-/* line 136, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+/* line 147, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 .entries_entry:last-child { margin: 0; }
 
-/* line 139, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+@media only screen and (max-width: 60em) { /* line 151, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+  .entries_entry { display: block; border: solid #cccccc; border-width: 1px 0 0; margin-bottom: 0; padding: 10px 0; }
+  /* line 158, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+  .entries_entry:last-child { border-bottom-width: 1px; } }
+/* line 162, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 .entries_entry_time { padding-right: 10px; }
 
-/* line 142, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+@media only screen and (min-width: 60em) { /* line 166, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+  .entries_entry_time { min-width: 6em; } }
+/* line 170, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 .entries_entry_title { margin: 0; }
 
 /* Pagination */
-/* line 149, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
-.entries-paginate { list-style: none; margin: 40px auto 0; padding: 0; text-align: center; }
+/* line 178, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+.entries-paginate { list-style: none; margin: 20px auto 0; padding: 0; text-align: center; }
 
-/* line 157, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+/* line 187, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 .entries-paginate_prev a, .entries-paginate_next a { display: inline-block; padding: 5px 10px; background: #003760; color: #f9f9f9; text-decoration: none; }
 
 /* Entry */
-/* line 168, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+/* line 199, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 .entry_title { font-size: 24px; font-size: 2.4rem; font-weight: normal; }
 
 /* Code */
-/* line 177, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+/* line 209, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 .code { padding: 0 10px; }
 
-/* line 180, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+/* line 213, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 .highlight { padding: 10px; border: 1px solid #cccccc; }
 
 /* ========================================================================== Helper classes ========================================================================== */
 /* Image replacement */
-/* line 192, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+/* line 226, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 .ir { background-color: transparent; border: 0; overflow: hidden; /* IE 6/7 fallback */ *text-indent: -9999px; }
 
-/* line 200, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+/* line 234, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 .ir:before { content: ""; display: block; width: 0; height: 100%; }
 
 /* Hide from both screenreaders and browsers: h5bp.com/u */
-/* line 211, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+/* line 245, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 .hidden { display: none !important; visibility: hidden; }
 
 /* Hide only visually, but have it available for screenreaders: h5bp.com/v */
-/* line 220, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+/* line 254, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 .visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
 
 /* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
-/* line 236, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+/* line 270, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
 
 /* Hide visually and from screenreaders, but maintain layout */
-/* line 250, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+/* line 284, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 .invisible { visibility: hidden; }
 
 /* Clearfix: contain floats  For modern browsers 1. The space content is one way to avoid an Opera bug when the `contenteditable` attribute is included anywhere else in the document. Otherwise it causes space to appear at the top and bottom of elements that receive the `clearfix` class. 2. The use of `table` rather than `block` is only necessary if using `:before` to contain the top-margins of child elements. */
-/* line 266, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+/* line 300, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 .clearfix:before, .clearfix:after { content: " "; display: table; }
 
-/* line 272, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+/* line 306, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 .clearfix:after { clear: both; }
 
 /* For IE 6/7 only Include this rule to trigger hasLayout and contain floats. */
-/* line 281, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+/* line 315, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 .clearfix { *zoom: 1; }
 
-/* ========================================================================== EXAMPLE Media Queries for Responsive Design. Theses examples override the primary ('mobile first') styles. Modify as content requires. ========================================================================== */
-@media only screen and (min-width: 60em) { /* line 292, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
-  .entries_entry_time { min-width: 6em; } }
-@media only screen and (max-width: 60em) { /* line 296, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
-  .entries_entry { display: block; } }
-/* Style adjustments for high resolution devices */
 /* ========================================================================== Print styles. Inlined to avoid required HTTP connection: h5bp.com/r ========================================================================== */
-@media print { /* line 310, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+@media print { /* line 324, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
   * { background: transparent !important; color: black !important; box-shadow: none !important; text-shadow: none !important; }
-  /* line 317, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+  /* line 331, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
   a, a:visited { text-decoration: underline; }
-  /* line 322, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+  /* line 336, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
   a[href]:after { content: " (" attr(href) ")"; }
-  /* line 326, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+  /* line 340, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
   abbr[title]:after { content: " (" attr(title) ")"; }
   /* Don't show links for images, or javascript/internal links */
-  /* line 334, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+  /* line 348, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
   .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
-  /* line 340, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+  /* line 354, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
   pre, blockquote { border: 1px solid #999999; page-break-inside: avoid; }
-  /* line 346, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+  /* line 360, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
   thead { display: table-header-group; }
-  /* line 350, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+  /* line 364, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
   tr, img { page-break-inside: avoid; }
-  /* line 355, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+  /* line 369, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
   img { max-width: 100% !important; }
-  /* line 358, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+  /* line 372, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
   p, h2, h3 { orphans: 3; widows: 3; }
-  /* line 365, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+  /* line 379, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
   h2, h3 { page-break-after: avoid; } }
