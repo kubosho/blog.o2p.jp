@@ -140,9 +140,14 @@ p
 @media only screen and (max-width: 60em)
   .entries_entry
     display: block
-    border-bottom: 1px solid #ccc
-    margin-bottom: 10px
-    padding-bottom: 10px
+    border: solid #ccc
+    border-width: 1px 0 0
+    margin-bottom: 0
+    padding: 10px 0
+
+    &:last-child
+      border-bottom-width: 1px
+
 
 .entries_entry_time
   padding-right: 10px
