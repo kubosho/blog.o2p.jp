@@ -100,6 +100,9 @@ a
   &:hover
     color: #0074d9
     text-decoration: underline
+@media only screen and (max-width: 60em)
+  a
+    text-decoration: underline
 
 blockquote
   border-left: 5px solid #ccc
@@ -134,9 +137,18 @@ p
 
   &:last-child
     margin: 0
+@media only screen and (max-width: 60em)
+  .entries_entry
+    display: block
+    border-bottom: 1px solid #ccc
+    margin-bottom: 10px
+    padding-bottom: 10px
 
 .entries_entry_time
   padding-right: 10px
+@media only screen and (min-width: 60em)
+  .entries_entry_time
+    min-width: 6em
 
 .entries_entry_title
   margin: 0
@@ -147,7 +159,7 @@ p
 
 .entries-paginate
   list-style: none
-  margin: 40px auto 0
+  margin: 20px auto 0
   padding: 0
   text-align: center
 
@@ -279,26 +291,6 @@ p
 
 .clearfix
   *zoom: 1
-
-
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   Theses examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 60em)
-  .entries_entry_time
-    min-width: 6em
-
-@media only screen and (max-width: 60em)
-  .entries_entry
-    display: block
-
-
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi)
-/* Style adjustments for high resolution devices */
-
 
 /* ==========================================================================
    Print styles.
