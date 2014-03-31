@@ -63,10 +63,10 @@ html lang="ja"
     main[role="main"]
       == yield
     footer[role="contentinfo"]
-      div.profile
-        p このブログは、日々気づいた・ハマったことを書き残すブログです。Webフロントエンドの話題が主になると思います。
-        p 記事の内容には間違いがないようにしますが、間違っている時は間違っている旨を教えていただければ幸いです。
-      div.feed
+      div.site-info
+        p このブログは、日々気づいた・ハマったことを書き残すブログです。
+        p 記事の内容に間違いがある場合は、記事のコメント欄、または<a href="https://github.com/o2project/o2project.github.io/issues">GitHubのIssues</a>で報告していただけると幸いです。
+      div.site-feed
         <a href='http://cloud.feedly.com/#subscription%2Ffeed%2Fhttp%3A%2F%2Fblog.o2p.jp%2Ffeed'  target='blank'><img id='feedlyFollow' src='http://s3.feedly.com/img/follows/feedly-follow-rectangle-flat-big_2x.png' alt='follow us in feedly' width='131' height='56'></a>
       p.copyright
         small © 2013-2014 <a href="https://twitter.com/#{data.site.author}">#{data.site.author}</a>
