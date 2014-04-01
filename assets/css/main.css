@@ -42,149 +42,189 @@ a:visited { color: #003760; }
 /* line 104, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 a:hover { color: #0074d9; text-decoration: underline; }
 
-@media only screen and (max-width: 60em) { /* line 109, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
-  a { text-decoration: underline; } }
-/* line 113, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+/* line 109, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 blockquote { border-left: 5px solid #cccccc; margin-right: 0; margin-left: 0; padding-left: 20px; }
 
-/* line 120, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+/* line 116, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 p { margin: 1.5em 0; }
 
 /* Global header */
-/* line 128, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+/* line 124, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 [role="banner"] { margin: 32px 0; }
 
-@media only screen and (max-width: 60em) { /* line 132, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+@media only screen and (max-width: 60em) { /* line 128, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
   [role="banner"] { margin: 16px 0; text-align: center; } }
-/* line 137, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+/* line 133, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 .logo { margin: 0; font-size: 39px; font-size: 3.9rem; font-weight: normal; line-height: 1; }
-/* line 144, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+/* line 140, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 .logo a { color: #003760; text-decoration: none; }
 
+@media only screen and (max-width: 60em) { /* line 145, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+  .logo { font-size: 25px; font-size: 2.5rem; } }
 /* Global footer */
-/* line 153, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+/* line 154, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 [role="contentinfo"] { margin: 32px 0; }
 
-@media only screen and (max-width: 60em) { /* line 157, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
-  [role="contentinfo"] { margin: 16px 0; } }
+@media only screen and (max-width: 60em) { /* line 158, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+  [role="contentinfo"] { margin: 32px 0 16px; } }
 /* Global footer: Site info */
-/* line 165, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+/* line 166, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 .site-info { margin-bottom: 20px; }
-/* line 168, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+/* line 169, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 .site-info p { margin: 0 0 0.33em; }
 
-@media only screen and (max-width: 60em) { /* line 172, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+@media only screen and (max-width: 60em) { /* line 173, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
   .site-info { margin-bottom: 16px; } }
 /* Global footer: Site feed */
-/* line 180, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+/* line 181, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 .site-feed { margin-bottom: 20px; text-align: center; }
 
-@media only screen and (max-width: 60em) { /* line 185, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+@media only screen and (max-width: 60em) { /* line 186, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
   .site-feed { margin-bottom: 16px; } }
 /* Global footer: Copyright */
-/* line 193, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+/* line 194, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 .copyright { margin: 20px 0; text-align: center; }
 
-@media only screen and (max-width: 60em) { /* line 198, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+@media only screen and (max-width: 60em) { /* line 199, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
   .copyright { margin: 16px 0; } }
+/* Entry */
+/* line 207, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+.entry_title { margin: 20px 0 10px; font-size: 48px; font-size: 4.8rem; font-weight: normal; }
+
+@media only screen and (max-width: 60em) { /* line 214, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+  .entry_title { margin: 16px 0 10px; padding: 10px 10px 0; border-top: 1px dotted #003760; font-size: 32px; font-size: 3.2rem; } }
+/* line 222, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+.entry_time { display: block; text-align: right; }
+
+@media only screen and (max-width: 60em) { /* line 227, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+  .entry_time { padding-right: 10px; } }
+@media only screen and (max-width: 60em) { /* line 231, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+  .entry_body { padding: 0 10px; } }
+/* Entry: Share */
+/* line 239, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+.entry_shares { list-style: none; display: table; margin: 12px 0; padding: 0; }
+/* line 245, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+.entry_shares li { display: table-cell; vertical-align: top; }
+
+@media only screen and (max-width: 60em) { /* line 250, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+  .entry_shares { padding: 0 10px; } }
+/* Entry: Body */
+/* line 259, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+.entry_body p { margin-top: 0; }
+
 /* Entries */
-/* line 206, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+/* line 267, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 .entries_entry { display: flex; align-items: center; margin-bottom: 20px; }
-/* line 211, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+/* line 272, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 .entries_entry:last-child { margin: 0; }
 
-@media only screen and (max-width: 60em) { /* line 215, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+@media only screen and (max-width: 60em) { /* line 276, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
   .entries_entry { display: block; border: dotted #003760; border-width: 1px 0 0; margin-bottom: 0; padding: 10px; }
-  /* line 222, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+  /* line 283, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
   .entries_entry:last-child { border-bottom-width: 1px; } }
-/* line 226, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
-.entries_entry_time { padding-right: 5px; }
+/* line 287, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+.entries_entry_time { padding-right: 5px; text-align: left; }
 
-@media only screen and (min-width: 60em) { /* line 230, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+@media only screen and (min-width: 60em) { /* line 292, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
   .entries_entry_time { min-width: 6em; } }
-/* line 234, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
-.entries_entry_title { max-width: 35em; margin: 0; padding-left: 8px; border-left: 5px solid #003760; }
+/* line 296, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+.entries_entry_title { max-width: 35em; margin: 0; padding-left: 8px; border-left: 5px solid #003760; font-size: 24px; font-size: 2.4rem; }
 
-@media only screen and (max-width: 60em) { /* line 241, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
-  .entries_entry_title { padding-left: 0; border-left: 0; } }
+@media only screen and (max-width: 60em) { /* line 305, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+  .entries_entry_title { border-top: 0; padding: 0; border-left: 0; } }
 /* Pagination */
-/* line 250, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+/* line 315, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 .entries-paginate { list-style: none; margin: 20px auto 32px; padding: 0; text-align: center; }
 
-@media only screen and (max-width: 60em) { /* line 257, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+@media only screen and (max-width: 60em) { /* line 322, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
   .entries-paginate { margin: 10px auto 16px; } }
-/* line 264, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+/* line 328, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 .entries-paginate_prev a, .entries-paginate_next a { display: inline-block; padding: 8px 13px; background: #003760; color: #f9f9f9; text-decoration: none; }
-/* line 271, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+/* line 335, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 .entries-paginate_prev a:hover, .entries-paginate_next a:hover { background: #0074d9; }
 
-/* Entry */
-/* line 279, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
-.entry_title { font-size: 24px; font-size: 2.4rem; font-weight: normal; }
+/* Back to * */
+/* line 343, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+.back-to { list-style: none; padding: 0; text-align: center; }
+/* line 349, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+.back-to li:first-child { margin-right: 32px; }
 
+@media only screen and (max-width: 60em) { /* line 355, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+  .back-to li:first-child { margin-right: 0; } }
+/* line 359, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+.back-to_page-top, .back-to_top-page { display: inline-block; }
+/* line 363, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+.back-to_page-top a, .back-to_top-page a { display: inline-block; padding: 8px 13px; background: #003760; color: #f9f9f9; text-decoration: none; }
+/* line 370, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+.back-to_page-top a:hover, .back-to_top-page a:hover { background: #0074d9; }
+
+@media only screen and (max-width: 60em) { /* line 374, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+  .back-to_page-top, .back-to_top-page { display: block; }
+  /* line 379, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+  .back-to_page-top { margin-top: 20px; } }
 /* Code */
-/* line 289, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+/* line 387, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 .code { padding: 0 10px; }
 
-/* line 293, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+/* line 391, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 .highlight { padding: 10px; border: 1px solid #cccccc; }
 
 /* ========================================================================== Helper classes ========================================================================== */
 /* Image replacement */
-/* line 306, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+/* line 404, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 .ir { background-color: transparent; border: 0; overflow: hidden; /* IE 6/7 fallback */ *text-indent: -9999px; }
 
-/* line 314, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+/* line 412, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 .ir:before { content: ""; display: block; width: 0; height: 100%; }
 
 /* Hide from both screenreaders and browsers: h5bp.com/u */
-/* line 325, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+/* line 423, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 .hidden { display: none !important; visibility: hidden; }
 
 /* Hide only visually, but have it available for screenreaders: h5bp.com/v */
-/* line 334, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+/* line 432, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 .visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
 
 /* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
-/* line 350, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+/* line 448, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
 
 /* Hide visually and from screenreaders, but maintain layout */
-/* line 364, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+/* line 462, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 .invisible { visibility: hidden; }
 
 /* Clearfix: contain floats  For modern browsers 1. The space content is one way to avoid an Opera bug when the `contenteditable` attribute is included anywhere else in the document. Otherwise it causes space to appear at the top and bottom of elements that receive the `clearfix` class. 2. The use of `table` rather than `block` is only necessary if using `:before` to contain the top-margins of child elements. */
-/* line 380, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+/* line 478, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 .clearfix:before, .clearfix:after { content: " "; display: table; }
 
-/* line 386, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+/* line 484, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 .clearfix:after { clear: both; }
 
 /* For IE 6/7 only Include this rule to trigger hasLayout and contain floats. */
-/* line 395, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+/* line 493, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
 .clearfix { *zoom: 1; }
 
 /* ========================================================================== Print styles. Inlined to avoid required HTTP connection: h5bp.com/r ========================================================================== */
-@media print { /* line 404, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+@media print { /* line 502, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
   * { background: transparent !important; color: black !important; box-shadow: none !important; text-shadow: none !important; }
-  /* line 411, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+  /* line 509, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
   a, a:visited { text-decoration: underline; }
-  /* line 416, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+  /* line 514, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
   a[href]:after { content: " (" attr(href) ")"; }
-  /* line 420, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+  /* line 518, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
   abbr[title]:after { content: " (" attr(title) ")"; }
   /* Don't show links for images, or javascript/internal links */
-  /* line 428, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+  /* line 526, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
   .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
-  /* line 434, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+  /* line 532, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
   pre, blockquote { border: 1px solid #999999; page-break-inside: avoid; }
-  /* line 440, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+  /* line 538, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
   thead { display: table-header-group; }
-  /* line 444, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+  /* line 542, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
   tr, img { page-break-inside: avoid; }
-  /* line 449, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+  /* line 547, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
   img { max-width: 100% !important; }
-  /* line 452, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+  /* line 550, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
   p, h2, h3 { orphans: 3; widows: 3; }
-  /* line 459, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
+  /* line 557, /home/travis/build/o2project/o2project.github.io/source/assets/css/main.sass */
   h2, h3 { page-break-after: avoid; } }
