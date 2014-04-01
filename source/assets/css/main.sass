@@ -334,13 +334,47 @@ p
 
 
 /*
- * Entry
+ * Back to *
  */
 
-.entry_title
-  font-size: 24px
-  font-size: 2.4rem
-  font-weight: normal
+.back-to
+  list-style: none
+  padding: 0
+  text-align: center
+
+  li
+    &:first-child
+      margin-right: 32px
+
+@media only screen and (max-width: 60em)
+  .back-to
+    li
+      &:first-child
+        margin-right: 0
+
+
+.back-to_page-top,
+.back-to_top-page
+  display: inline-block
+
+  a
+    display: inline-block
+    padding: 8px 13px
+    background: #003760
+    color: #f9f9f9
+    text-decoration: none
+
+    &:hover
+      background: #0074d9
+
+@media only screen and (max-width: 60em)
+  .back-to_page-top,
+  .back-to_top-page
+    display: block
+
+
+  .back-to_page-top
+    margin-top: 20px
 
 
 /*
