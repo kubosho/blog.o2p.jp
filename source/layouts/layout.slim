@@ -13,6 +13,7 @@ html lang="ja"
   head
     meta charset="utf-8"
     meta name="description" content="#{data.site.subtitle}"
+
     - if current_article
       meta property="og:type" content="article"
     - else
@@ -29,11 +30,13 @@ html lang="ja"
         = data.site.title
       meta property="og:title" content="#{data.site.title}"
       meta property="og:url" content="#{data.site.url}"
+
     meta name="viewport" content="width=device-width"
     meta name="format-detection" content="telephone=no"
     meta name="format-detection" content="address=no"
     meta name="apple-mobile-web-app-title" content="#{data.site.title}"
     meta http-equiv="X-UA-Compatible" content="IE=edge"
+
     link rel="icon" type="image/x-icon" href="#{data.site.url}/assets/img/favicon.ico"
     link rel="apple-touch-icon-precomposed" href="#{data.site.url}/assets/img/apple-touch-icon.png"
 
@@ -41,10 +44,13 @@ html lang="ja"
     = stylesheet_link_tag 'main'
     = stylesheet_link_tag 'syntax'
     link rel="alternate" type="application/rss+xml" title="#{data.site.title} RSS(最新記事をお届けします)" href="#{data.site.feed}"
+
     script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"
     javascript:
       window.jQuery || document.write('<script src="/js/vendor/jquery-1.8.0.min.js"><\/script>')
     script src="/assets/js/main.js"
+
+
   body
     javascript:
       var gaOptOutProperty = 'ga-disable-UA-25380313-3';
@@ -57,16 +63,24 @@ html lang="ja"
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
       ga('create', 'UA-25380313-3', 'o2p.jp');
       ga('send', 'pageview');
-    header.mod-header[role="banner"]
-      h1
+
+
+    header[role="banner"]
+      h1.logo
         a[href="/"] #{data.site.title}
-    div.mod-main[role="main"]
+
+
+    main[role="main"]
       == yield
-    footer.mod-footer[role="contentinfo"]
-      div.profile
-        p このブログは、日々気づいた・ハマったことを書き残すブログです。Webフロントエンドの話題が主になると思います。
-        p 記事の内容には間違いがないようにしますが、間違っている時は間違っている旨を教えていただければ幸いです。
-      div.feed
+
+
+    footer[role="contentinfo"]
+      div.site-info
+        p このブログは、日々気づいた・ハマったことを書き残すブログです。
+        p 記事の内容に間違いがある場合は、記事のコメント欄、または<a href="https://github.com/o2project/o2project.github.io/issues">GitHubのIssues</a>で報告していただけると幸いです。
+
+      div.site-feed
         <a href='http://cloud.feedly.com/#subscription%2Ffeed%2Fhttp%3A%2F%2Fblog.o2p.jp%2Ffeed'  target='blank'><img id='feedlyFollow' src='http://s3.feedly.com/img/follows/feedly-follow-rectangle-flat-big_2x.png' alt='follow us in feedly' width='131' height='56'></a>
+
       p.copyright
         small © 2013-2014 <a href="https://twitter.com/#{data.site.author}">#{data.site.author}</a>

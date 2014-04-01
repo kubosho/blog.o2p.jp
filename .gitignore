@@ -18,3 +18,5 @@
 
 # Ignore bundle install file
 /vendor
+
+.cache

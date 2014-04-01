@@ -14,23 +14,6 @@ $break-large: 980px
    Base styles: opinionated defaults
    ========================================================================== */
 
-html,
-button,
-input,
-select,
-textarea
-  color: #393939
-
-html
-  font-size: 62.5%
-
-body
-  font-size: 16px
-  font-size: 1.6rem
-  font-family: "Lucida Grande", "Hiragino Kaku Gothic ProN", Meiryo, "Droid Sans", sans-serif
-  line-height: 1.4
-  background-color: #ececec
-
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection declarations have to be separate.
@@ -77,7 +60,6 @@ fieldset
   margin: 0
   padding: 0
 
-
 /*
  * Allow only vertical resizing of textareas.
  */
@@ -85,25 +67,43 @@ fieldset
 textarea
   resize: vertical
 
-
-/* ==========================================================================
-   Chrome Frame prompt
-   ========================================================================== */
-
-.chromeframe
-  margin: 0.2em 0
-  background: #ccc
-  color: #000
-  padding: 0.2em 0
-
-
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
 
+html,
+button,
+input,
+select,
+textarea
+  color: #393939
+
+
+html
+  font-size: 62.5%
+
+
+body
+  margin: 0 auto
+  max-width: 60em
+  background: #ececec
+  font-size: 16px
+  font-size: 1.6rem
+  font-family: "Lucida Grande", "Hiragino Kaku Gothic ProN", Meiryo, "Droid Sans", sans-serif
+  line-height: 1.4
+
+
 a
+  text-decoration: none
+
   &:link
     color: #3946eb
+  &:visited
+    color: #003760
+  &:hover
+    color: #0074d9
+    text-decoration: underline
+
 
 blockquote
   border-left: 5px solid #ccc
@@ -111,116 +111,286 @@ blockquote
   margin-left: 0
   padding-left: 20px
 
+
 p
   margin: 1.5em 0
 
-.mod-header,
-.mod-main,
-.mod-footer
-  -moz-box-sizing: border-box
-  box-sizing: border-box
-  min-width: 320px
-  max-width: 960px
-  margin: 0 auto
-  padding: 0 1em
 
-.mod-header
-  padding: 0
-  h1
-    a
-      padding: 10px
-      background: #003760
-      color: #fcfdfb
-      font-size: 20px
-      font-size: 2.0rem
-      font-weight: normal
-      text-decoration: none
+/*
+ * Global header
+ */
 
-.mod-main
-  position: relative
-  border: 1px solid #e1e1e1
-  padding-top: 1px
-  padding-bottom: 1px
-  background: #fcfdfb
+[role="banner"]
+  margin: 32px 0
 
-article
-  h1
-    font-size: 24px
-    font-size: 2.4rem
-    font-weight: normal
-
-.mod-entries
-  border-bottom: 1px solid #ccc
-  padding-top: 16px
-  h1
-    margin: 5px 0 16px
-    word-break: break-all
-
-.mod-entry
-  time
-    display: inline-block
-    margin: 16px 0 6px
-    color: #666
-    font-size: 14px
-    font-size: 1.4rem
-  h1
-    margin: 0 0 4px
-    font-size: 32px
-    font-size: 3.2rem
-    word-break: break-all
-  li
-    word-break: break-all
-  .body
-    img
-      max-width: 100%
-
-.paginate,
-.back-to-top
-  list-style: none
-  margin: 0
-  padding-left: 0
-  a
-    display: block
-    margin-top: 0
-    border-top: 1px solid #030303
-    padding: 10px
+@media only screen and (max-width: 60em)
+  [role="banner"]
+    margin: 16px 0
     text-align: center
 
-.feed
-  margin: 1em 0
+
+.logo
+  margin: 0
+  font-size: 39px
+  font-size: 3.9rem
+  font-weight: normal
+  line-height: 1
+
+  a
+    color: #003760
+    text-decoration: none
+
+@media only screen and (max-width: 60em)
+  .logo
+    font-size: 25px
+    font-size: 2.5rem
+
+
+/*
+ * Global footer
+ */
+
+[role="contentinfo"]
+  margin: 32px 0
+
+@media only screen and (max-width: 60em)
+  [role="contentinfo"]
+    margin: 32px 0 16px
+
+
+/*
+ * Global footer: Site info
+ */
+
+.site-info
+  margin-bottom: 20px
+
+  p
+    margin: 0 0 0.33em
+
+@media only screen and (max-width: 60em)
+  .site-info
+    margin-bottom: 16px
+
+
+/*
+ * Global footer: Site feed
+ */
+
+.site-feed
+  margin-bottom: 20px
   text-align: center
 
-.profile
-  margin-top: 1.5em
-  p
-    margin: 0
+@media only screen and (max-width: 60em)
+  .site-feed
+    margin-bottom: 16px
+
+
+/*
+ * Global footer: Copyright
+ */
 
 .copyright
+  margin: 20px 0
   text-align: center
 
-.lineno
-  padding: 0 10px
-  border-right: 1px solid #ccc
-  color: #393939
+@media only screen and (max-width: 60em)
+  .copyright
+    margin: 16px 0
+
+
+/*
+ * Entry
+ */
+
+.entry_title
+  margin: 20px 0 10px
+  font-size: 48px
+  font-size: 4.8rem
+  font-weight: normal
+
+@media only screen and (max-width: 60em)
+  .entry_title
+    margin: 16px 0 10px
+    padding: 10px 10px 0
+    border-top: 1px dotted #003760
+    font-size: 32px
+    font-size: 3.2rem
+
+
+.entry_time
+  display: block
   text-align: right
+
+@media only screen and (max-width: 60em)
+  .entry_time
+    padding-right: 10px
+
+@media only screen and (max-width: 60em)
+  .entry_body
+    padding: 0 10px
+
+
+/*
+ * Entry: Share
+ */
+
+.entry_shares
+  list-style: none
+  display: table
+  margin: 12px 0
+  padding: 0
+
+  li
+    display: table-cell
+    vertical-align: top
+
+@media only screen and (max-width: 60em)
+  .entry_shares
+    padding: 0 10px
+
+
+/*
+ * Entry: Body
+ */
+
+.entry_body
+  p
+    margin-top: 0
+
+
+/*
+ * Entries
+ */
+
+.entries_entry
+  display: flex
+  align-items: center
+  margin-bottom: 20px
+
+  &:last-child
+    margin: 0
+
+@media only screen and (max-width: 60em)
+  .entries_entry
+    display: block
+    border: dotted #003760
+    border-width: 1px 0 0
+    margin-bottom: 0
+    padding: 10px
+
+    &:last-child
+      border-bottom-width: 1px
+
+
+.entries_entry_time
+  padding-right: 5px
+  text-align: left
+
+@media only screen and (min-width: 60em)
+  .entries_entry_time
+    min-width: 6em
+
+
+.entries_entry_title
+  max-width: 35em
+  margin: 0
+  padding-left: 8px
+  border-left: 5px solid #003760
+  font-size: 24px
+  font-size: 2.4rem
+
+@media only screen and (max-width: 60em)
+  .entries_entry_title
+    border-top: 0
+    padding: 0
+    border-left: 0
+
+
+/*
+ * Pagination
+ */
+
+.entries-paginate
+  list-style: none
+  margin: 20px auto 32px
+  padding: 0
+  text-align: center
+
+@media only screen and (max-width: 60em)
+  .entries-paginate
+    margin: 10px auto 16px
+
+
+.entries-paginate_prev,
+.entries-paginate_next
+  a
+    display: inline-block
+    padding: 8px 13px
+    background: #003760
+    color: #f9f9f9
+    text-decoration: none
+
+    &:hover
+      background: #0074d9
+
+
+/*
+ * Back to *
+ */
+
+.back-to
+  list-style: none
+  padding: 0
+  text-align: center
+
+  li
+    &:first-child
+      margin-right: 32px
+
+@media only screen and (max-width: 60em)
+  .back-to
+    li
+      &:first-child
+        margin-right: 0
+
+
+.back-to_page-top,
+.back-to_top-page
+  display: inline-block
+
+  a
+    display: inline-block
+    padding: 8px 13px
+    background: #003760
+    color: #f9f9f9
+    text-decoration: none
+
+    &:hover
+      background: #0074d9
+
+@media only screen and (max-width: 60em)
+  .back-to_page-top,
+  .back-to_top-page
+    display: block
+
+
+  .back-to_page-top
+    margin-top: 20px
+
+
+/*
+ * Code
+ */
 
 .code
   padding: 0 10px
 
+
 .highlight
+  padding: 10px
   border: 1px solid #ccc
 
-.share
-  border-top: 1px solid #ccc
-  border-bottom: 1px solid #ccc
-  padding-left: 0
-  li
-    list-style: none
-    display: inline-block
-    padding: 10px 0
-
-.mod-entry header .share
-  margin-bottom: 0
 
 /* ==========================================================================
    Helper classes
@@ -321,21 +491,6 @@ article
 
 .clearfix
   *zoom: 1
-
-
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   Theses examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 50em)
-/* Style adjustments for viewports that meet the condition */
-
-
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi)
-/* Style adjustments for high resolution devices */
-
 
 /* ==========================================================================
    Print styles.

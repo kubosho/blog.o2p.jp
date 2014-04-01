@@ -3,28 +3,31 @@
   javascript:
     (function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));
 
-  article.mod-entry
-    header
-      time datetime="#{current_article.date.strftime('%c')}"
-        | #{current_article.date.strftime('%Y/%m/%d')}
-      h1
+  article.entry
+    header.entry_header
+      h1.entry_title
         = current_article.title
-      ul.share
-        li
+      time.entry_time datetime="#{current_article.date.strftime('%c')}"
+        | #{current_article.date.strftime('%Y/%m/%d')}に投稿
+      ul.entry_shares
+        li.entry_share
           a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"
-    div.body
+    div.entry_body
       == yield
 
-  ul.share
-    li
+  ul.entry_shares
+    li.entry_share
       a href="https://twitter.com/share" class="twitter-share-button" data-via="kubosho_" data-lang="ja" data-related="kubosho_" Tweet
-    li
+    li.entry_share
       div class="fb-like" data-layout="button_count" data-action="recommend" data-show-faces="false" data-share="false"
 
   div#disqus_thread
 
-  p.back-to-top
-    | <a href="/">トップページへ戻る</a>
+  ul.back-to
+    li.back-to_top-page
+      | <a href="/">←トップページへ戻る</a>
+    li.back-to_page-top
+      | <a href="#top">ページの上部へ戻る↑</a>
 
   javascript:
     !function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");
