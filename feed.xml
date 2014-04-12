@@ -5,10 +5,71 @@
   <id>http://blog.o2p.jp/</id>
   <link href="http://blog.o2p.jp/"/>
   <link href="http://blog.o2p.jp/feed" rel="self"/>
-  <updated>2014-04-10T00:00:00Z</updated>
+  <updated>2014-04-12T14:50:00Z</updated>
   <author>
     <name>kubosho_</name>
   </author>
+  <entry>
+    <title>AndroidのChromeで見ているページをPCでデバッグする方法</title>
+    <link rel="alternate" href="/2014/04/12/android-chrome-remote-dubugging.html"/>
+    <id>/2014/04/12/android-chrome-remote-dubugging.html</id>
+    <published>2014-04-12T14:50:00Z</published>
+    <updated>2014-04-12T14:50:00Z</updated>
+    <author>
+      <name>kubosho_</name>
+    </author>
+    <content type="html">&lt;p&gt;AndroidのChromeを用いてデバッグをしたいということがある。その際のデバッグ方法として、自分が知っている限りでは以下の2つがあった。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Android SDKをダウンロードしてデバッグ
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://slumbers99.blogspot.jp/2013/01/chrome-for-android-usb-web.html"&gt;Chrome for Android の USB ウェブデバッグでスマフォWEBサイトをデバッグする | SLUMBERS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;ChromeにADBという拡張機能をインストールしてデバッグ
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://iti.hatenablog.jp/entry/2013/11/05/182133"&gt;SDK不要Android端末のリモートデバッグChrome拡張機能「ADB」 - Intelligent Technology&amp;#39;s Technical Blog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;しかしどちらもAndroid SDKのダウンロードと設定や、PCのChromeに拡張機能をインストールしないといけなく、正直めんどいなと思ったら、Chrome 32以上ならは上記のSDKなどをダウンロードしなくてもPCからデバッグが出来るようだ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://d.hatena.ne.jp/hokaccha/20140109/1389254171"&gt;最近のAndroid Chromeのリモートデバッグ - hokaccha.hamalog v2&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ということで、&lt;a href="https://developers.google.com/chrome-developer-tools/docs/remote-debugging?hl=ja"&gt;Remote Debugging Chrome on Android - Chrome DevTools — Google Developers&lt;/a&gt;や他サイトに沿ってデバッグが行えるようにしたので、やったことを書いていく。&lt;/p&gt;
+
+&lt;h2&gt;Android側のUSBデバッグを有効にする&lt;/h2&gt;
+
+&lt;p&gt;Android 4.2以上のバージョンの場合、開発者向けオプションは初期設定では隠されている。それ以下の場合は設定の下の方に開発者向けオプションがある。&lt;/p&gt;
+
+&lt;p&gt;Android 4.2以上で開発者向けオプションを表示するには、設定-&amp;gt;システム:端末情報内の項目にある「ビルド番号」を7回タップする必要がある。タップし続けると「デベロッパーになるまであとnステップです」と表示されたり、7回タップすると「あなたは今開発者になりました！」と表示されるので分かりやすい&lt;a href="#note1"&gt;*1&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;「あなたは今開発者になりました！」と表示されたあと、設定のシステムの所に「開発者向けオプション」が表示されるようになる。そしてそのオプションの中に「USBデバッグ」という項目があるので、チェックを付ける。&lt;/p&gt;
+
+&lt;p&gt;それでPCにUSBでAndroidを繋いで無事デバッグ出来るように…というところだが、Windowsの場合は別途&lt;a href="http://developer.android.com/sdk/win-usb.html"&gt;Google USB Driver | Android Developers&lt;/a&gt;からUSB Driverをダウンロードする必要がある。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://android.akjava.com/html5/usbdebug.html"&gt;USBデバッグ&lt;/a&gt;によると、今つないでいるPCでUSBデバッグを許可するかどうかというポップアップが表示される機種もあるようだが、SO-04E Hatsune Mikuモデル(Android 4.2.2)では表示されなかった。&lt;/p&gt;
+
+&lt;h2&gt;Chrome側でデバイス検出を有効にする&lt;/h2&gt;
+
+&lt;p&gt;&lt;q&gt;chrome://inspect/#devices&lt;/q&gt;にChromeでアクセスすることにより、以下のような設定画面が出てくる。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://imgur.com/RDDvfz2"&gt;&lt;img src="http://i.imgur.com/RDDvfz2.png" title="Hosted by imgur.com" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ここから「Discover USB devices」にチェックを入れ、USBデバッグを有効にしたAndroid端末を繋ぐことにより、以下のように各種操作が出来るようになる。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://imgur.com/45dBUuE"&gt;&lt;img src="http://i.imgur.com/45dBUuE.png" title="Hosted by imgur.com" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;inspectはChromeのdeveloper toolsがそのまま使えたり、アドレス指定でタブを開かせたり、他にもいろいろと出来るので便利。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;span id="note1"&gt;なお、タップの間隔はいくら遅くても大丈夫そうだが、戻るボタンなどで前の画面に戻ってしまうと、また最初からタップし直しとなってしまう。&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+  </entry>
   <entry>
     <title>一人暮らしにあって良かったものを7つ挙げてみた</title>
     <link rel="alternate" href="/2014/04/10/requirements-for-new-life.html"/>
@@ -291,79 +352,6 @@
 &lt;/ul&gt;
 
 &lt;p&gt;どれも不可能ではないと考えていて、数的に一番多いブログの記事も週に1個かけば達成できる範囲なので出来ると思います。来年はいい意味で目立つ年にしたいな。&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>WordPressからGitHub Pages+Middleman+Travis CIに移行したらブログを書く気になれた話</title>
-    <link rel="alternate" href="/2013/12/17/wordpress-to-middleman.html"/>
-    <id>/2013/12/17/wordpress-to-middleman.html</id>
-    <published>2013-12-17T14:59:00Z</published>
-    <updated>2013-12-17T14:59:00Z</updated>
-    <author>
-      <name>kubosho_</name>
-    </author>
-    <content type="html">&lt;p&gt;&lt;a href="http://www.adventar.org/calendars/167"&gt;Blog #blogadvent Advent Calendar 2013&lt;/a&gt; 17日目の記事です。&lt;/p&gt;
-
-&lt;p&gt;かつて、&lt;a href="http://inputxoutput.com/"&gt;WordPressでブログを運営&lt;/a&gt;していましたが、&lt;a href="http://pages.github.com/"&gt;GitHub Pages&lt;/a&gt;+&lt;a href="http://middlemanapp.com/"&gt;Middleman&lt;/a&gt;(&lt;a href="http://middlemanjp.github.io/"&gt;日本語&lt;/a&gt;)+&lt;a href="https://travis-ci.org/"&gt;Travis CI&lt;/a&gt;に移行してみたら捗るようになったので、その移行話を書いてみます。&lt;/p&gt;
-
-&lt;p&gt;(&lt;a href="https://github.com/o2project/o2project.github.io"&gt;ちなみに移行先のリポジトリはこれです&lt;/a&gt;)&lt;/p&gt;
-
-&lt;h2&gt;なぜ移行したか&lt;/h2&gt;
-
-&lt;p&gt;移行した理由ですが、簡潔に言うと「記事を公開するまでの流れを楽にしたかった」ということです。そして実際に移行したことによるメリットが2つあります。&lt;/p&gt;
-
-&lt;p&gt;1つめは、記事公開するまでの手順を減らせたことです。例えばWordPressの場合、普段使っているエディタで記事を書いた場合、以下の5つの手間が発生してとても面倒くさいものでした。&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;記事をエディタで書く&lt;/li&gt;
-&lt;li&gt;ブラウザでWordPressのダッシュボードを開く&lt;/li&gt;
-&lt;li&gt;投稿から新規追加を押す&lt;/li&gt;
-&lt;li&gt;タイトルと本文、タグなどにそれぞれ書いた内容をコピペしたり、スラッグを決める&lt;/li&gt;
-&lt;li&gt;公開ボタンを押す&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;しかしmiddlemanに移行後、手順が以下の通り2つ減り、よりブログの記事を書こうという気になっています。&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;記事をエディタで書く&lt;/li&gt;
-&lt;li&gt;ターミナルやGitをGUIで扱えるソフト(SourceTree)などを開く&lt;/li&gt;
-&lt;li&gt;git add . &amp;amp;&amp;amp; git commit &amp;amp;&amp;amp; git push origin master&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;2つめは、普段使っているエディタとmarkdown形式が使えるようになったということです。markdown形式については、&lt;a href="http://wordpress.org/plugins/markdown-on-save/"&gt;Markdown on Save&lt;/a&gt;というWordPressのプラグインを使っていましたが、プラグインを追加しなくても標準で対応しているというのが良いと思いました。&lt;/p&gt;
-
-&lt;p&gt;とはいえメリットだけでなく、GitHub Pages+Middleman+Travis CIの連携がちょっと面倒というデメリットはあります(参考までに、下記の移行までの流れの章で移行にあたって参考にしたサイトを載せています)。&lt;/p&gt;
-
-&lt;p&gt;とはいえそれも最初だけで、ブログを書いて公開する時間のほうが移行する準備の時間より長いので、元は取れるかなという感じです。&lt;/p&gt;
-
-&lt;h2&gt;移行までの流れ&lt;/h2&gt;
-
-&lt;p&gt;MiddlemanのインストールとTravis CIで自動ビルドとGitHubへ自動的にpushする流れを作るのに、&lt;a href="http://tricknotes.hateblo.jp/entry/2013/06/17/020229"&gt;Middleman で作った web サイトを Travis + GitHub pages でお手軽に運用する - tricknotesのぼうけんのしょ&lt;/a&gt;を参考にしました。&lt;/p&gt;
-
-&lt;p&gt;Middlemanの設定については、&lt;a href="https://twitter.com/hokaccha"&gt;@hokaccha&lt;/a&gt;のブログ、&lt;a href="http://webtech-walker.com/"&gt;Webtech Walker&lt;/a&gt;の&lt;a href="https://github.com/hokaccha/webtech-walker"&gt;リポジトリ&lt;/a&gt;を見て参考にしています。&lt;/p&gt;
-
-&lt;p&gt;上の2つのリンクと&lt;a href="http://middlemanapp.com/"&gt;公式サイト&lt;/a&gt;のMiddleman Basicsのリンク先を見れば、インストールから設定まで事足りますが、リンクだけ紹介するのも芸がないので、移行にあたり工夫した点を以下に書いていきます。&lt;/p&gt;
-
-&lt;h2&gt;テンプレートファイルをSlimにした&lt;/h2&gt;
-
-&lt;p&gt;ERB形式のテンプレートファイルの場合、Rubyをテンプレートファイルの中に組み込みたいという場合に&amp;lt;% ... %&amp;gt;みたいな感じで、いちいち&amp;lt;&amp;gt;や%を書かないといけなかったり、HTMLの要素を書くときにも&amp;lt;と&amp;gt;を打たないといけないというのが面倒だと感じました(HTMLに関してはEmmetを使えばいい話ですが)。&lt;/p&gt;
-
-&lt;p&gt;なので、Slim形式にテンプレートを書き換え、config.rbで以下の2行を追記し、Slimを使うようにしています。&lt;/p&gt;
-&lt;pre class="highlight ruby"&gt;&lt;span class="n"&gt;set&lt;/span&gt; &lt;span class="ss"&gt;:markdown&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;:layout_engine&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="ss"&gt;:slim&lt;/span&gt;
-&lt;span class="n"&gt;set&lt;/span&gt; &lt;span class="ss"&gt;:blog_layout_engine&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;:slim&lt;/span&gt;
-&lt;/pre&gt;
-
-&lt;h2&gt;URLにyyyy/mm/ddの形式で年月日を含めるようにした&lt;/h2&gt;
-
-&lt;p&gt;Middleman固有の話ではないのですが、URLに年月日を含めるようにしました。というのもこのブログで扱うのがWebの技術に関することという以上、更新しない限り情報は古くなります。&lt;/p&gt;
-
-&lt;p&gt;そうなった場合、例えば情報を探している人が検索エンジンなどから自分が書いた古くなった情報が載っている記事にアクセスして、かつその情報を参考にしてしまった場合、その時点で正しくない情報に誘導(して|されて)しまったということでお互いもやっとした気持ちになると思います。&lt;/p&gt;
-
-&lt;p&gt;なので、そういうことが減るようURLに年月日を含めることで、もしかしたらこの情報は古いかもしれないという事に気づいてくれたらという期待をこめて、URLに年月日を含めるようにしました。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;ということで、WordPressからMiddlemanに移行したらブログを書く気になれた話でした。これからもここで記事を書けるよう技術的に精進していきたいと思います。&lt;/p&gt;
 </content>
   </entry>
 </feed>

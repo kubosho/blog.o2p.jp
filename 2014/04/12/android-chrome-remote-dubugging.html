@@ -1,0 +1,69 @@
+<!DOCTYPE html><!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]--><!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]--><!--[if IE 8]><html class="no-js lt-ie9"><![endif]--><!--[if gt IE 8]><html class="no-js"><![endif]--><!--[if (gte IE 9)|!(IE)]<!--><html lang="ja"><!--<![endif]--><head><meta charset="utf-8" /><meta content="kubosho_が日々気づいたことやハマったことを書き残していくブログです。" name="description" /><meta content="article" property="og:type" /><meta content="kubosho_が日々気づいたことやハマったことを書き残していくブログです。" property="og:description" /><meta content="http://blog.o2p.jp/assets/img/ogp.png" property="og:image" /><title>AndroidのChromeで見ているページをPCでデバッグする方法 - blog.o2p.jp</title><meta content="AndroidのChromeで見ているページをPCでデバッグする方法 - blog.o2p.jp" property="og:title" /><meta content="http://blog.o2p.jp/2014/04/12/android-chrome-remote-dubugging.html" property="og:url" /><meta content="width=device-width" name="viewport" /><meta content="telephone=no" name="format-detection" /><meta content="address=no" name="format-detection" /><meta content="blog.o2p.jp" name="apple-mobile-web-app-title" /><meta content="IE=edge" http-equiv="X-UA-Compatible" /><link href="http://blog.o2p.jp/assets/img/favicon.ico" rel="icon" type="image/x-icon" /><link href="http://blog.o2p.jp/assets/img/apple-touch-icon.png" rel="apple-touch-icon-precomposed" /><link href="/assets/css/normalize.css" media="screen" rel="stylesheet" type="text/css" /><link href="/assets/css/main.css" media="screen" rel="stylesheet" type="text/css" /><link href="/assets/css/syntax.css" media="screen" rel="stylesheet" type="text/css" /><link href="http://blog.o2p.jp/feed" rel="alternate" title="blog.o2p.jp RSS(最新記事をお届けします)" type="application/rss+xml" /><script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script><script type="text/javascript">window.jQuery || document.write('<script src="/js/vendor/jquery-1.8.0.min.js"><\/script>')</script><script src="/assets/js/main.js"></script></head><body><script type="text/javascript">var gaOptOutProperty = 'ga-disable-UA-25380313-3';
+if (document.cookie.indexOf(gaOptOutProperty + '=true') > -1) {
+  window[gaOptOutProperty] = true;
+}
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-25380313-3', 'o2p.jp');
+ga('send', 'pageview');</script><header role="banner"><h1 class="logo"><a href="/">blog.o2p.jp</a></h1></header><main role="main"><div id="fb-root"></div><script type="text/javascript">(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script><article class="entry"><header class="entry_header"><h1 class="entry_title">AndroidのChromeで見ているページをPCでデバッグする方法</h1><time class="entry_time" datetime="Sat Apr 12 23:50:00 2014">2014/04/12に投稿</time><ul class="entry_shares"><li class="entry_share"><a class="pocket-btn" data-lang="en" data-pocket-count="horizontal" data-pocket-label="pocket"></a></li></ul></header><div class="entry_body"><p>AndroidのChromeを用いてデバッグをしたいということがある。その際のデバッグ方法として、自分が知っている限りでは以下の2つがあった。</p>
+
+<ul>
+<li>Android SDKをダウンロードしてデバッグ
+
+<ul>
+<li><a href="http://slumbers99.blogspot.jp/2013/01/chrome-for-android-usb-web.html">Chrome for Android の USB ウェブデバッグでスマフォWEBサイトをデバッグする | SLUMBERS</a></li>
+</ul></li>
+<li>ChromeにADBという拡張機能をインストールしてデバッグ
+
+<ul>
+<li><a href="http://iti.hatenablog.jp/entry/2013/11/05/182133">SDK不要Android端末のリモートデバッグChrome拡張機能「ADB」 - Intelligent Technology&#39;s Technical Blog</a></li>
+</ul></li>
+</ul>
+
+<p>しかしどちらもAndroid SDKのダウンロードと設定や、PCのChromeに拡張機能をインストールしないといけなく、正直めんどいなと思ったら、Chrome 32以上ならは上記のSDKなどをダウンロードしなくてもPCからデバッグが出来るようだ。</p>
+
+<p><a href="http://d.hatena.ne.jp/hokaccha/20140109/1389254171">最近のAndroid Chromeのリモートデバッグ - hokaccha.hamalog v2</a></p>
+
+<p>ということで、<a href="https://developers.google.com/chrome-developer-tools/docs/remote-debugging?hl=ja">Remote Debugging Chrome on Android - Chrome DevTools — Google Developers</a>や他サイトに沿ってデバッグが行えるようにしたので、やったことを書いていく。</p>
+
+<h2>Android側のUSBデバッグを有効にする</h2>
+
+<p>Android 4.2以上のバージョンの場合、開発者向けオプションは初期設定では隠されている。それ以下の場合は設定の下の方に開発者向けオプションがある。</p>
+
+<p>Android 4.2以上で開発者向けオプションを表示するには、設定-&gt;システム:端末情報内の項目にある「ビルド番号」を7回タップする必要がある。タップし続けると「デベロッパーになるまであとnステップです」と表示されたり、7回タップすると「あなたは今開発者になりました！」と表示されるので分かりやすい<a href="#note1">*1</a>。</p>
+
+<p>「あなたは今開発者になりました！」と表示されたあと、設定のシステムの所に「開発者向けオプション」が表示されるようになる。そしてそのオプションの中に「USBデバッグ」という項目があるので、チェックを付ける。</p>
+
+<p>それでPCにUSBでAndroidを繋いで無事デバッグ出来るように…というところだが、Windowsの場合は別途<a href="http://developer.android.com/sdk/win-usb.html">Google USB Driver | Android Developers</a>からUSB Driverをダウンロードする必要がある。</p>
+
+<p><a href="http://android.akjava.com/html5/usbdebug.html">USBデバッグ</a>によると、今つないでいるPCでUSBデバッグを許可するかどうかというポップアップが表示される機種もあるようだが、SO-04E Hatsune Mikuモデル(Android 4.2.2)では表示されなかった。</p>
+
+<h2>Chrome側でデバイス検出を有効にする</h2>
+
+<p><q>chrome://inspect/#devices</q>にChromeでアクセスすることにより、以下のような設定画面が出てくる。</p>
+
+<p><a href="http://imgur.com/RDDvfz2"><img src="http://i.imgur.com/RDDvfz2.png" title="Hosted by imgur.com" /></a></p>
+
+<p>ここから「Discover USB devices」にチェックを入れ、USBデバッグを有効にしたAndroid端末を繋ぐことにより、以下のように各種操作が出来るようになる。</p>
+
+<p><a href="http://imgur.com/45dBUuE"><img src="http://i.imgur.com/45dBUuE.png" title="Hosted by imgur.com" /></a></p>
+
+<p>inspectはChromeのdeveloper toolsがそのまま使えたり、アドレス指定でタブを開かせたり、他にもいろいろと出来るので便利。</p>
+
+<hr>
+
+<ol>
+<li><span id="note1">なお、タップの間隔はいくら遅くても大丈夫そうだが、戻るボタンなどで前の画面に戻ってしまうと、また最初からタップし直しとなってしまう。</span></li>
+</ol>
+</div></article><ul class="entry_shares"><li class="entry_share"><a class="twitter-share-button" data-lang="ja" data-related="kubosho_" data-via="kubosho_" href="https://twitter.com/share">Tweet</a></li><li class="entry_share"><div class="fb-like" data-action="recommend" data-layout="button_count" data-share="false" data-show-faces="false"></div></li></ul><div id="disqus_thread"></div><ul class="back-to"><li class="back-to_top-page"><a href="/">←トップページへ戻る</a></li><li class="back-to_page-top"><a href="#top">ページの上部へ戻る↑</a></li></ul><script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script><script type="text/javascript">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script><script type="text/javascript">/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+var disqus_shortname = 'techo2pjp'; // required: replace example with your forum shortname
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function() {
+var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><noscript><a href="http://disqus.com/?ref_noscript">Disqus</a>提供のコメント機能を有効にするためにJavaScriptを有効にしてください。<br>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a></noscript></main><footer role="contentinfo"><div class="site-info"><p>このブログは、日々気づいた・ハマったことを書き残すブログです。</p><p>記事の内容に間違いがある場合は、記事のコメント欄、または<a href="https://github.com/o2project/o2project.github.io/issues">GitHubのIssues</a>で報告していただけると幸いです。</p></div><div class="site-feed"><a href='http://cloud.feedly.com/#subscription%2Ffeed%2Fhttp%3A%2F%2Fblog.o2p.jp%2Ffeed'  target='blank'><img id='feedlyFollow' src='http://s3.feedly.com/img/follows/feedly-follow-rectangle-flat-big_2x.png' alt='follow us in feedly' width='131' height='56'></a></div><p class="copyright"><small>© 2013-2014 <a href="https://twitter.com/kubosho_">kubosho_</a></small></p></footer></body></html>
