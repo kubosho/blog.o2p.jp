@@ -1,0 +1,119 @@
+<!DOCTYPE html><!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]--><!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]--><!--[if IE 8]><html class="no-js lt-ie9"><![endif]--><!--[if gt IE 8]><html class="no-js"><![endif]--><!--[if (gte IE 9)|!(IE)]<!--><html lang="ja"><!--<![endif]--><head><meta charset="utf-8" /><meta content="kubosho_が日々気づいたことやハマったことを書き残していくブログです。" name="description" /><meta content="article" property="og:type" /><meta content="kubosho_が日々気づいたことやハマったことを書き残していくブログです。" property="og:description" /><meta content="http://blog.o2p.jp/assets/img/ogp.png" property="og:image" /><title>Boxenを使ってMacを設定してみた - blog.o2p.jp</title><meta content="Boxenを使ってMacを設定してみた - blog.o2p.jp" property="og:title" /><meta content="http://blog.o2p.jp/2014/04/28/use-boxen.html" property="og:url" /><meta content="width=device-width" name="viewport" /><meta content="telephone=no" name="format-detection" /><meta content="address=no" name="format-detection" /><meta content="blog.o2p.jp" name="apple-mobile-web-app-title" /><meta content="IE=edge" http-equiv="X-UA-Compatible" /><link href="http://blog.o2p.jp/assets/img/favicon.ico" rel="icon" type="image/x-icon" /><link href="http://blog.o2p.jp/assets/img/apple-touch-icon.png" rel="apple-touch-icon-precomposed" /><link href="/assets/css/normalize.css" media="screen" rel="stylesheet" type="text/css" /><link href="/assets/css/main.css" media="screen" rel="stylesheet" type="text/css" /><link href="/assets/css/syntax.css" media="screen" rel="stylesheet" type="text/css" /><link href="http://blog.o2p.jp/feed" rel="alternate" title="blog.o2p.jp RSS(最新記事をお届けします)" type="application/rss+xml" /><script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script><script type="text/javascript">window.jQuery || document.write('<script src="/js/vendor/jquery-1.8.0.min.js"><\/script>')</script><script src="/assets/js/main.js"></script></head><body><script type="text/javascript">var gaOptOutProperty = 'ga-disable-UA-25380313-3';
+if (document.cookie.indexOf(gaOptOutProperty + '=true') > -1) {
+  window[gaOptOutProperty] = true;
+}
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-25380313-3', 'o2p.jp');
+ga('send', 'pageview');</script><header role="banner"><h1 class="logo"><a href="/">blog.o2p.jp</a></h1></header><main role="main"><div id="fb-root"></div><script type="text/javascript">(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script><article class="entry"><header class="entry_header"><h1 class="entry_title">Boxenを使ってMacを設定してみた</h1><time class="entry_time" datetime="Mon Apr 28 13:00:00 2014">2014/04/28に投稿</time><ul class="entry_shares"><li class="entry_share"><a class="pocket-btn" data-lang="en" data-pocket-count="horizontal" data-pocket-label="pocket"></a></li></ul></header><div class="entry_body"><p>新しい MacBook Pro を手に入れ、いろいろと設定する必要が出てきたのと、MacBook Air Retina なんてものが出た時にはすぐに買うし、その際にも設定が必要なので、設定の手間を省くために boxen であれこれ設定しようとしたらハマりまくったので、ハマったところを書いていく。</p>
+
+<h2>Boxen を使うにあたって準備しておくもの</h2>
+
+<p><a href="https://github.com/boxen/our-boxen">boxen/our-boxen</a> の README より引用。</p>
+
+<ul>
+<li>(できれば)Xcode のフルインストール</li>
+<li>Xcode Command Line Tools のインストール
+
+<ul>
+<li>Mavericks からはインストール方法が変わっていた。<a href="http://hiroki.jp/mavericks-command-line-developer-tools">MavericksでCommand Line Developer Toolsをインストールする方法が変更 | Act as Professional - hiroki.jp</a></li>
+</ul></li>
+<li>ハイフンが入っていない GitHub のアカウント</li>
+<li>rvm のアンインストール</li>
+<li>rbenv のアンインストール
+
+<ul>
+<li><a href="http://qiita.com/astronaughts/items/760d56fb5674707a9a0f">Git で入れてしまった rbenv を削除して Homebrew で入れなおした時のメモ - Qiita</a>を見ながら rbenv を削除した。</li>
+</ul></li>
+<li>chruby のアンインストール</li>
+<li>homebrew のアンインストール</li>
+<li>nvm のアンインストール</li>
+</ul>
+
+<p>自分の場合、homebrew と rbenv をインストールして使っていたので、アンインストールする必要が出てしまった。特に homebrew はアンインストールが面倒だったので、<a href="https://github.com/Homebrew/homebrew/wiki/FAQ#how-do-i-uninstall-homebrew">FAQ · Homebrew/homebrew Wiki</a> を元にやり方を書いていく。</p>
+
+<h2>homebrew のアンインストール方法</h2>
+
+<ol>
+<li><a href="https://gist.github.com/mxcl/1173223">Uninstall Homebrew</a> を git clone もしくはダウンロードする</li>
+<li>実行権限を与えるため <code>chmod u+x uninstall_homebrew.sh</code> を実行する</li>
+<li>sh ./uninstall_homebrew.sh を実行</li>
+</ol>
+
+<p>これで homebrew は綺麗さっぱりアンインストールできると思う。しかし次の難関、puppetfile のバージョン番号がよく分からないという問題にぶち当たった。</p>
+
+<h2>puppetfile 内のバージョン is 何</h2>
+
+<p>puppetfile 内に書くバージョンは <a href="https://github.com/boxen">Boxen</a> 内の puppet- から始まるリポジトリ内のタグのバージョン番号となる。</p>
+
+<p>最初これが分からなくて、Node なんかは 3.7.0 とか書かれていて、「インストールしたいバージョンを足した合計を書くのか？」とか思った。例えば 0.10 と 0.11 をインストールしたいのなら 0.21 と書くような感じ。よく考えれば違うと分かるけど、Boxen の puppet- から始まるリポジトリ内のタグのバージョン番号とは分からなかった。</p>
+
+<hr>
+
+<p>さて、これで boxen を実行した…と思ったら、下記に示すエラーが出てしまった。</p>
+
+<h2>エラー一覧</h2>
+
+<h3>Mavericks+Xcode 5.1 という組み合わせで JSON の gem install に失敗するときの対処法</h3>
+
+<p><a href="https://github.com/boxen/our-boxen/issues/528">Ruby Gem install Json fails on Mavericks and Xcode 5.1 - unknown argument: &apos;-multiply_definedsuppress&apos; · Issue #528 · boxen/our-boxen</a> に書かれているように、ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future script/boxen とすることにより、実行されるようになる。</p>
+
+<h3>Nginx インストール時に pcre が not a directory となる</h3>
+<pre class="highlight plaintext">Installing pcre from S3...
+tar: Unrecognized archive format
+tar: Error exit delayed from previous errors.
+Error: /opt/boxen/homebrew/Cellar/pcre/8.35 is not a directory
+Warning: Bottle installation failed: building from source.
+Warning: Nothing was installed to /opt/boxen/homebrew/Cellar/pcre/8.35
+Error: /opt/boxen/homebrew/Cellar/pcre/8.35 is not a directory
+</pre>
+
+<p>boxen のディレクトリで ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future ./script/boxen --no-fde というコマンドを実行した時に上記ソースのようなエラーが出て、インストールが先に進まないというのが発生した。</p>
+
+<p>しかし、<a href="https://github.com/fasrc/boxen/wiki">Home · fasrc/boxen Wiki</a> によると ./script/boxen を実行し直すことによりインストールが出来るらしい。しかし自分の場合、Git周りでエラーが出てしまった。</p>
+
+<p>再度調べてみたところ、<a href="https://github.com/boxen/our-boxen/issues/421">Our-Boxen fails to install · Issue #421 · boxen/our-boxen</a> というissueを見つけた。これによると <code>brew install pcre</code> とした後再度boxenを実行する。</p>
+
+<h3>puppet-module-data の 0.0.3 を使うと uninitialized constant Puppet::DataBinding::LookupError というエラーが出る</h3>
+
+<p>とりあえず 0.0.1 を使うようにすればエラーは出なくなる。<a href="https://github.com/ripienaar/puppet-module-data/issues/6">それらしきissueも報告されている</a>。とはいえ、0.0.3 だとなぜエラーが出るのかは謎…</p>
+
+<h2>You haven&#39;t loaded Boxen&#39;s environment yet!</h2>
+
+<p>以下のようなメッセージが出る時がある。</p>
+
+<blockquote>
+<p>--&gt; You haven&#39;t loaded Boxen&#39;s environment yet!
+   To permanently fix this, source /opt/boxen/env.sh at the end
+   of your shell&#39;s startup file.</p>
+</blockquote>
+
+<p>解決策としては、<a href="http://threetreeslight.com/post/58009785849/boxen-mac">Boxenを利用したMacのセットアップ | iii ThreeTreesLight</a>にも書かれているように、.zshrc などを任意のエディタで開き、<code>source /opt/boxen/env.sh</code> として boxen の 環境設定ファイルを読み込むようにする。</p>
+
+<p>ちなみに、<a href="http://threetreeslight.com/post/58009785849/boxen-mac">Boxenを利用したMacのセットアップ | iii ThreeTreesLight</a>の記事は、ハマった時に見たら問題が解決されたので良記事だと思う。</p>
+
+<h2>紆余曲折あったけどできた</h2>
+
+<p>自分用の Mac の設定ができたので公開します。Boxen を使いたいという場合に参考になるかもしれないです。</p>
+
+<p><a href="https://github.com/kubosho/macbox">kubosho/macbox</a></p>
+
+<p>アプリケーションは以下のものがインストールされる。</p>
+
+<p><a href="https://github.com/kubosho/macbox/issues/1">インストールするアプリケーション一覧 · Issue #1 · kubosho/macbox</a></p>
+
+<p>Mac の設定は以下の通りとなる。</p>
+
+<p><a href="https://github.com/kubosho/macbox/issues/2">Macの各種設定をおこなうようにする · Issue #2 · kubosho/macbox</a></p>
+</div></article><ul class="entry_shares"><li class="entry_share"><a class="twitter-share-button" data-lang="ja" data-related="kubosho_" data-via="kubosho_" href="https://twitter.com/share">Tweet</a></li><li class="entry_share"><div class="fb-like" data-action="recommend" data-layout="button_count" data-share="false" data-show-faces="false"></div></li></ul><div id="disqus_thread"></div><ul class="back-to"><li class="back-to_top-page"><a href="/">←トップページへ戻る</a></li><li class="back-to_page-top"><a href="#top">ページの上部へ戻る↑</a></li></ul><script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script><script type="text/javascript">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script><script type="text/javascript">/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+var disqus_shortname = 'techo2pjp'; // required: replace example with your forum shortname
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function() {
+var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><noscript><a href="http://disqus.com/?ref_noscript">Disqus</a>提供のコメント機能を有効にするためにJavaScriptを有効にしてください。<br>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a></noscript></main><footer role="contentinfo"><div class="site-info"><p>このブログは、日々気づいた・ハマったことを書き残すブログです。</p><p>記事の内容に間違いがある場合は、記事のコメント欄、または<a href="https://github.com/o2project/o2project.github.io/issues">GitHubのIssues</a>で報告していただけると幸いです。</p></div><div class="site-feed"><a href='http://cloud.feedly.com/#subscription%2Ffeed%2Fhttp%3A%2F%2Fblog.o2p.jp%2Ffeed'  target='blank'><img id='feedlyFollow' src='http://s3.feedly.com/img/follows/feedly-follow-rectangle-flat-big_2x.png' alt='follow us in feedly' width='131' height='56'></a></div><p class="copyright"><small>© 2013-2014 <a href="https://twitter.com/kubosho_">kubosho_</a></small></p></footer></body></html>

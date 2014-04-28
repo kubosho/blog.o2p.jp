@@ -5,10 +5,121 @@
   <id>http://blog.o2p.jp/</id>
   <link href="http://blog.o2p.jp/"/>
   <link href="http://blog.o2p.jp/feed" rel="self"/>
-  <updated>2014-04-12T14:50:00Z</updated>
+  <updated>2014-04-28T04:00:00Z</updated>
   <author>
     <name>kubosho_</name>
   </author>
+  <entry>
+    <title>Boxenを使ってMacを設定してみた</title>
+    <link rel="alternate" href="/2014/04/28/use-boxen.html"/>
+    <id>/2014/04/28/use-boxen.html</id>
+    <published>2014-04-28T04:00:00Z</published>
+    <updated>2014-04-28T04:00:00Z</updated>
+    <author>
+      <name>kubosho_</name>
+    </author>
+    <content type="html">&lt;p&gt;新しい MacBook Pro を手に入れ、いろいろと設定する必要が出てきたのと、MacBook Air Retina なんてものが出た時にはすぐに買うし、その際にも設定が必要なので、設定の手間を省くために boxen であれこれ設定しようとしたらハマりまくったので、ハマったところを書いていく。&lt;/p&gt;
+
+&lt;h2&gt;Boxen を使うにあたって準備しておくもの&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/boxen/our-boxen"&gt;boxen/our-boxen&lt;/a&gt; の README より引用。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;(できれば)Xcode のフルインストール&lt;/li&gt;
+&lt;li&gt;Xcode Command Line Tools のインストール
+
+&lt;ul&gt;
+&lt;li&gt;Mavericks からはインストール方法が変わっていた。&lt;a href="http://hiroki.jp/mavericks-command-line-developer-tools"&gt;MavericksでCommand Line Developer Toolsをインストールする方法が変更 | Act as Professional - hiroki.jp&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;ハイフンが入っていない GitHub のアカウント&lt;/li&gt;
+&lt;li&gt;rvm のアンインストール&lt;/li&gt;
+&lt;li&gt;rbenv のアンインストール
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://qiita.com/astronaughts/items/760d56fb5674707a9a0f"&gt;Git で入れてしまった rbenv を削除して Homebrew で入れなおした時のメモ - Qiita&lt;/a&gt;を見ながら rbenv を削除した。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;chruby のアンインストール&lt;/li&gt;
+&lt;li&gt;homebrew のアンインストール&lt;/li&gt;
+&lt;li&gt;nvm のアンインストール&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;自分の場合、homebrew と rbenv をインストールして使っていたので、アンインストールする必要が出てしまった。特に homebrew はアンインストールが面倒だったので、&lt;a href="https://github.com/Homebrew/homebrew/wiki/FAQ#how-do-i-uninstall-homebrew"&gt;FAQ · Homebrew/homebrew Wiki&lt;/a&gt; を元にやり方を書いていく。&lt;/p&gt;
+
+&lt;h2&gt;homebrew のアンインストール方法&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="https://gist.github.com/mxcl/1173223"&gt;Uninstall Homebrew&lt;/a&gt; を git clone もしくはダウンロードする&lt;/li&gt;
+&lt;li&gt;実行権限を与えるため &lt;code&gt;chmod u+x uninstall_homebrew.sh&lt;/code&gt; を実行する&lt;/li&gt;
+&lt;li&gt;sh ./uninstall_homebrew.sh を実行&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;これで homebrew は綺麗さっぱりアンインストールできると思う。しかし次の難関、puppetfile のバージョン番号がよく分からないという問題にぶち当たった。&lt;/p&gt;
+
+&lt;h2&gt;puppetfile 内のバージョン is 何&lt;/h2&gt;
+
+&lt;p&gt;puppetfile 内に書くバージョンは &lt;a href="https://github.com/boxen"&gt;Boxen&lt;/a&gt; 内の puppet- から始まるリポジトリ内のタグのバージョン番号となる。&lt;/p&gt;
+
+&lt;p&gt;最初これが分からなくて、Node なんかは 3.7.0 とか書かれていて、「インストールしたいバージョンを足した合計を書くのか？」とか思った。例えば 0.10 と 0.11 をインストールしたいのなら 0.21 と書くような感じ。よく考えれば違うと分かるけど、Boxen の puppet- から始まるリポジトリ内のタグのバージョン番号とは分からなかった。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;さて、これで boxen を実行した…と思ったら、下記に示すエラーが出てしまった。&lt;/p&gt;
+
+&lt;h2&gt;エラー一覧&lt;/h2&gt;
+
+&lt;h3&gt;Mavericks+Xcode 5.1 という組み合わせで JSON の gem install に失敗するときの対処法&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/boxen/our-boxen/issues/528"&gt;Ruby Gem install Json fails on Mavericks and Xcode 5.1 - unknown argument: &amp;apos;-multiply_definedsuppress&amp;apos; · Issue #528 · boxen/our-boxen&lt;/a&gt; に書かれているように、ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future script/boxen とすることにより、実行されるようになる。&lt;/p&gt;
+
+&lt;h3&gt;Nginx インストール時に pcre が not a directory となる&lt;/h3&gt;
+&lt;pre class="highlight plaintext"&gt;Installing pcre from S3...
+tar: Unrecognized archive format
+tar: Error exit delayed from previous errors.
+Error: /opt/boxen/homebrew/Cellar/pcre/8.35 is not a directory
+Warning: Bottle installation failed: building from source.
+Warning: Nothing was installed to /opt/boxen/homebrew/Cellar/pcre/8.35
+Error: /opt/boxen/homebrew/Cellar/pcre/8.35 is not a directory
+&lt;/pre&gt;
+
+&lt;p&gt;boxen のディレクトリで ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future ./script/boxen --no-fde というコマンドを実行した時に上記ソースのようなエラーが出て、インストールが先に進まないというのが発生した。&lt;/p&gt;
+
+&lt;p&gt;しかし、&lt;a href="https://github.com/fasrc/boxen/wiki"&gt;Home · fasrc/boxen Wiki&lt;/a&gt; によると ./script/boxen を実行し直すことによりインストールが出来るらしい。しかし自分の場合、Git周りでエラーが出てしまった。&lt;/p&gt;
+
+&lt;p&gt;再度調べてみたところ、&lt;a href="https://github.com/boxen/our-boxen/issues/421"&gt;Our-Boxen fails to install · Issue #421 · boxen/our-boxen&lt;/a&gt; というissueを見つけた。これによると &lt;code&gt;brew install pcre&lt;/code&gt; とした後再度boxenを実行する。&lt;/p&gt;
+
+&lt;h3&gt;puppet-module-data の 0.0.3 を使うと uninitialized constant Puppet::DataBinding::LookupError というエラーが出る&lt;/h3&gt;
+
+&lt;p&gt;とりあえず 0.0.1 を使うようにすればエラーは出なくなる。&lt;a href="https://github.com/ripienaar/puppet-module-data/issues/6"&gt;それらしきissueも報告されている&lt;/a&gt;。とはいえ、0.0.3 だとなぜエラーが出るのかは謎…&lt;/p&gt;
+
+&lt;h2&gt;You haven&amp;#39;t loaded Boxen&amp;#39;s environment yet!&lt;/h2&gt;
+
+&lt;p&gt;以下のようなメッセージが出る時がある。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;--&amp;gt; You haven&amp;#39;t loaded Boxen&amp;#39;s environment yet!
+   To permanently fix this, source /opt/boxen/env.sh at the end
+   of your shell&amp;#39;s startup file.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;解決策としては、&lt;a href="http://threetreeslight.com/post/58009785849/boxen-mac"&gt;Boxenを利用したMacのセットアップ | iii ThreeTreesLight&lt;/a&gt;にも書かれているように、.zshrc などを任意のエディタで開き、&lt;code&gt;source /opt/boxen/env.sh&lt;/code&gt; として boxen の 環境設定ファイルを読み込むようにする。&lt;/p&gt;
+
+&lt;p&gt;ちなみに、&lt;a href="http://threetreeslight.com/post/58009785849/boxen-mac"&gt;Boxenを利用したMacのセットアップ | iii ThreeTreesLight&lt;/a&gt;の記事は、ハマった時に見たら問題が解決されたので良記事だと思う。&lt;/p&gt;
+
+&lt;h2&gt;紆余曲折あったけどできた&lt;/h2&gt;
+
+&lt;p&gt;自分用の Mac の設定ができたので公開します。Boxen を使いたいという場合に参考になるかもしれないです。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/kubosho/macbox"&gt;kubosho/macbox&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;アプリケーションは以下のものがインストールされる。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/kubosho/macbox/issues/1"&gt;インストールするアプリケーション一覧 · Issue #1 · kubosho/macbox&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Mac の設定は以下の通りとなる。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/kubosho/macbox/issues/2"&gt;Macの各種設定をおこなうようにする · Issue #2 · kubosho/macbox&lt;/a&gt;&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>AndroidのChromeで見ているページをPCでデバッグする方法</title>
     <link rel="alternate" href="/2014/04/12/android-chrome-remote-dubugging.html"/>
@@ -287,71 +398,6 @@
 &lt;p&gt;これらの質問に答えると、&lt;q&gt;Config file generated at &amp;quot;/path/to/karma.conf.js&amp;quot;.&lt;/q&gt;というメッセージが表示され、karma.conf.jsが作成されています。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href="https://github.com/karma-runner/karma/blob/master/test/client/karma.conf.js"&gt;karma/test/client/karma.conf.js at master · karma-runner/karma&lt;/a&gt;を見つつ、karma.conf.jsを自分で作成・設定するという手もあると思いますが、&lt;code&gt;karma init&lt;/code&gt;を実行するほうが楽だと思います。&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>2013年を振り返ってみる、そして2014年</title>
-    <link rel="alternate" href="/2013/12/30/2013-to-2014.html"/>
-    <id>/2013/12/30/2013-to-2014.html</id>
-    <published>2013-12-30T07:00:00Z</published>
-    <updated>2013-12-30T07:00:00Z</updated>
-    <author>
-      <name>kubosho_</name>
-    </author>
-    <content type="html">&lt;p&gt;今年もいつの間にやら年の瀬の時期になってました。というわけで今年を振りかえってみようかと思います。&lt;/p&gt;
-
-&lt;h2&gt;今年一番の話題: 転職&lt;/h2&gt;
-
-&lt;p&gt;今年の個人的な一番の話題は、2012年の年末に面白法人カヤックを辞めて、4ヶ月ほど潜伏した後、&lt;a href="http://inputxoutput.com/join-grani/"&gt;株式会社グラニ&lt;/a&gt;(別名&lt;a href="http://grani.jp/"&gt;謎社&lt;/a&gt;)に転職したことでしょうか。&lt;/p&gt;
-
-&lt;p&gt;今まで触ったことない、C#やASP.NET MVC(自分が主に触るのはRazorですが)、TypeScript、そしてIDEはVisual Studio 2013と、かなりWindowsに寄った開発現場は初めてですが、入ってから7ヶ月の間に1,586コミットをして、コミット数が1位になるくらい頑張ってます。&lt;/p&gt;
-
-&lt;p&gt;あとはアプリ自体も今のところ好調です。ただそれはけっして自分だけの力ではなくチーム全員が頑張った結果です。&lt;/p&gt;
-
-&lt;p&gt;ただ、まだまだ改善すべきところはあるのと、あとは一時的にランキングで3冠(参考: &lt;a href="http://gamebiz.jp/?p=125582"&gt;グラニの『神獄のヴァルハラゲート』がスマホ版GREEランキングで首位獲得！　大手ゲーム会社を抑えて3冠達成！　谷氏のコメントも掲載 | Social Game Info&lt;/a&gt;)になったりもしましたが、本当に一時的なものだったので、ある程度の期間3冠にいられるようにしたいなとは思います。&lt;/p&gt;
-
-&lt;h2&gt;今年一番買ってよかったもの&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href="http://blog.sou-lab.com/mac-totebag/"&gt;MacBookを持ち運ぶためのかっこいいトートバッグ | Sou-Lablog&lt;/a&gt;を見て買った、&lt;a href="http://www.focal.co.jp/products/detail.php?product_id=679"&gt;HEX ACADEMY TOTE for MacBook Pro&lt;/a&gt;。&lt;/p&gt;
-
-&lt;p&gt;デザイン的にもいいし、MacBook AirとNexus 7とNintendo 3DSを入れてもなお余裕があるというのがいいです。次点で&lt;a href="http://dx39.net/"&gt;Xperia feat. HATSUNE MIKU&lt;/a&gt;。端末のサイズがちょうど手に合っているのと、特に不具合もなく快適に使えるのがいいです。&lt;/p&gt;
-
-&lt;h2&gt;なにげにQiitaにも投稿してた&lt;/h2&gt;
-
-&lt;p&gt;今年、このブログ以外にQiitaでも記事を書いてました。使い分け方としては、Qiitaが「ちょっとしたメモ」、ブログが「がっつりしたメモ」という感じで、スクリーンショットの数や載せるソースの数、あとは文章量によって、使い分けをしていました。&lt;/p&gt;
-
-&lt;p&gt;というわけで、以下が今年Qiitaに投稿した8つの記事です。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://qiita.com/kubosho_/items/aeb1c6b0b159f585e91c"&gt;Ruby on Rails+Apacheという組み合わせで「We&amp;apos;re sorry, but something went wrong.」のエラーが出た時の対処法&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://qiita.com/kubosho_/items/9dfc8f1085762fc48a2d"&gt;ERROR: Could not find a valid gem &amp;apos;gem名&amp;apos; (&amp;gt;= 0), here is why: Unable to download data from https://rubygems.org/ と出た場合の対処法&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://qiita.com/kubosho_/items/ac4d0dee85123393735b"&gt;GoogleAnalytics - Universal Analytics トラッキング コード(analytics.js)でCookieを用いたオプトアウトを行なう方法&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://qiita.com/kubosho_/items/2faf94e93a8b2dfe44b6"&gt;Mac OS X Mavericksでgemをインストールしようとした時に ERROR: Failed to build gem native extension と怒られた時の対処法&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://qiita.com/kubosho_/items/2887d200f9b5aa738fb1"&gt;QiitaのサイトにBEMを勝手に取り入れてみた&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://qiita.com/kubosho_/items/4f48612e1cec9f9e9638"&gt;「Qiitaのサイトに勝手にBEMを取り入れてみた」の解説&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://qiita.com/kubosho_/items/8b324b5e9aef10b7d04d"&gt;CoffeeScriptで「$ = jQuery」とした時に「jQuery is not defined」というReferenceErrorが出た&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://qiita.com/kubosho_/items/248fd5128366f55513e0"&gt;rbenvで自分が使ったコマンドのメモ&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Ruby関連の話題が多めな気がします。どれもちょっとしたメモ(「勝手にBEMを取り入れてみた」シリーズは除く)といった感じで、ブログに載せるほどでもないかなーと思ってQiitaに載せました。あとはメモ程度でも載せないよりかは載せたほうがいいと思ったのもQiitaに載せた理由です。&lt;/p&gt;
-
-&lt;p&gt;エラーを解決した系の記事はエラーメッセージをタイトルに入れることで、検索に引っかかって多く見られることを期待していたりします(それで自分が解決したやり方で直ればなおさらいいですね)。&lt;/p&gt;
-
-&lt;p&gt;来年もQiitaには引き続きちょっとしたメモ系の記事を上げていこうと思います。&lt;/p&gt;
-
-&lt;h2&gt;そして2014年&lt;/h2&gt;
-
-&lt;p&gt;個人的な目標として掲げるのは以下の5つ。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;ライブラリを3個以上作る&lt;/li&gt;
-&lt;li&gt;Webサービスを3個以上作る&lt;/li&gt;
-&lt;li&gt;ブログの記事を50個以上書く&lt;/li&gt;
-&lt;li&gt;勉強会で2回以上発表する&lt;/li&gt;
-&lt;li&gt;冬コミ(C87)サークル参加&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;どれも不可能ではないと考えていて、数的に一番多いブログの記事も週に1個かけば達成できる範囲なので出来ると思います。来年はいい意味で目立つ年にしたいな。&lt;/p&gt;
 </content>
   </entry>
 </feed>
