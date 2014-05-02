@@ -144,15 +144,15 @@ Error: /opt/boxen/homebrew/Cellar/pcre/8.35 is not a directory
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;しかしどちらもAndroid SDKのダウンロードと設定や、PCのChromeに拡張機能をインストールしないといけなく、正直めんどいなと思ったら、Chrome 32以上ならは上記のSDKなどをダウンロードしなくてもPCからデバッグが出来るようだ。&lt;/p&gt;
+&lt;p&gt;しかしどちらもAndroid SDKのダウンロードと設定や、PCのChromeに拡張機能をインストールしないといけなく、正直めんどい。と思ったら、Chrome バージョン32以上からは上記のSDKなどをダウンロードしなくてもPCからデバッグができるようだ。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href="http://d.hatena.ne.jp/hokaccha/20140109/1389254171"&gt;最近のAndroid Chromeのリモートデバッグ - hokaccha.hamalog v2&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;ということで、&lt;a href="https://developers.google.com/chrome-developer-tools/docs/remote-debugging?hl=ja"&gt;Remote Debugging Chrome on Android - Chrome DevTools — Google Developers&lt;/a&gt;や他サイトに沿ってデバッグが行えるようにしたので、やったことを書いていく。&lt;/p&gt;
+&lt;p&gt;ということで、&lt;a href="https://developers.google.com/chrome-developer-tools/docs/remote-debugging?hl=ja"&gt;Remote Debugging Chrome on Android - Chrome DevTools — Google Developers&lt;/a&gt;や他サイトに沿ってデバッグがおこなえるようにしたので、やったことを書いていく。&lt;/p&gt;
 
 &lt;h2&gt;Android側のUSBデバッグを有効にする&lt;/h2&gt;
 
-&lt;p&gt;Android 4.2以上のバージョンの場合、開発者向けオプションは初期設定では隠されている。それ以下の場合は設定の下の方に開発者向けオプションがある。&lt;/p&gt;
+&lt;p&gt;Android 4.2以上のバージョンの場合、開発者向けオプションは初期設定では隠されている。なおAndroid 4.2未満の場合は、設定画面の下の方に開発者向けオプションがある。&lt;/p&gt;
 
 &lt;p&gt;Android 4.2以上で開発者向けオプションを表示するには、設定-&amp;gt;システム:端末情報内の項目にある「ビルド番号」を7回タップする必要がある。タップし続けると「デベロッパーになるまであとnステップです」と表示されたり、7回タップすると「あなたは今開発者になりました！」と表示されるので分かりやすい&lt;a href="#note1"&gt;*1&lt;/a&gt;。&lt;/p&gt;
 
