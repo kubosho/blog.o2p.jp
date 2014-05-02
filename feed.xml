@@ -18,60 +18,68 @@
     <author>
       <name>kubosho_</name>
     </author>
-    <content type="html">&lt;p&gt;新しい MacBook Pro を手に入れ、いろいろと設定する必要が出てきたのと、MacBook Air Retina なんてものが出た時にはすぐに買うし、その際にも設定が必要なので、設定の手間を省くために boxen であれこれ設定しようとしたらハマりまくったので、ハマったところを書いていく。&lt;/p&gt;
+    <content type="html">&lt;p&gt;最近、新しいMacを手に入れた。しかし、初期設定が面倒くさい。&lt;/p&gt;
 
-&lt;h2&gt;Boxen を使うにあたって準備しておくもの&lt;/h2&gt;
+&lt;p&gt;なので、前から気になっていたBoxenを使って、新しく手に入れたMacや今後手に入れるであろうMacの初期設定を楽にしよう…と思ったら、案外ハマったのでメモる。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href="https://github.com/boxen/our-boxen"&gt;boxen/our-boxen&lt;/a&gt; の README より引用。&lt;/p&gt;
+&lt;h2&gt;Boxenを使うにあたって準備しておくもの&lt;/h2&gt;
 
-&lt;ul&gt;
-&lt;li&gt;(できれば)Xcode のフルインストール&lt;/li&gt;
-&lt;li&gt;Xcode Command Line Tools のインストール
+&lt;p&gt;&lt;a href="https://github.com/boxen/our-boxen"&gt;boxen/our-boxen&lt;/a&gt; のREADMEより引用。&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Mavericks からはインストール方法が変わっていた。&lt;a href="http://hiroki.jp/mavericks-command-line-developer-tools"&gt;MavericksでCommand Line Developer Toolsをインストールする方法が変更 | Act as Professional - hiroki.jp&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;(できれば)Xcodeのフルインストール&lt;/li&gt;
+&lt;li&gt;Xcode Command Line Toolsのインストール
+
+&lt;ul&gt;
+&lt;li&gt;Mavericksからはインストール方法が変わっていた。&lt;a href="http://hiroki.jp/mavericks-command-line-developer-tools"&gt;MavericksでCommand Line Developer Toolsをインストールする方法が変更 | Act as Professional - hiroki.jp&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;ハイフンが入っていない GitHub のアカウント&lt;/li&gt;
-&lt;li&gt;rvm のアンインストール&lt;/li&gt;
-&lt;li&gt;rbenv のアンインストール
+&lt;li&gt;ハイフンが入っていないGitHubのアカウント&lt;/li&gt;
+&lt;li&gt;rvmのアンインストール&lt;/li&gt;
+&lt;li&gt;rbenvのアンインストール
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="http://qiita.com/astronaughts/items/760d56fb5674707a9a0f"&gt;Git で入れてしまった rbenv を削除して Homebrew で入れなおした時のメモ - Qiita&lt;/a&gt;を見ながら rbenv を削除した。&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://qiita.com/astronaughts/items/760d56fb5674707a9a0f"&gt;Git で入れてしまった rbenv を削除して Homebrew で入れなおした時のメモ - Qiita&lt;/a&gt;を見ながらrbenvを削除した。&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;chruby のアンインストール&lt;/li&gt;
-&lt;li&gt;homebrew のアンインストール&lt;/li&gt;
-&lt;li&gt;nvm のアンインストール&lt;/li&gt;
+&lt;li&gt;chrubyのアンインストール&lt;/li&gt;
+&lt;li&gt;homebrewのアンインストール&lt;/li&gt;
+&lt;li&gt;nvmのアンインストール&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;自分の場合、homebrew と rbenv をインストールして使っていたので、アンインストールする必要が出てしまった。特に homebrew はアンインストールが面倒だったので、&lt;a href="https://github.com/Homebrew/homebrew/wiki/FAQ#how-do-i-uninstall-homebrew"&gt;FAQ · Homebrew/homebrew Wiki&lt;/a&gt; を元にやり方を書いていく。&lt;/p&gt;
+&lt;p&gt;自分の場合、homebrewとrbenvをインストールして使っていたので、アンインストールする必要が出てしまった。&lt;/p&gt;
 
-&lt;h2&gt;homebrew のアンインストール方法&lt;/h2&gt;
+&lt;p&gt;特にhomebrewはアンインストールが面倒だったので、&lt;a href="https://github.com/Homebrew/homebrew/wiki/FAQ#how-do-i-uninstall-homebrew"&gt;FAQ · Homebrew/homebrew Wiki&lt;/a&gt;を元にやり方を以下に書いていく。&lt;/p&gt;
+
+&lt;h2&gt;homebrewのアンインストール方法&lt;/h2&gt;
 
 &lt;ol&gt;
-&lt;li&gt;&lt;a href="https://gist.github.com/mxcl/1173223"&gt;Uninstall Homebrew&lt;/a&gt; を git clone もしくはダウンロードする&lt;/li&gt;
-&lt;li&gt;実行権限を与えるため &lt;code&gt;chmod u+x uninstall_homebrew.sh&lt;/code&gt; を実行する&lt;/li&gt;
-&lt;li&gt;sh ./uninstall_homebrew.sh を実行&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://gist.github.com/mxcl/1173223"&gt;Uninstall Homebrew&lt;/a&gt;をgit clone、もしくはダウンロードする&lt;/li&gt;
+&lt;li&gt;実行権限を与えるため&lt;code&gt;chmod u+x uninstall_homebrew.sh&lt;/code&gt;を実行する&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sh ./uninstall_homebrew.sh&lt;/code&gt;を実行&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;これで homebrew は綺麗さっぱりアンインストールできると思う。しかし次の難関、puppetfile のバージョン番号がよく分からないという問題にぶち当たった。&lt;/p&gt;
+&lt;p&gt;これでhomebrewはきれいさっぱりアンインストールできると思う。&lt;/p&gt;
 
-&lt;h2&gt;puppetfile 内のバージョン is 何&lt;/h2&gt;
+&lt;p&gt;しかし、次にpuppetfileのバージョン番号がよく分からないという問題にぶち当たった。&lt;/p&gt;
 
-&lt;p&gt;puppetfile 内に書くバージョンは &lt;a href="https://github.com/boxen"&gt;Boxen&lt;/a&gt; 内の puppet- から始まるリポジトリ内のタグのバージョン番号となる。&lt;/p&gt;
+&lt;h2&gt;puppetfile内のバージョン is 何&lt;/h2&gt;
 
-&lt;p&gt;最初これが分からなくて、Node なんかは 3.7.0 とか書かれていて、「インストールしたいバージョンを足した合計を書くのか？」とか思った。例えば 0.10 と 0.11 をインストールしたいのなら 0.21 と書くような感じ。よく考えれば違うと分かるけど、Boxen の puppet- から始まるリポジトリ内のタグのバージョン番号とは分からなかった。&lt;/p&gt;
+&lt;p&gt;puppetfile内に書くバージョンは&lt;a href="https://github.com/boxen"&gt;Boxen&lt;/a&gt;内のpuppet-から始まるリポジトリ内のタグのバージョン番号となる。&lt;/p&gt;
+
+&lt;p&gt;最初これが分からなくて、Nodeなんかは&lt;b&gt;3.7.0&lt;/b&gt;とか書かれていて、「インストールしたいバージョンを足した合計を書くのか？」とか思った。例えば0.10と0.11をインストールしたいのなら0.21と書くような感じ。&lt;/p&gt;
+
+&lt;p&gt;この考え方は、よく考えれば違うと分かるけど、Boxenのpuppet-から始まるリポジトリ内のタグのバージョン番号とは分からなかった。&lt;/p&gt;
 
 &lt;hr&gt;
 
-&lt;p&gt;さて、これで boxen を実行した…と思ったら、下記に示すエラーが出てしまった。&lt;/p&gt;
+&lt;p&gt;さて、これでhomebrewをアンインストールし、 puppetfile内のバージョンをpuppet-から始まるリポジトリ内のタグのバージョン名にして、その後、boxenを実行した…と思ったら、下記に示すエラーが出てしまった。&lt;/p&gt;
 
 &lt;h2&gt;エラー一覧&lt;/h2&gt;
 
-&lt;h3&gt;Mavericks+Xcode 5.1 という組み合わせで JSON の gem install に失敗するときの対処法&lt;/h3&gt;
+&lt;h3&gt;Mavericks + Xcode 5.1という組み合わせでJSONのgem installに失敗するときの対処法&lt;/h3&gt;
 
-&lt;p&gt;&lt;a href="https://github.com/boxen/our-boxen/issues/528"&gt;Ruby Gem install Json fails on Mavericks and Xcode 5.1 - unknown argument: &amp;apos;-multiply_definedsuppress&amp;apos; · Issue #528 · boxen/our-boxen&lt;/a&gt; に書かれているように、ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future script/boxen とすることにより、実行されるようになる。&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/boxen/our-boxen/issues/528"&gt;Ruby Gem install Json fails on Mavericks and Xcode 5.1 - unknown argument: &amp;apos;-multiply_definedsuppress&amp;apos; · Issue #528 · boxen/our-boxen&lt;/a&gt; に書かれているように、ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future script/boxenとすることにより、実行されるようになる。&lt;/p&gt;
 
-&lt;h3&gt;Nginx インストール時に pcre が not a directory となる&lt;/h3&gt;
+&lt;h3&gt;Nginxインストール時にpcreがnot a directoryとなる&lt;/h3&gt;
 &lt;pre class="highlight plaintext"&gt;Installing pcre from S3...
 tar: Unrecognized archive format
 tar: Error exit delayed from previous errors.
@@ -81,15 +89,17 @@ Warning: Nothing was installed to /opt/boxen/homebrew/Cellar/pcre/8.35
 Error: /opt/boxen/homebrew/Cellar/pcre/8.35 is not a directory
 &lt;/pre&gt;
 
-&lt;p&gt;boxen のディレクトリで ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future ./script/boxen --no-fde というコマンドを実行した時に上記ソースのようなエラーが出て、インストールが先に進まないというのが発生した。&lt;/p&gt;
+&lt;p&gt;BoxenのファイルがあるディレクトリでARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future ./script/boxen --no-fdeというコマンドを実行した時に、上記のようなエラーが出て、インストールが先に進まないというのが発生した。&lt;/p&gt;
 
-&lt;p&gt;しかし、&lt;a href="https://github.com/fasrc/boxen/wiki"&gt;Home · fasrc/boxen Wiki&lt;/a&gt; によると ./script/boxen を実行し直すことによりインストールが出来るらしい。しかし自分の場合、Git周りでエラーが出てしまった。&lt;/p&gt;
+&lt;p&gt;しかし、&lt;a href="https://github.com/fasrc/boxen/wiki"&gt;Home · fasrc/boxen Wiki&lt;/a&gt; によると&lt;code&gt;./script/boxen&lt;/code&gt;を実行し直すことによりインストールが出来るらしい。しかし自分の場合、Git周りでエラーが出てしまい、インストールが進まず途中で止まってしまった。&lt;/p&gt;
 
-&lt;p&gt;再度調べてみたところ、&lt;a href="https://github.com/boxen/our-boxen/issues/421"&gt;Our-Boxen fails to install · Issue #421 · boxen/our-boxen&lt;/a&gt; というissueを見つけた。これによると &lt;code&gt;brew install pcre&lt;/code&gt; とした後再度boxenを実行する。&lt;/p&gt;
+&lt;p&gt;解決方法を再度調べてみたところ、&lt;a href="https://github.com/boxen/our-boxen/issues/421"&gt;Our-Boxen fails to install · Issue #421 · boxen/our-boxen&lt;/a&gt;というissueを見つけた。これによると&lt;code&gt;brew install pcre&lt;/code&gt;とした後、再度&lt;code&gt;./script/boxen&lt;/code&gt;を実行するとのこと。&lt;/p&gt;
 
-&lt;h3&gt;puppet-module-data の 0.0.3 を使うと uninitialized constant Puppet::DataBinding::LookupError というエラーが出る&lt;/h3&gt;
+&lt;h3&gt;puppet-module-dataの0.0.3を使うとuninitialized constant Puppet::DataBinding::LookupErrorというエラーが出る&lt;/h3&gt;
 
-&lt;p&gt;とりあえず 0.0.1 を使うようにすればエラーは出なくなる。&lt;a href="https://github.com/ripienaar/puppet-module-data/issues/6"&gt;それらしきissueも報告されている&lt;/a&gt;。とはいえ、0.0.3 だとなぜエラーが出るのかは謎…&lt;/p&gt;
+&lt;p&gt;とりあえず0.0.1を使うようにすればエラーは出なくなる。&lt;a href="https://github.com/ripienaar/puppet-module-data/issues/6"&gt;それらしきissueも報告されている&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;なお、0.0.3だとなぜエラーが出るのかまでは調べていない。&lt;/p&gt;
 
 &lt;h2&gt;You haven&amp;#39;t loaded Boxen&amp;#39;s environment yet!&lt;/h2&gt;
 
@@ -101,23 +111,13 @@ Error: /opt/boxen/homebrew/Cellar/pcre/8.35 is not a directory
    of your shell&amp;#39;s startup file.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;解決策としては、&lt;a href="http://threetreeslight.com/post/58009785849/boxen-mac"&gt;Boxenを利用したMacのセットアップ | iii ThreeTreesLight&lt;/a&gt;にも書かれているように、.zshrc などを任意のエディタで開き、&lt;code&gt;source /opt/boxen/env.sh&lt;/code&gt; として boxen の 環境設定ファイルを読み込むようにする。&lt;/p&gt;
+&lt;p&gt;解決策としては、&lt;a href="http://threetreeslight.com/post/58009785849/boxen-mac"&gt;Boxenを利用したMacのセットアップ | iii ThreeTreesLight&lt;/a&gt;にも書かれているように、.zshrcなどを任意のエディタで開き、&lt;code&gt;source /opt/boxen/env.sh&lt;/code&gt; としてboxenの環境設定ファイルを読み込むようにする。&lt;/p&gt;
 
-&lt;p&gt;ちなみに、&lt;a href="http://threetreeslight.com/post/58009785849/boxen-mac"&gt;Boxenを利用したMacのセットアップ | iii ThreeTreesLight&lt;/a&gt;の記事は、ハマった時に見たら問題が解決されたので良記事だと思う。&lt;/p&gt;
+&lt;h2&gt;完成品&lt;/h2&gt;
 
-&lt;h2&gt;紆余曲折あったけどできた&lt;/h2&gt;
-
-&lt;p&gt;自分用の Mac の設定ができたので公開します。Boxen を使いたいという場合に参考になるかもしれないです。&lt;/p&gt;
+&lt;p&gt;いろいろとハマった結果、できたものは以下のものになる。参考にできそうなところがあれば参考にしてほしい。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href="https://github.com/kubosho/macbox"&gt;kubosho/macbox&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;アプリケーションは以下のものがインストールされる。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://github.com/kubosho/macbox/issues/1"&gt;インストールするアプリケーション一覧 · Issue #1 · kubosho/macbox&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Mac の設定は以下の通りとなる。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://github.com/kubosho/macbox/issues/2"&gt;Macの各種設定をおこなうようにする · Issue #2 · kubosho/macbox&lt;/a&gt;&lt;/p&gt;
 </content>
   </entry>
   <entry>
