@@ -59,11 +59,11 @@
 
 &lt;p&gt;これでhomebrewはきれいさっぱりアンインストールできると思う。&lt;/p&gt;
 
-&lt;p&gt;しかし、次にpuppetfileのバージョン番号がよく分からないという問題にぶち当たった。&lt;/p&gt;
+&lt;hr&gt;
 
 &lt;h2&gt;puppetfile内のバージョン is 何&lt;/h2&gt;
 
-&lt;p&gt;puppetfile内に書くバージョンは&lt;a href="https://github.com/boxen"&gt;Boxen&lt;/a&gt;内のpuppet-から始まるリポジトリ内のタグのバージョン番号となる。&lt;/p&gt;
+&lt;p&gt;次にpuppetfileのバージョン番号がよく分からないという問題にぶち当たった。puppetfile内に書くバージョンは&lt;a href="https://github.com/boxen"&gt;Boxen&lt;/a&gt;内のpuppet-から始まるリポジトリ内のタグのバージョン番号となる。&lt;/p&gt;
 
 &lt;p&gt;最初これが分からなくて、Nodeなんかは&lt;b&gt;3.7.0&lt;/b&gt;とか書かれていて、「インストールしたいバージョンを足した合計を書くのか？」とか思った。例えば0.10と0.11をインストールしたいのなら0.21と書くような感じ。&lt;/p&gt;
 
@@ -71,13 +71,13 @@
 
 &lt;hr&gt;
 
-&lt;p&gt;さて、これでhomebrewをアンインストールし、 puppetfile内のバージョンをpuppet-から始まるリポジトリ内のタグのバージョン名にして、その後、boxenを実行した…と思ったら、下記に示すエラーが出てしまった。&lt;/p&gt;
-
 &lt;h2&gt;エラー一覧&lt;/h2&gt;
 
 &lt;h3&gt;Mavericks + Xcode 5.1という組み合わせでJSONのgem installに失敗するときの対処法&lt;/h3&gt;
 
-&lt;p&gt;&lt;a href="https://github.com/boxen/our-boxen/issues/528"&gt;Ruby Gem install Json fails on Mavericks and Xcode 5.1 - unknown argument: &amp;apos;-multiply_definedsuppress&amp;apos; · Issue #528 · boxen/our-boxen&lt;/a&gt; に書かれているように、ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future script/boxenとすることにより、実行されるようになる。&lt;/p&gt;
+&lt;p&gt;いよいよ、&lt;code&gt;./script/boxen&lt;/code&gt;を実行して初期設定を始めようとした矢先、JSONのgem installに失敗した。&lt;/p&gt;
+
+&lt;p&gt;これは、&lt;a href="https://github.com/boxen/our-boxen/issues/528"&gt;Ruby Gem install Json fails on Mavericks and Xcode 5.1 - unknown argument: &amp;apos;-multiply_definedsuppress&amp;apos; · Issue #528 · boxen/our-boxen&lt;/a&gt;に書かれているように、ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future script/boxenとすることにより、実行されるようになる。&lt;/p&gt;
 
 &lt;h3&gt;Nginxインストール時にpcreがnot a directoryとなる&lt;/h3&gt;
 &lt;pre class="highlight plaintext"&gt;Installing pcre from S3...
@@ -89,7 +89,7 @@ Warning: Nothing was installed to /opt/boxen/homebrew/Cellar/pcre/8.35
 Error: /opt/boxen/homebrew/Cellar/pcre/8.35 is not a directory
 &lt;/pre&gt;
 
-&lt;p&gt;BoxenのファイルがあるディレクトリでARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future ./script/boxen --no-fdeというコマンドを実行した時に、上記のようなエラーが出て、インストールが先に進まないというのが発生した。&lt;/p&gt;
+&lt;p&gt;しかし、ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future ./script/boxen --no-fdeというコマンドを実行した時に、上記のようなエラーが出て、インストールが先に進まないというのが発生した。&lt;/p&gt;
 
 &lt;p&gt;しかし、&lt;a href="https://github.com/fasrc/boxen/wiki"&gt;Home · fasrc/boxen Wiki&lt;/a&gt; によると&lt;code&gt;./script/boxen&lt;/code&gt;を実行し直すことによりインストールが出来るらしい。しかし自分の場合、Git周りでエラーが出てしまい、インストールが進まず途中で止まってしまった。&lt;/p&gt;
 
