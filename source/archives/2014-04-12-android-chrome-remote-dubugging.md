@@ -13,15 +13,15 @@ AndroidのChromeを用いてデバッグをしたいということがある。�
 - ChromeにADBという拡張機能をインストールしてデバッグ
   - [SDK不要Android端末のリモートデバッグChrome拡張機能「ADB」 - Intelligent Technology's Technical Blog](http://iti.hatenablog.jp/entry/2013/11/05/182133)
 
-しかしどちらもAndroid SDKのダウンロードと設定や、PCのChromeに拡張機能をインストールしないといけなく、正直めんどいなと思ったら、Chrome 32以上ならは上記のSDKなどをダウンロードしなくてもPCからデバッグが出来るようだ。
+しかしどちらもAndroid SDKのダウンロードと設定や、PCのChromeに拡張機能をインストールしないといけなく、正直めんどい。と思ったら、Chrome バージョン32以上からは上記のSDKなどをダウンロードしなくてもPCからデバッグができるようだ。
 
 [最近のAndroid Chromeのリモートデバッグ - hokaccha.hamalog v2](http://d.hatena.ne.jp/hokaccha/20140109/1389254171)
 
-ということで、[Remote Debugging Chrome on Android - Chrome DevTools — Google Developers](https://developers.google.com/chrome-developer-tools/docs/remote-debugging?hl=ja)や他サイトに沿ってデバッグが行えるようにしたので、やったことを書いていく。
+ということで、[Remote Debugging Chrome on Android - Chrome DevTools — Google Developers](https://developers.google.com/chrome-developer-tools/docs/remote-debugging?hl=ja)や他サイトに沿ってデバッグがおこなえるようにしたので、やったことを書いていく。
 
 ## Android側のUSBデバッグを有効にする
 
-Android 4.2以上のバージョンの場合、開発者向けオプションは初期設定では隠されている。それ以下の場合は設定の下の方に開発者向けオプションがある。
+Android 4.2以上のバージョンの場合、開発者向けオプションは初期設定では隠されている。なおAndroid 4.2未満の場合は、設定画面の下の方に開発者向けオプションがある。
 
 Android 4.2以上で開発者向けオプションを表示するには、設定->システム:端末情報内の項目にある「ビルド番号」を7回タップする必要がある。タップし続けると「デベロッパーになるまであとnステップです」と表示されたり、7回タップすると「あなたは今開発者になりました！」と表示されるので分かりやすい<a href="#note1">*1</a>。
 
