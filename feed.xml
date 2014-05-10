@@ -5,10 +5,44 @@
   <id>http://blog.o2p.jp/</id>
   <link href="http://blog.o2p.jp/"/>
   <link href="http://blog.o2p.jp/feed" rel="self"/>
-  <updated>2014-04-28T04:00:00Z</updated>
+  <updated>2014-05-10T04:30:00Z</updated>
   <author>
     <name>kubosho_</name>
   </author>
+  <entry>
+    <title>Web Audio APIについてLTを2つしていた</title>
+    <link rel="alternate" href="/2014/05/10/web-audio-api-lt.html"/>
+    <id>/2014/05/10/web-audio-api-lt.html</id>
+    <published>2014-05-10T04:30:00Z</published>
+    <updated>2014-05-10T04:30:00Z</updated>
+    <author>
+      <name>kubosho_</name>
+    </author>
+    <content type="html">&lt;p&gt;最近、個人的に注目しているのが&lt;a href="https://dvcs.w3.org/hg/audio/raw-file/tip/webaudio/specification.html"&gt;Web Audio API&lt;/a&gt;です。&lt;/p&gt;
+
+&lt;p&gt;そのWeb Audio APIについて、&lt;a href="http://atnd.org/events/48953"&gt;帰ってきたYokohama.js&lt;/a&gt;と&lt;a href="http://www.zusaar.com/event/5117005"&gt;CodeGrid二周年記念パーティー&lt;/a&gt;でLTをしてきたので、その時の発表資料をブログにも貼り付けておきます。&lt;/p&gt;
+
+&lt;h2&gt;帰ってきたYokohama.jsで話したこと&lt;/h2&gt;
+
+&lt;p&gt;Web Audio APIの概要や何ができるか、ブラウザの対応状況などについて話してきました。&lt;/p&gt;
+
+&lt;p&gt;&lt;iframe src="http://www.slideshare.net/slideshow/embed_code/33705589" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px 1px 0; margin-bottom:5px; max-width: 100%;" allowfullscreen&gt; &lt;/iframe&gt; &lt;div style="margin-bottom:5px"&gt; &lt;strong&gt; &lt;a href="https://www.slideshare.net/kubosho/web-audio-api-33705589" title="Web Audio APIの初歩" target="_blank"&gt;Web Audio APIの初歩&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a href="http://www.slideshare.net/kubosho" target="_blank"&gt;Shota Kubota&lt;/a&gt;&lt;/strong&gt; &lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;Yokohama.jsでLTの募集がおこなわれているのを見て、突然Web Audio APIに力を入れようと思い、いろいろと調べた結果をまとめた資料となっています。&lt;/p&gt;
+
+&lt;h2&gt;CodeGrid二周年記念パーティーで話したこと&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href="http://kubosho.github.io/hearing-test-app/"&gt;可聴域調査&lt;/a&gt;という、割と最近のブラウザー(IEとAndroid Browserは除く)に対応した、100Hz〜20,000Hzの範囲でどこまで音を聴けるか確かめられるアプリを作りました。資料内では20Hz〜となっていますが、100Hz〜が正しいです。&lt;/p&gt;
+
+&lt;p&gt;&lt;iframe src="http://www.slideshare.net/slideshow/embed_code/34440311" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px 1px 0; margin-bottom:5px; max-width: 100%;" allowfullscreen&gt; &lt;/iframe&gt; &lt;div style="margin-bottom:5px"&gt; &lt;strong&gt; &lt;a href="https://www.slideshare.net/kubosho/web-audio-api-34440311" title="Web Audio APIを使って可聴域を調べるアプリをつくってみた" target="_blank"&gt;Web Audio APIを使って可聴域を調べるアプリをつくってみた&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a href="http://www.slideshare.net/kubosho" target="_blank"&gt;Shota Kubota&lt;/a&gt;&lt;/strong&gt; &lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;なぜこのアプリを作ろうと思ったかですが、以下のツイートをした後、聴力検査という単語にピンときて、実際につくってみました。&lt;/p&gt;
+
+&lt;blockquote class="twitter-tweet" lang="ja"&gt;&lt;p&gt;Web Audio API、聴力検査で流れるような音を生成して再生しただけなのに楽しい&lt;/p&gt;&amp;mdash; kubosho_ (@kubosho_) &lt;a href="https://twitter.com/kubosho_/statuses/461848719319498752"&gt;2014, 5月 1&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;なお、アプリを作成して多少知見を得られたので、今後記事として公開していこうと思います。&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Boxenを使ってMacを設定してみた</title>
     <link rel="alternate" href="/2014/04/28/use-boxen.html"/>
@@ -334,70 +368,6 @@ Error: /opt/boxen/homebrew/Cellar/pcre/8.35 is not a directory
 &lt;p&gt;今回、胸をマークアップしてみましたが、胸に関して言えば状態の数がかなりあると思います(例えば乳輪の色とか乳首の形とか)。&lt;/p&gt;
 
 &lt;p&gt;そうなるとModifierの管理が大変そうな感じがしますが、そこは運用していって最適な形にするのがいいのかなと思います。&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>package.jsonとKarmaの設定を行う</title>
-    <link rel="alternate" href="/2014/01/02/try-packagejson-and-karma.html"/>
-    <id>/2014/01/02/try-packagejson-and-karma.html</id>
-    <published>2014-01-01T15:50:00Z</published>
-    <updated>2014-01-01T15:50:00Z</updated>
-    <author>
-      <name>kubosho_</name>
-    </author>
-    <content type="html">&lt;p&gt;あけましておめでとうございます。今年もよろしくお願いします。&lt;/p&gt;
-
-&lt;p&gt;さて、今年最初に何をやろうかと考えたところ、今までほとんどやってこなかったJavaScriptのテスト周りを触れてみようという結論に達し、&lt;a href="http://visionmedia.github.io/mocha/"&gt;Mocha&lt;/a&gt;+&lt;a href="https://github.com/karma-runner/karma"&gt;Karma&lt;/a&gt;という組み合わせを構築しようとしています。&lt;/p&gt;
-
-&lt;p&gt;まだ構築は完了していないですが、ここまでやったことを書いていきます。&lt;/p&gt;
-
-&lt;h2&gt;package.jsonの設定&lt;/h2&gt;
-
-&lt;p&gt;おもむろに&lt;code&gt;npm init&lt;/code&gt;を実行すると以下のことを聞かれます。ちなみに、&lt;a href="http://kokudori.hatenablog.com/entry/2013/04/04/025521"&gt;npmとpackage.json使い方 - Kokudoriing&lt;/a&gt;がよくまとまっていて分からない設定項目があった時に参考にしました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;name&lt;/li&gt;
-&lt;li&gt;version&lt;/li&gt;
-&lt;li&gt;description&lt;/li&gt;
-&lt;li&gt;entry point&lt;/li&gt;
-&lt;li&gt;test command&lt;/li&gt;
-&lt;li&gt;git repository&lt;/li&gt;
-&lt;li&gt;keywords&lt;/li&gt;
-&lt;li&gt;author&lt;/li&gt;
-&lt;li&gt;license&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;答えると、&lt;q&gt;About to write to /path/to/package.json:&lt;/q&gt;と表示され、package.jsonの内容が表示されます。&lt;/p&gt;
-
-&lt;p&gt;その後、&lt;q&gt;Is this ok? (yes)&lt;/q&gt;と聞かれるのでOKならそのままEnterを押してしまいましょう。&lt;/p&gt;
-
-&lt;p&gt;今回は自動生成されたpackage.jsonにKarmaのために以下の記述を追加しています。具体例は&lt;a href="https://github.com/kubosho/jquery-gameText/blob/master/package.json"&gt;jquery-gameText/package.json at master · kubosho/jquery-gameText&lt;/a&gt;になります。&lt;/p&gt;
-&lt;pre class="highlight json"&gt;&lt;span class="s2"&gt;"devDependencies"&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
-  &lt;/span&gt;&lt;span class="s2"&gt;"karma"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"~0.10"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
-  &lt;/span&gt;&lt;span class="s2"&gt;"karma-mocha"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"~0.1"&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/pre&gt;
-
-&lt;h2&gt;Karmaの設定&lt;/h2&gt;
-
-&lt;p&gt;KarmaのReadmeに書かれているように、&lt;code&gt;karma init&lt;/code&gt;を実行すると以下のことを聞かれます。デフォルト値が設定されている質問についてはだいたいそのままで大丈夫だと思います。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Which testing framework do you want to use ?&lt;/li&gt;
-&lt;li&gt;Do you want to use Require.js ?&lt;/li&gt;
-&lt;li&gt;Do you want to capture a browser automatically ?
-
-&lt;ul&gt;
-&lt;li&gt;なおSafariを選ぶと、karma-safari-launcherがインストールされていない場合は、無いというWarningメッセージが出ます。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;What is the location of your source and test files ? You can use glob patterns, eg. &amp;quot;js/&lt;em&gt;.js&amp;quot; or &amp;quot;test/&lt;/em&gt;&lt;em&gt;/&lt;/em&gt;Spec.js&amp;quot;.&lt;/li&gt;
-&lt;li&gt;Should any of the files included by the previous patterns be excluded ? You can use glob patterns, eg. &amp;quot;*&lt;em&gt;/&lt;/em&gt;.swp&amp;quot;.&lt;/li&gt;
-&lt;li&gt;Do you want Karma to watch all the files and run the tests on change ?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;これらの質問に答えると、&lt;q&gt;Config file generated at &amp;quot;/path/to/karma.conf.js&amp;quot;.&lt;/q&gt;というメッセージが表示され、karma.conf.jsが作成されています。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://github.com/karma-runner/karma/blob/master/test/client/karma.conf.js"&gt;karma/test/client/karma.conf.js at master · karma-runner/karma&lt;/a&gt;を見つつ、karma.conf.jsを自分で作成・設定するという手もあると思いますが、&lt;code&gt;karma init&lt;/code&gt;を実行するほうが楽だと思います。&lt;/p&gt;
 </content>
   </entry>
 </feed>
