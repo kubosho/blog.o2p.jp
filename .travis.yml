@@ -6,3 +6,4 @@ deploy:
   on:
     repo: o2project/o2project.github.io
     branch: develop
+  run: "bundle exec middleman build"
