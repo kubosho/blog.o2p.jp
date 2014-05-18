@@ -69,3 +69,5 @@ desc 'Publish website'
 task :publish do
   push_to_target_repo MASTER_REPO, PUBLISH_BRANCH
 end
+
+task default: :setup
