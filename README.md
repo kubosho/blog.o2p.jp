@@ -1,7 +1,7 @@
 blog.o2p.jp
 ===========
 
-[![Build Status](https://travis-ci.org/o2project/blog.o2p.jp.png)](https://travis-ci.org/o2project/blog.o2p.jp)
+[![Build Status](https://travis-ci.org/o2project/blog.o2p.jp.svg?branch=develop)](https://travis-ci.org/o2project/blog.o2p.jp)
 
 O2 Project Blog.
 
