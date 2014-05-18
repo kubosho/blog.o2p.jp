@@ -8,6 +8,9 @@ gem 'middleman-syntax'
 gem 'redcarpet'
 gem 'travis'
 
+# For Heroku
+gem 'rake'
+
 # For feed.xml.builder
 gem 'builder'
 gem 'compass', '~> 0.12.4'
