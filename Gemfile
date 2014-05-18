@@ -6,8 +6,9 @@ gem 'middleman'
 gem 'middleman-blog'
 gem 'middleman-syntax'
 gem 'redcarpet'
+gem 'travis'
 
-# for feed.xml.builder
+# For feed.xml.builder
 gem 'builder'
 gem 'compass', '~> 0.12.4'
 gem 'slim'
