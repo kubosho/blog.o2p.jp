@@ -50,7 +50,7 @@ end
 
 desc 'Setup origin repo for GitHub pages'
 task :setup do
-  initialize_repo MASTER_REPO, PUBLISH_BRANCH
+  init_repo MASTER_REPO, PUBLISH_BRANCH
   update_repo PUBLISH_BRANCH
 end
 
