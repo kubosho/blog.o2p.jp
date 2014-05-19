@@ -6,6 +6,6 @@ deploy:
     secure: X7hTnf1j0gW+Qe2i1yKXWTV1FXXgIx/XGdTk573+aYn8oRyw2BZeJcobsbN3Cw6a+0v5xFT0fabbWokTWPZZLeVdBI+M+yBxl1jW8AXF+IbBIeEM9qv9TdnaqZV9Nedq9JLa5FMbZnu4eKooRotzNuF6rXdkATxE8JKiFh/7tgo=
   app: o2p
   on:
-    repo: o2project/o2project.github.io
+    repo: o2project/blog.o2p.jp
     branch: develop
   run: "bundle exec middleman build"

@@ -1,7 +1,7 @@
 MASTER_REPO = if ENV['GH_TOKEN']
-                      'https://$GH_TOKEN@github.com/o2project/o2project.github.io'
+                      'https://$GH_TOKEN@github.com/o2project/blog.o2p.jp'
                     else
-                      'git@github.com:o2project/o2project.github.io'
+                      'git@github.com:o2project/blog.o2p.jp'
                     end
 PUBLISH_BRANCH = 'master'
 DEST_DIR = 'build'
