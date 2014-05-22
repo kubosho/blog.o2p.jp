@@ -11,6 +11,6 @@ O2 Project Blog.
 
 ソースコードのライセンスは特に断りがない場合は、MIT Licenseとなります。
 
-文章のライセンスは<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>となっております。
+ブログ記事のライセンスは<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>となっております。
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
