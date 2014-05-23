@@ -10,8 +10,9 @@ gem 'travis'
 
 # For Heroku
 gem 'rake'
-gem "rack-contrib"
-gem "puma"
+gem 'rack-contrib'
+gem 'puma'
+gem 'newrelic_rpm'
 
 # For feed.xml.builder
 gem 'builder'
