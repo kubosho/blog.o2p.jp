@@ -34,6 +34,7 @@ set :build_dir, "tmp"
 ###
 set :markdown, :layout_engine => :slim
 set :blog_layout_engine, :slim
+set :slim, { :pretty => true, :sort_attrs => false, :format => :html5 }
 page '/feed.xml', :layout => false
 page '/no_analytics_report.html', :layout => false
 
