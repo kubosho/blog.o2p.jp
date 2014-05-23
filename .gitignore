@@ -19,4 +19,8 @@
 # Ignore bundle install file
 /vendor
 
+# IntelliJ IDEA
+.idea
+*.iml
+
 .cache
