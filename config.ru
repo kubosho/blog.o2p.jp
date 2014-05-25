@@ -4,6 +4,16 @@ require "rack"
 require "middleman/rack"
 require "rack/contrib/try_static"
 
+###
+# production settings
+###
+if ENV['RACK_ENV'] == 'production'
+  require 'newrelic_rpm'
+  require 'new_relic/rack/agent_hooks'
+  require 'new_relic/rack/browser_monitoring'
+  require 'new_relic/rack/error_collector'
+end
+
 # Build the static site when the app boots
 `bundle exec middleman build`
 
