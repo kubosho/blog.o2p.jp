@@ -9,3 +9,10 @@ deploy:
     repo: o2project/blog.o2p.jp
     branch: develop
   run: "bundle exec middleman build"
+notifications:
+  webhooks:
+    urls:
+      - https://webhooks.gitter.im/e/b38467bb8c2231a9ec5b
+    on_success: change
+    on_failure: always
+    on_start: false
