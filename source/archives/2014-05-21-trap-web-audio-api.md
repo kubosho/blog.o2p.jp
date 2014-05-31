@@ -6,3 +6,9 @@ tags:
 published: false
 ---
 
+## AudioContextはベンダープレフィックスが必要
+
+```
+window.AudioContext = window.AudioContext || window.webkitAudioContext;
+```
+
