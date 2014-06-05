@@ -1,12 +1,11 @@
 ---
 title: html5j パフォーマンス部 第二回勉強会 メモ
-date: 2014-06-05 22:00 JST
+date: 2014-06-06 01:50 JST
 tags:
   - 勉強会
-published: false
 ---
 
-[html5j パフォーマンス部 第二回勉強会](http://atnd.org/events/50870)に参加したのでそのメモです。
+[html5j パフォーマンス部 第二回勉強会](http://atnd.org/events/50870)に参加したのでそのメモです。理解できていない部分があるため、画像多めでお届けします。
 
 # Session 1. 品質管理と統計学 ― IT業界へどうつなぐ？
 
@@ -37,10 +36,14 @@ published: false
 
 ## 品質管理と統計学
 
+<a href="https://www.flickr.com/photos/95938132@N07/14166488719" title="image-01.jpg by Shota Kubota, on Flickr"><img src="https://farm6.staticflickr.com/5489/14166488719_83ba7cf250_z.jpg" width="800" alt="image-01.jpg"></a>
+
 - ばらつきの科学
 - 1mのものを作るときは完全に1mということはないので許される範囲を定義
 
 ## 特性要因図
+
+<a href="https://www.flickr.com/photos/95938132@N07/14373334893" title="image-02.jpg by Shota Kubota, on Flickr"><img src="https://farm4.staticflickr.com/3869/14373334893_e0fbb2698e_z.jpg" width="800" alt="image-02.jpg"></a>
 
 <blockquote class="twitter-tweet" lang="ja"><p>パフォーマンスの向上を考える際に、特性要因図を作成して、管理可能な変数と管理不可能な変数を考えなければならない。<a href="https://twitter.com/search?q=%23html5j_perf&amp;src=hash">#html5j_perf</a></p>&mdash; Yoichiro Takehora (@takehora) <a href="https://twitter.com/takehora/statuses/474503940520697856">2014, 6月 5</a></blockquote>
 
@@ -67,9 +70,13 @@ published: false
 
 ## 正規分布の基礎
 
+<a href="https://www.flickr.com/photos/95938132@N07/14166571880" title="image-03.jpg by Shota Kubota, on Flickr"><img src="https://farm4.staticflickr.com/3881/14166571880_364047dec4.jpg" width="800" alt="image-03.jpg"></a>
+
 - 変曲点
 
 ## 品質管理
+
+<a href="https://www.flickr.com/photos/95938132@N07/14349828931" title="image-04.jpg by Shota Kubota, on Flickr"><img src="https://farm6.staticflickr.com/5312/14349828931_6444819a9b.jpg" width="800" alt="image-04.jpg"></a>
 
 - A社は技術力を高める
 - B社は不良品を出さない仕組みを考える
@@ -78,6 +85,8 @@ published: false
 これらはリスクマネジメントにつながる
 
 ## 工程能力指数
+
+<a href="https://www.flickr.com/photos/95938132@N07/14166570490" title="image-05.jpg by Shota Kubota, on Flickr"><img src="https://farm6.staticflickr.com/5040/14166570490_eb3b20d770.jpg" width="800" alt="image-05.jpg"></a>
 
 - 1.33(=100万個の中の30個)を目指す -> 32ppm
 
@@ -103,12 +112,16 @@ published: false
 
 ### 見積もり手法の種類
 
+<a href="https://www.flickr.com/photos/95938132@N07/14166517288" title="image-08.jpg by Shota Kubota, on Flickr"><img src="https://farm3.staticflickr.com/2917/14166517288_1fa0ab2a40.jpg" width="800" alt="image-08.jpg"></a>
+
 - 単純推論
   - 過去の開発実績から推測
 - 作業展開積み上げ
   - 作業を細かく分割して、各作業のコストを積み上げる
 
 ## ソフトウェア工学の潮流
+
+<a href="https://www.flickr.com/photos/95938132@N07/14352292324" title="image-07.jpg by Shota Kubota, on Flickr"><img src="https://farm6.staticflickr.com/5568/14352292324_6546eed0ce.jpg" width="800" alt="image-07.jpg"></a>
 
 - ライフサイクル論争
   - 工業的
@@ -119,6 +132,8 @@ published: false
 
 ### アジャイルの大事なこと
 
+<a href="https://www.flickr.com/photos/95938132@N07/14166516248" title="image-09.jpg by Shota Kubota, on Flickr"><img src="https://farm3.staticflickr.com/2918/14166516248_52e04fc35d.jpg" width="800" alt="image-09.jpg"></a>
+
 <strong>明確になった事項を、明確になったものだけ、すみやかに実装する</strong>
 
 ### 内製化
@@ -127,9 +142,14 @@ published: false
 
 ### 品質とは
 
-ユーザーやスポンサーの要求を満たすためにソフトウェアが持つべき特性
+- ユーザーやスポンサーの要求を満たすために製品やサービスが持つべき特性
+- ユーザー視点に立ったソフトウェア品質体系の規格として、JIS X 0129 = ISO/IEC 9126がある
+  - 品質特性: ユーザー視点、ソフトウェアの製品の評価を意識した特性
+  - 内部特性: 開発者の視点、開発プロセスの評価を意識した特性
 
 ### リファクタリングの効果
+
+<a href="https://www.flickr.com/photos/95938132@N07/14166485789" title="image-10.jpg by Shota Kubota, on Flickr"><img src="https://farm6.staticflickr.com/5505/14166485789_ff36e9781a.jpg" width="800" alt="image-10.jpg"></a>
 
 リファクタリングすることにより、コストが抑えられる
 
@@ -141,6 +161,8 @@ published: false
 
 ### パフォーマンス改善のプロセス
 
+<a href="https://www.flickr.com/photos/95938132@N07/14330032376" title="image-11.jpg by Shota Kubota, on Flickr"><img src="https://farm6.staticflickr.com/5478/14330032376_ba00ef21e9.jpg" width="800" alt="image-11.jpg"></a>
+
 1. 仮説をたてる
 2. 実装する
 3. 計測する
@@ -149,6 +171,8 @@ published: false
 このプロセスを回す
 
 ## もっと先のソフトウェア工学
+
+<a href="https://www.flickr.com/photos/95938132@N07/14166568770" title="image-12.jpg by Shota Kubota, on Flickr"><img src="https://farm4.staticflickr.com/3889/14166568770_58648b5c2b.jpg" width="800" alt="image-12.jpg"></a>
 
 [アジャイルプロセス協議会](http://www.agileprocess.jp/)
 
