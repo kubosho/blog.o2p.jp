@@ -1,8 +1,7 @@
 ---
 title: Web Audio APIについてLTを2つしていた
 date: 2014-05-10 13:30 JST
-tags:
-  - Web Auido API
+tags: Web Auido API
 ---
 
 最近、個人的に注目しているのが[Web Audio API](https://dvcs.w3.org/hg/audio/raw-file/tip/webaudio/specification.html)です。

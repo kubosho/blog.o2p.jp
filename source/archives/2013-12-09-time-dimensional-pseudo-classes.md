@@ -1,8 +1,7 @@
 ---
 title: Time-dimensional擬似クラスについて調べてみた
 date: 2013-12-09 21:30 JST
-tags:
-  - Advent Calendar
+tags: Advent Calendar
 ---
 
 [CSS Property Advent Calendar 2013](http://www.adventar.org/calendars/57) 9日目の記事です。

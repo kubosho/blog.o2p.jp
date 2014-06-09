@@ -1,8 +1,7 @@
 ---
 title: masterブランチへの自動コミット時にTravis CIにbuildさせないようにする設定
 date: 2014-01-17 11:00 JST
-tags:
-  - TravisCI
+tags: TravisCI
 ---
 
 とある事情により、このブログのリポジトリを[Organizationアカウント](https://github.com/o2project/o2project.github.io)のほうに移行しました。

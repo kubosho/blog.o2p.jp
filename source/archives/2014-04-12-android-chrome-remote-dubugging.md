@@ -1,9 +1,7 @@
 ---
 title: AndroidのChromeで見ているページをPCでデバッグする方法
 date: 2014-04-12 23:50 JST
-tags:
-  - Chrome
-  - Smartphone
+tags: Chrome, Smartphone
 ---
 
 AndroidのChromeを用いてデバッグをしたいということがある。その際のデバッグ方法として、自分が知っている限りでは以下の2つがあった。

@@ -1,9 +1,7 @@
 ---
 title: Middlemanのアップデート後に記事を見ようとしたらundefined method `safe_concat'(略)というエラーが出た場合の対処法
 date: 2014-05-24 18:30 JST
-tags:
-  - Middleman
-  - Slim
+tags: Middleman, Slim
 ---
 
 昨夜、gemのバージョンが古いと[Gemnasium](https://gemnasium.com/)で表示されていたので、<code>gem update</code>をしました。

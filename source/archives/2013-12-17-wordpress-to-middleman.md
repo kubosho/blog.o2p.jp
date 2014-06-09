@@ -1,9 +1,7 @@
 ---
 title: WordPressからGitHub Pages+Middleman+Travis CIに移行したらブログを書く気になれた話
 date: 2013-12-17 23:59 JST
-tags:
-  - Middleman
-  - Advent Calendar
+tags: Middleman, Advent Calendar
 ---
 
 [Blog #blogadvent Advent Calendar 2013](http://www.adventar.org/calendars/167) 17日目の記事です。

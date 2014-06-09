@@ -2,8 +2,7 @@
 title: CoffeeScriptを触ってみた感想
 date: 2013-12-25 09:00 JST
 published: false
-tags:
-  - CoffeeScript
+tags: CoffeeScript
 ---
 
 ## 記法の違い

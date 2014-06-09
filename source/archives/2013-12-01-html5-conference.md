@@ -1,11 +1,7 @@
 ---
 title: HTML5 Conference 2013に行ってきたので全体の感想と面白かったセッションの情報を公開します
 date: 2013-12-01 02:00 JST
-tags:
-  - HTML
-  - CSS
-  - JavaScript
-  - 勉強会
+tags: HTML, CSS, JavaScript, 勉強会
 ---
 
 去年に引き続き、HTML5 Conference 2013に行ってきました。運営に携わった皆様お疲れさまでした。

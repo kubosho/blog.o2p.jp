@@ -1,8 +1,7 @@
 ---
 title: LESSのextend機能の使い方について
 date: 2013-11-25 09:00 JST
-tags:
-  - LESS
+tags: LESS
 ---
 
 LESSのバージョン1.4.0 Beta 1 & 2から実装された「extend」について、サンプルコードを交えながら使い方を紹介します。

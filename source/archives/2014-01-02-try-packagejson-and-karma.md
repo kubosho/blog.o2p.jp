@@ -1,8 +1,7 @@
 ---
 title: package.jsonとKarmaの設定を行う
 date: 2014-01-02 00:50 JST
-tags:
-  - Karma
+tags: Karma
 ---
 
 あけましておめでとうございます。今年もよろしくお願いします。

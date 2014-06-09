@@ -1,8 +1,7 @@
 ---
 title: カラーコードやRGB値に一致する正規表現の書き方
 date: 2014-01-23 09:00 JST
-tags:
-  - regexp
+tags: regexp
 published: false
 ---
 

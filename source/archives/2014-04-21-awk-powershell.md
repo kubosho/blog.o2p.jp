@@ -1,8 +1,7 @@
 ---
 title: awk みたいなことを PowerShell 上から実行する
 date: 2014-04-21 18:00 JST
-tags:
-  - PowerShell
+tags: PowerShell
 published: false
 ---
 
