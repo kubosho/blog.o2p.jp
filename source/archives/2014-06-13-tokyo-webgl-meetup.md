@@ -111,3 +111,5 @@ WebGLに興味はあるけど3Dと聞いてハードルが高そうと思って�
 - モデリングツールとの連携が難しい
 - 難易度が高い
 - 負荷が高くなる可能性が高い
+
+<blockquote class="twitter-tweet" data-partner="tweetdeck"><p>ちなみに、Firefoxのデバッガは「シェーダエディタ（要フラグON）」というのがついていて、これを使うとシェーダをリアルタイムに書き換えられるので、<a href="https://twitter.com/h_doxas">@h_doxas</a> さんの内容を実際に書いてみたいときに便利。 <a href="https://twitter.com/search?q=%23webgl_tokyo&amp;src=hash">#webgl_tokyo</a></p>&mdash; えど (@edo_m18) <a href="https://twitter.com/edo_m18/statuses/477416942806917121">June 13, 2014</a></blockquote>
