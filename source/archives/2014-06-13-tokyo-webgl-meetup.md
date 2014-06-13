@@ -43,6 +43,15 @@ WebGLに興味はあるけど3Dと聞いてハードルが高そうと思って�
   - JavaScriptはWebGLのAPIを叩く
   - あとはOS側で処理
 - シェーダはGPUを操作する
+ - 1pxごとに計算するのがフラグメントシェーダ
+
+サンプル: [edom18/WebGL-Meetup-sample](https://github.com/edom18/WebGL-Meetup-sample)
+
+<blockquote class="twitter-tweet" data-partner="tweetdeck"><p>「これだけ長いコードを書いて、三角形が1個だけ書けます」 by <a href="https://twitter.com/edo_m18">@edo_m18</a> <a href="https://twitter.com/search?q=%23webgl_tokyo&amp;src=hash">#webgl_tokyo</a></p>&mdash; Takuo Kihira (@tkihira) <a href="https://twitter.com/tkihira/statuses/477397618046148608">June 13, 2014</a></blockquote>
+
+- WebGLは準備が大変。準備さえできればデータの追加はできる(頂点の位置情報変更など)
+- ライブラリを使えば手軽にWebGLで表現できる
+  - [three.js - JavaScript 3D library](http://threejs.org/)
 
 ## WebGL on IE11
 
