@@ -113,3 +113,14 @@ WebGLに興味はあるけど3Dと聞いてハードルが高そうと思って�
 - 負荷が高くなる可能性が高い
 
 <blockquote class="twitter-tweet" data-partner="tweetdeck"><p>ちなみに、Firefoxのデバッガは「シェーダエディタ（要フラグON）」というのがついていて、これを使うとシェーダをリアルタイムに書き換えられるので、<a href="https://twitter.com/h_doxas">@h_doxas</a> さんの内容を実際に書いてみたいときに便利。 <a href="https://twitter.com/search?q=%23webgl_tokyo&amp;src=hash">#webgl_tokyo</a></p>&mdash; えど (@edo_m18) <a href="https://twitter.com/edo_m18/statuses/477416942806917121">June 13, 2014</a></blockquote>
+
+## distance functionと法線
+
+- 求め方として、ほんの少しだけレイをずらし、その差分を見る
+
+## レイマーチングの参考
+
+- [Iñigo Quilez :: fractals, computer graphics, mathematics, demoscene and more](http://www.iquilezles.org/)
+- [demoscene.jp](http://www.demoscene.jp/)
+- [Shadertoy BETA](https://www.shadertoy.com/)
+- [GLSL Sandbox](http://glsl.heroku.com/e)
