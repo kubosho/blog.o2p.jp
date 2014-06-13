@@ -55,6 +55,24 @@ WebGLに興味はあるけど3Dと聞いてハードルが高そうと思って�
 
 ## WebGL on IE11
 
+- WebGLにセキュリティ的な懸念があった
+  - JavaScriptからデバイスにアクセスできてしまうため
+- IE10ではTypedArrayをサポート
+- DirectX上でWebGLを動かす
+  - DirectX用ではなくWebGL用のコードで動く
+
+## デモ
+
+- [yomotsu.github.io/inori/](http://yomotsu.github.io/inori/)
+- [yomotsu.net/blog/assets/2014-02-26-facial-animation/](http://yomotsu.net/blog/assets/2014-02-26-facial-animation/)(over 4MB)
+
+- IEチームはWebGLを真剣に考えている
+- IE上のWebGLはバージョン0.92(1.0ではない)
+  - コンソール上から確認できる
+  - Microsoft Connect上でMicrosoftの中の人も問題を認識している旨の返信をしている
+  - もうすぐアップデートされてバージョン0.93になる
+- VM上のIEはグラフィックに差があるので、実際のWindowsを使うのがいい
+
 ## WebGL in iOS (with Ejecta)
 
 ## GLSL ray marching
