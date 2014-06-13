@@ -2,6 +2,7 @@
 title: Tokyo WebGL Meetup メモ
 date: 2014-06-13 01:50 JST
 tags: 勉強会, WebGL
+published: false
 ---
 
 ## WebGL のことはじめ
