@@ -75,4 +75,9 @@ WebGLに興味はあるけど3Dと聞いてハードルが高そうと思って�
 
 ## WebGL in iOS (with Ejecta)
 
+- Ejecta
+  - [Ejecta - Impact](http://impactjs.com/ejecta)
+  - iOS 5.0+以上サポート
+  - DOMにアクセス出来ないので修正する必要がある
+
 ## GLSL ray marching
