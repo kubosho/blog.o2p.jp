@@ -1,0 +1,48 @@
+---
+title: Web Audio APIの最初のハマりどころ
+date: 2014-06-18 12:40 JST
+tags: Web Auido API
+---
+
+初めてWeb Audio APIを用いてサービスだったりアプリを開発する際にハマるであろう点を書いていきます。
+
+## AudioContextはベンダープレフィックスが必要
+
+[Can I use](http://caniuse.com/#search=web%20audio%20api)を見ると分かるのですが、Safariがまだベンダープレフィックスを必要としています。そのため、以下のように一手間加えてあげる必要があります。
+
+```
+// Safariでは動かない
+var context = new window.AudioContext();
+// Safariでも動く
+var AudioContext = window.AudioContext || window.webkitAudioContext,
+    context      = new AudioContext();
+```
+
+これは、実際に[可聴域調査](http://kubosho.github.io/hearing-test-app/)というサービスを作って、[CodeGrid二周年記念パーティー](http://www.zusaar.com/event/5117005)でLTをした際に、iPhoneだと動いてなくて「あれ、あれ？」となったのですが、原因がこれだったというオチでした。
+
+## OscillatorNodeは使い捨て
+
+[サウンドの生成 | Web Audio APIの基本処理 | WEB SOUNDER - Web Audio API 解説 -](http://curtaincall.weblike.jp/portfolio-web-sounder/webaudioapi-basic/oscillator)や[Web Audio APIを使って可聴域を調べるアプリをつくってみた](http://www.slideshare.net/kubosho/web-audio-api-34440311)の11ページでも書いたのですが、OscillatorNodeは使い捨てです。
+
+ではどんな時にOscillatorNodeが捨てられるかというと、一番分かりやすいのは「音が停止したとき」です。他にも条件はありますが、自分がまだ他の条件を理解していない部分があるので、[サウンドの生成 | Web Audio APIの基本処理 | WEB SOUNDER - Web Audio API 解説 -](http://curtaincall.weblike.jp/portfolio-web-sounder/webaudioapi-basic/oscillator)のガベージコレクションの章に説明を譲りたいと思います。
+
+では、「再生ボタンが押されたら音を再生し、停止ボタンが押されたら音を停止する。その後再生ボタンが押されたら再び音の再生をおこなう」という当たり前の動作はどう実装したらいいかというと、[hearing-test-app/src/app.js at master · kubosho/hearing-test-app](https://github.com/kubosho/hearing-test-app/blob/master/src/app.js#L17-L21)の17〜21行目に答えはあります。
+
+該当の行数のソースは以下の通りです。
+
+```
+this.$watch('isPlaySound', function (isPlaySound) {
+                if (!isPlaySound) {
+                    this.$options.sound = hearingTest.init(this.frequency);
+                }
+            });
+```
+
+Vue.js側で音が再生されているかどうかというフラグ(isPlaySound)を監視し、isPlaySoundがfalseだったら、[hearing-test-app/src/hearing-test.js at master · kubosho/hearing-test-app](https://github.com/kubosho/hearing-test-app/blob/master/src/hearing-test.js#L12-L14)の12〜14行目にあるように、OscillatorNodeを生成し、AudioContext.destinationに接続しています。
+
+```
+var sound = context.createOscillator();
+sound.connect(context.destination);
+```
+
+これで、「再生ボタンが押されたら音を再生し、停止ボタンが押されたら音を停止する。その後再生ボタンが押されたら再び音の再生をおこなう」という動作が可能になります。
