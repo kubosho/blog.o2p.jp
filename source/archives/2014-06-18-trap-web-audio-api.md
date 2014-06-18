@@ -1,5 +1,5 @@
 ---
-title: Web Audio APIの最初のハマりどころ
+title: Web Audio APIを触り始めた人が最初にハマりそうなところ
 date: 2014-06-18 01:00 JST
 tags: Web Auido API
 ---
