@@ -40,10 +40,12 @@ html lang="ja"
     link rel="icon" type="image/x-icon" href="#{data.site.url}/assets/img/favicon.ico"
     link rel="apple-touch-icon-precomposed" href="#{data.site.url}/assets/img/apple-touch-icon.png"
 
+    link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"
     = stylesheet_link_tag 'external/normalize'
     = stylesheet_link_tag 'external/foundation.min'
     = stylesheet_link_tag 'main'
     = stylesheet_link_tag 'syntax'
+
     link rel="alternate" type="application/rss+xml" title="#{data.site.title} RSS(最新記事をお届けします)" href="#{data.site.feed}"
 
     script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js" defer="defer"
