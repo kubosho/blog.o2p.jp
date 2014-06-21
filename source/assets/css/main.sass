@@ -17,10 +17,16 @@ body
 
 [role="banner"]
   background: $primary-color
+  a
+    color: #fff
 
-  h1
-    a
-      color: #fff
+  .feed
+    display: none
+    margin-top: $space-small
+    font-size: $font-size-large
+  @media only screen and (min-width: 40.063em)
+    .feed
+      display: inline
 
 @media only screen and (min-width: 40.063em)
   [role="banner"]
@@ -91,8 +97,7 @@ body
     margin-right: $space-small
 
   .social
-    list-style: none
-    margin-left: 0
+    margin-bottom: $space-small
     font-size: $font-size-large
 
     a

@@ -56,9 +56,12 @@ html lang="ja"
 
     header[role="banner"]
       div.row
-        div.columns.large-12
+        div.columns.large-11.small-9
           h1
             a[href="/"] #{data.site.title}
+        div.feed.columns.large-1.small-1
+          a href="//cloud.feedly.com/#subscription%2Ffeed%2Fhttp%3A%2F%2Fblog.o2p.jp%2Ffeed" target="blank"
+            span.fa.fa-rss
 
     main[role="main"]
       div.row
@@ -67,16 +70,14 @@ html lang="ja"
 
     footer[role="contentinfo"]
       div.row
-        section.author.columns.large-8
+        section.author.columns.large-9
           img.author_image alt="顔写真" src="//farm4.staticflickr.com/3910/14286904217_6e4be2e527.jpg" width="100"
           p.author_name
             | Shota Kubota (kubosho_)
           p.author_description
-            | ウェブフロントエンドエンジニア。Web Audio APIやWeb MIDI APIなどといった音系のWeb技術を研究中。
+            | ウェブフロントエンドエンジニア。Web Audio APIやWeb MIDI APIなど音系のWeb技術を研究中。
 
-        div.social.columns.large-4
-          a href="//cloud.feedly.com/#subscription%2Ffeed%2Fhttp%3A%2F%2Fblog.o2p.jp%2Ffeed" target="blank"
-            span.fa.fa-rss
+        div.social.columns.large-3
           a href="//twitter.com/#{data.site.author}" target="brank"
             span.fa.fa-twitter
           a href="//github.com/kubosho" target="brank"
