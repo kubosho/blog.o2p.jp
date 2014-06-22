@@ -40,50 +40,50 @@ html lang="ja"
     link rel="icon" type="image/x-icon" href="#{data.site.url}/assets/img/favicon.ico"
     link rel="apple-touch-icon-precomposed" href="#{data.site.url}/assets/img/apple-touch-icon.png"
 
-    = stylesheet_link_tag 'normalize'
+    link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"
+    = stylesheet_link_tag 'external/normalize'
+    = stylesheet_link_tag 'external/foundation.min'
     = stylesheet_link_tag 'main'
     = stylesheet_link_tag 'syntax'
+
     link rel="alternate" type="application/rss+xml" title="#{data.site.title} RSS(最新記事をお届けします)" href="#{data.site.feed}"
 
-    script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"
-    javascript:
-      window.jQuery || document.write('<script src="/js/vendor/jquery-1.8.0.min.js"><\/script>')
-    script src="/assets/js/main.js"
+    script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js" defer="defer"
+    script src="/assets/js/main.js" defer="defer"
 
-
-  body
-    javascript:
-      var gaOptOutProperty = 'ga-disable-UA-25380313-3';
-      if (document.cookie.indexOf(gaOptOutProperty + '=true') > -1) {
-        window[gaOptOutProperty] = true;
-      }
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-25380313-3', 'o2p.jp');
-      ga('send', 'pageview');
-
+  body class="#{page_classes}"
+    script src="/assets/js/external/analytics.js" async="async"
 
     header[role="banner"]
-      h1.logo
-        a[href="/"] #{data.site.title}
-
+      div.row
+        div.columns.large-11.small-9
+          h1
+            a[href="/"] #{data.site.title}
+        div.feed.columns.large-1.small-1
+          a href="//cloud.feedly.com/#subscription%2Ffeed%2Fhttp%3A%2F%2Fblog.o2p.jp%2Ffeed" target="blank"
+            span.fa.fa-rss
 
     main[role="main"]
-      == yield
-
+      div.row
+        div.columns.large-12
+          == yield
 
     footer[role="contentinfo"]
-      div.site-info
-        p このブログは、日々気づいた・ハマったことを書き残すブログです。
-        p 記事の内容に間違いがある場合は、記事のコメント欄、または<a href="https://github.com/o2project/o2project.github.io/issues">GitHubのIssues</a>で報告していただけると幸いです。
+      div.row
+        section.author.columns.large-9
+          img.author_image alt="顔写真" src="//farm4.staticflickr.com/3910/14286904217_6e4be2e527.jpg" width="100"
+          p.author_name
+            | Shota Kubota (kubosho_)
+          p.author_description
+            | ウェブフロントエンドエンジニア。Web Audio APIやWeb MIDI APIなど音系のWeb技術を研究中。
 
-      div.site-feed
-        <a href='http://cloud.feedly.com/#subscription%2Ffeed%2Fhttp%3A%2F%2Fblog.o2p.jp%2Ffeed'  target='blank'><img id='feedlyFollow' src='http://s3.feedly.com/img/follows/feedly-follow-rectangle-flat-big_2x.png' alt='follow us in feedly' width='131' height='56'></a>
+        div.social.columns.large-3
+          a href="//twitter.com/#{data.site.author}" target="brank"
+            span.fa.fa-twitter
+          a href="//github.com/kubosho" target="brank"
+            span.fa.fa-github
 
-      p.privacy
-        <a href="/privacy.html">プライバシーポリシー</a>
+        hr
 
-      p.copyright
-        small © 2013-2014 <a href="https://twitter.com/#{data.site.author}">#{data.site.author}</a>
+        div.site-info.columns.large-12
+          a href="/privacy.html" プライバシーポリシー

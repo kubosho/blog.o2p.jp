@@ -1,568 +1,144 @@
-/*
- * HTML5 Boilerplate
- *
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
+$font-size-small : 0.825rem
+$font-size-base  : 1.025rem
+$font-size-medium: 1.625rem
+$font-size-large : 2.225rem
 
-$break-small: 320px
-$break-medium: 640px
-$break-large: 980px
+$primary-color  : #003760
+$secondary-color: #e9e9e9
+$accent-color   : #603a00
 
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-
-/*
- * Remove text-shadow in selection highlight: h5bp.com/i
- * These selection declarations have to be separate.
- * Customize the background color to match your design.
- */
-
-::-moz-selection
-  background: #b3d4fc
-  text-shadow: none
-
-
-::selection
-  background: #b3d4fc
-  text-shadow: none
-
-
-/*
- * A better looking default horizontal rule
- */
-
-hr
-  display: block
-  height: 1px
-  border: 0
-  border-top: 1px solid #ccc
-  margin: 1em 0
-  padding: 0
-
-
-/*
- * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
- */
-
-img
-  max-width: 100%
-  vertical-align: middle
-
-
-/*
- * Remove default fieldset styles.
- */
-
-fieldset
-  border: 0
-  margin: 0
-  padding: 0
-
-/*
- * Allow only vertical resizing of textareas.
- */
-
-textarea
-  resize: vertical
-
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-html,
-button,
-input,
-select,
-textarea
-  color: #393939
-
-
-html
-  font-size: 62.5%
-
+$space-small : 20px
+$space-medium: 40px
+$space-large : 80px
 
 body
-  margin: 0 auto
-  max-width: 60em
-  background: #eceef0
-  font-size: 16px
-  font-size: 1.6rem
-  font-family: "Lucida Grande", "Hiragino Kaku Gothic ProN", Meiryo, "Droid Sans", sans-serif
-  line-height: 1.7
-
-
-a
-  text-decoration: none
-
-  &:link
-    color: #3946eb
-  &:visited
-    color: #003760
-  &:hover
-    color: #0074d9
-    text-decoration: underline
-
-
-blockquote
-  border-left: 5px solid #ccc
-  margin-right: 0
-  margin-left: 0
-  padding-left: 20px
-
-
-p
-  margin: 1.5em 0
-
-
-/*
- * Global header
- */
+  background: #fcfdff
+  font-family: "Lucida Grande", Geneva, Verdana, "Hiragino Kaku Gothic ProN", Meiryo, "Droid Sans", sans-serif
 
 [role="banner"]
-  margin: 32px 0
+  background: $primary-color
+  a
+    color: #fff
 
-@media only screen and (max-width: 60em)
+  .feed
+    display: none
+    margin-top: $space-small
+    font-size: $font-size-large
+  @media only screen and (min-width: 40.063em)
+    .feed
+      display: inline
+
+@media only screen and (min-width: 40.063em)
   [role="banner"]
-    margin: 16px 0
+    margin-bottom: $space-medium
+
+[role="main"]
+  article
+    padding: $space-medium 0
+    a
+      text-decoration: underline
+      &:hover
+        color: $accent-color
+
+    h1
+      font-size: $font-size-medium
+      font-weight: bold
+    @media only screen and (min-width: 40.063em)
+      h1
+        font-size: $font-size-large
+
+    h2
+      border-bottom: 1px solid $secondary-color
+      margin-bottom: $space-small
+
+    time
+      color: $accent-color
+      font-size: $font-size-small
+      font-weight: bold
+
+  .share
+    border: solid $secondary-color
+    border-width: 0 0 1px
+    margin: $space-small 0
+    padding: ($space-small / 2) 0
+
+  .highlight
+    margin-bottom: $space-small
+    padding: $space-small
+    border: 1px solid #ccc
+
+  .pagination
+    margin: $space-small 0 $space-medium
     text-align: center
 
+    li
+      margin-left: 0
 
-.logo
-  margin: 0
-  font-size: 39px
-  font-size: 3.9rem
-  font-weight: normal
-  line-height: 1
+      &:first-child
+        margin-right: $space-small
 
-  a
-    color: #003760
-    text-decoration: none
+      a
+        border: 1px solid $secondary-color
+  @media only screen and (min-width: 40.063em)
+    .pagination
+      margin: 0 0 $space-large
 
-@media only screen and (max-width: 60em)
-  .logo
-    font-size: 25px
-    font-size: 2.5rem
-
-
-/*
- * Global footer
- */
+  .back
+    margin: $space-small 0 $space-medium
+    text-align: center
+  @media only screen and (min-width: 40.063em)
+    .back
+      margin: $space-medium 0 $space-large
+      .button
+        &:first-child
+          margin-right: $space-small
 
 [role="contentinfo"]
-  margin: 32px 0
-
-@media only screen and (max-width: 60em)
-  [role="contentinfo"]
-    margin: 32px 0 16px
-
-
-/*
- * Global footer: Site info
- */
-
-.site-info
-  margin-bottom: 20px
-
-  p
-    margin: 0 0 0.33em
-
-@media only screen and (max-width: 60em)
-  .site-info
-    margin-bottom: 16px
-
-
-/*
- * Global footer: Site feed
- */
-
-.site-feed
-  text-align: center
-
-@media only screen and (max-width: 60em)
-  .site-feed
-    margin-bottom: 16px
-
-/*
- * Global footer: Privacy
- */
-.privacy
-  text-align: center
-
-/*
- * Global footer: Copyright
- */
-
-.copyright
-  text-align: center
-
-@media only screen and (max-width: 60em)
-  .copyright
-    margin: 16px 0
-
-
-/*
- * Entry
- */
-
-.entry_title
-  margin: 20px 0 10px
-  padding-left: 8px
-  border-left: 10px solid #003760
-  font-size: 48px
-  font-size: 4.8rem
-  font-weight: normal
-  line-height: 1.3
-
-@media only screen and (max-width: 60em)
-  .entry_title
-    margin: 16px 0 10px
-    padding: 10px
-    border-left: 0
-    background: #003760
-    color: #fff
-    font-size: 32px
-    font-size: 3.2rem
-
-
-.entry_time
-  display: block
-  text-align: right
-
-@media only screen and (max-width: 60em)
-  .entry_time
-    padding-right: 10px
-
-@media only screen and (max-width: 60em)
-  .entry_body
-    padding: 0 10px
-
-
-/*
- * Entry: Share
- */
-
-.entry_shares
-  list-style: none
-  display: table
-  margin: 12px 0
-  padding: 0
-
-  li
-    display: table-cell
-    vertical-align: top
-
-@media only screen and (max-width: 60em)
-  .entry_shares
-    padding: 0 10px
-
-
-/*
- * Entry: Body
- */
-
-.entry_body
-  p
-    margin-top: 0
-
-
-/*
- * Entries
- */
-
-.entries_entry
-  display: flex
-  align-items: center
-  margin-bottom: 1px
-
-  &:last-child
-    margin: 0
-
-@media only screen and (max-width: 60em)
-  .entries_entry
-    display: block
-    border: dotted #003760
-    border-width: 1px 0 0
-    margin-bottom: 0
-    padding: 10px
-
-    &:last-child
-      border-bottom-width: 1px
-
-
-.entries_entry_time
-  padding-right: 5px
-  text-align: left
-
-@media only screen and (min-width: 60em)
-  .entries_entry_time
-    min-width: 6em
-
-
-.entries_entry_title
-  max-width: 35em
-  margin: 0
-  padding: 10px 0 10px 8px
-  border-left: 5px solid #003760
-  font-size: 24px
-  font-size: 2.4rem
-
-@media only screen and (max-width: 60em)
-  .entries_entry_title
-    border-top: 0
-    padding: 0
-    border-left: 0
-    background: transparent
-
-
-/*
- * Pagination
- */
-
-.entries-paginate
-  list-style: none
-  margin: 20px auto 32px
-  padding: 0
-  text-align: center
-
-@media only screen and (max-width: 60em)
-  .entries-paginate
-    margin: 10px auto 16px
-
-
-.entries-paginate_prev,
-.entries-paginate_next
-  a
-    display: inline-block
-    padding: 8px 13px
-    background: #003760
-    color: #f9f9f9
-    text-decoration: none
-
-    &:hover
-      background: #0074d9
-
-
-/*
- * Back to *
- */
-
-.back-to
-  list-style: none
-  padding: 0
-  text-align: center
-
-  li
-    &:first-child
-      margin-right: 32px
-
-@media only screen and (max-width: 60em)
-  .back-to
-    li
-      &:first-child
-        margin-right: 0
-
-
-.back-to_page-top,
-.back-to_top-page
-  display: inline-block
+  border-top: 2px solid $secondary-color
+  padding: $space-medium 0
+  background: $primary-color
+  color: #fcfdff
 
   a
-    display: inline-block
-    padding: 8px 13px
-    background: #003760
-    color: #f9f9f9
-    text-decoration: none
-
-    &:hover
-      background: #0074d9
-
-@media only screen and (max-width: 60em)
-  .back-to_page-top,
-  .back-to_top-page
-    display: block
-
-
-  .back-to_page-top
-    margin-top: 20px
-
-
-/*
- * Code
- */
-
-.code
-  padding: 0 10px
-
-
-.highlight
-  padding: 10px
-  border: 1px solid #ccc
-
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Image replacement
- */
-
-.ir
-  background-color: transparent
-  border: 0
-  overflow: hidden
-  /* IE 6/7 fallback */
-  *text-indent: -9999px
-
-
-.ir:before
-  content: ""
-  display: block
-  width: 0
-  height: 100%
-
-
-/*
- * Hide from both screenreaders and browsers: h5bp.com/u
- */
-
-.hidden
-  display: none !important
-  visibility: hidden
-
-
-/*
- * Hide only visually, but have it available for screenreaders: h5bp.com/v
- */
-
-.visuallyhidden
-  border: 0
-  clip: rect(0 0 0 0)
-  height: 1px
-  margin: -1px
-  overflow: hidden
-  padding: 0
-  position: absolute
-  width: 1px
-
-
-/*
- * Extends the .visuallyhidden class to allow the element to be focusable
- * when navigated to via the keyboard: h5bp.com/p
- */
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus
-  clip: auto
-  height: auto
-  margin: 0
-  overflow: visible
-  position: static
-  width: auto
-
-
-/*
- * Hide visually and from screenreaders, but maintain layout
- */
-
-.invisible
-  visibility: hidden
-
-
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-
-.clearfix:before,
-.clearfix:after
-  content: " " /* 1 */
-  display: table /* 2 */
-
-
-.clearfix:after
-  clear: both
-
-
-/*
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
-
-.clearfix
-  *zoom: 1
-
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid required HTTP connection: h5bp.com/r
-   ========================================================================== */
-
-@media print
-  *
-    background: transparent !important
-    color: #000 !important /* Black prints faster: h5bp.com/s */
-    box-shadow: none !important
-    text-shadow: none !important
-
-
-  a,
-  a:visited
+    color: #fcfdff
     text-decoration: underline
 
+  h1
+    color: #fcfdff
+    font-size: $font-size-medium
 
-  a[href]:after
-    content: " (" attr(href) ")"
+  .author
+    &:after
+      display: block
+      clear: both
+      content: ""
 
+  .author_image
+    float: left
+    margin-right: $space-small
 
-  abbr[title]:after
-    content: " (" attr(title) ")"
+  .social
+    margin-bottom: $space-small
+    font-size: $font-size-large
 
+    a
+      margin-right: $space-small
+      &:last-child
+        margin: 0
 
-  /*
-   * Don't show links for images, or javascript/internal links
-   */
+//////////////////////////////////////////////////
 
-  .ir a:after,
-  a[href^="javascript:"]:after,
-  a[href^="#"]:after
-    content: ""
+.index
+  article
+    border-bottom: 1px solid $secondary-color
 
+    &:last-of-type
+      border-bottom: 0
 
-  pre,
-  blockquote
-    border: 1px solid #999
-    page-break-inside: avoid
+    a
+      text-decoration: none
 
+  @media only screen and (min-width: 40.063em)
+    article
+      padding: $space-medium 0
 
-  thead
-    display: table-header-group /* h5bp.com/t */
-
-
-  tr,
-  img
-    page-break-inside: avoid
-
-
-  img
-    max-width: 100% !important
-
-  p,
-  h2,
-  h3
-    orphans: 3
-    widows: 3
-
-
-  h2,
-  h3
-    page-break-after: avoid
