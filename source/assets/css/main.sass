@@ -34,11 +34,11 @@ body
 
 [role="main"]
   article
-    padding: $space-small
-    border-bottom: 1px solid $secondary-color
-
-    &:last-of-type
-      border-bottom: 0
+    padding: $space-medium 0
+    a
+      text-decoration: underline
+      &:hover
+        color: $accent-color
 
     h1
       font-size: $font-size-medium
@@ -47,10 +47,25 @@ body
       h1
         font-size: $font-size-large
 
+    h2
+      border-bottom: 1px solid $secondary-color
+      margin-bottom: $space-small
+
     time
       color: $accent-color
       font-size: $font-size-small
       font-weight: bold
+
+  .share
+    border: solid $secondary-color
+    border-width: 0 0 1px
+    margin: $space-small 0
+    padding: ($space-small / 2) 0
+
+  .highlight
+    margin-bottom: $space-small
+    padding: $space-small
+    border: 1px solid #ccc
 
   .pagination
     margin: $space-small 0 $space-medium
@@ -68,9 +83,15 @@ body
     .pagination
       margin: 0 0 $space-large
 
+  .back
+    margin: $space-small 0 $space-medium
+    text-align: center
   @media only screen and (min-width: 40.063em)
-    article
-      padding: $space-medium 0
+    .back
+      margin: $space-medium 0 $space-large
+      .button
+        &:first-child
+          margin-right: $space-small
 
 [role="contentinfo"]
   border-top: 2px solid $secondary-color
@@ -104,3 +125,20 @@ body
       margin-right: $space-small
       &:last-child
         margin: 0
+
+//////////////////////////////////////////////////
+
+.index
+  article
+    border-bottom: 1px solid $secondary-color
+
+    &:last-of-type
+      border-bottom: 0
+
+    a
+      text-decoration: none
+
+  @media only screen and (min-width: 40.063em)
+    article
+      padding: $space-medium 0
+
