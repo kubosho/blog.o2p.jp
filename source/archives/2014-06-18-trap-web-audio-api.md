@@ -28,7 +28,11 @@ var AudioContext = window.AudioContext || window.webkitAudioContext,
 
 [サウンドの生成 | Web Audio APIの基本処理 | WEB SOUNDER - Web Audio API 解説 -](http://curtaincall.weblike.jp/portfolio-web-sounder/webaudioapi-basic/oscillator)や、[Web Audio APIを使って可聴域を調べるアプリをつくってみた](http://www.slideshare.net/kubosho/web-audio-api-34440311)というスライドの11ページでも書いたのですが、OscillatorNodeは使い捨てです。
 
-では、どんな時にOscillatorNodeが捨てられるか。一番分かりやすいのは「音が停止したとき」です。他にも条件はありますが、自分がまだ他の条件を理解していない部分があるので、[サウンドの生成 | Web Audio APIの基本処理 | WEB SOUNDER - Web Audio API 解説 -](http://curtaincall.weblike.jp/portfolio-web-sounder/webaudioapi-basic/oscillator)のガベージコレクションの章に説明を譲りたいと思います。
+どんな時にOscillatorNodeが捨てられるか。一番分かりやすいのは「音が停止したとき」です。他にも条件はありますが、自分がまだ他の条件を理解していない部分があるので、[サウンドの生成 | Web Audio APIの基本処理 | WEB SOUNDER - Web Audio API 解説 -](http://curtaincall.weblike.jp/portfolio-web-sounder/webaudioapi-basic/oscillator)のガベージコレクションの章に説明を譲りたいと思います。
+
+OscillatorNodeが使い捨てなことは以下のJS Binで確認できます。Playを押した後、Stopを押し、再度Playを押すと、"Uncaught InvalidStateError: Failed to execute 'start' on 'OscillatorNode': cannot call start more than once. "というエラーがコンソール上で表示されると思います。
+
+<a class="jsbin-embed" href="http://jsbin.com/qeluv/7/embed?js,console,output">Web Audio API Sample</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 では、「再生ボタンが押されたら音を再生し、停止ボタンが押されたら音を停止する。その後再生ボタンが押されたら再び音の再生をおこなう」という、ミュージックプレイヤーにとっては当たり前の動作はどう実装したらいいかというと、[hearing-test-app/src/app.js at master · kubosho/hearing-test-app](https://github.com/kubosho/hearing-test-app/blob/master/src/app.js#L17-L21)の17〜21行目に答えはあります。
 
