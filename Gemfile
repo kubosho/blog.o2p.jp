@@ -4,27 +4,4 @@ source 'https://rubygems.org'
 
 ruby '2.1.2'
 
-gem 'middleman'
-gem 'middleman-blog'
-gem 'middleman-syntax'
-gem 'middleman-slim'
-gem 'slim'
-gem 'redcarpet'
-
-gem 'travis'
-
-# For Heroku
-gem 'rake'
-gem 'rack-contrib'
-gem 'puma'
-gem 'newrelic_rpm'
-
-# For feed.xml.builder
-gem 'builder'
-gem 'compass'
-gem 'sass'
-gem 'susy'
-gem 'nokogiri'
-
-# Live-reloading plugin
-gem 'middleman-livereload'
+gem 'jekyll'
