@@ -18,6 +18,7 @@ end
 ###
 configure :development do
   set :debug_assets, true
+  activate :directory_indexes
 end
 
 ###
@@ -26,6 +27,7 @@ end
 configure :build do
   # activate :minify_css
   # activate :minify_javascript
+  activate :directory_indexes
 end
 set :build_dir, "tmp"
 
@@ -48,11 +50,12 @@ activate :gzip
 ###
 Time.zone = 'Tokyo'
 
+###
+# Syntax Highlighting
+###
 activate :syntax
 set :markdown_engine, :redcarpet
 set :markdown, :fenced_code_blocks => true
-
-activate :directory_indexes
 
 activate :blog do |blog|
   # blog.prefix = "blog"
