@@ -18,7 +18,7 @@ end
 ###
 configure :development do
   set :debug_assets, true
-  activate :directory_indexes
+#  activate :directory_indexes
 end
 
 ###
@@ -27,7 +27,7 @@ end
 configure :build do
   # activate :minify_css
   # activate :minify_javascript
-  activate :directory_indexes
+#  activate :directory_indexes
 end
 set :build_dir, "tmp"
 
