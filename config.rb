@@ -59,18 +59,20 @@ set :markdown_engine, :redcarpet
 set :markdown, :fenced_code_blocks => true
 
 activate :blog do |blog|
-  # blog.prefix = "blog"
   blog.layout = 'layouts/post'
   blog.paginate = true
-  blog.permalink = ':year/:month/:day/:title.html'
+
   blog.sources = 'archives/:year-:month-:day-:title.html'
   blog.default_extension = '.md'
-  blog.taglink = 'tags/:tag.html'
+
   blog.tag_template = 'tag.html'
-  # blog.year_link = ":year.html"
-  # blog.month_link = ":year/:month.html"
-  # blog.day_link = ":year/:month/:day.html"
   blog.calendar_template = 'calendar.html'
+
+  blog.taglink = 'tag/:tag.html'
+  blog.permalink = 'entry/:year/:month/:day/:title.html'
+  blog.year_link = "archive/:year.html"
+  blog.month_link = "archive/:year/:month.html"
+  blog.day_link = "archive/:year/:month/:day.html"
   # blog.summary_separator = /(readmore)/
   # blog.summary_length = 250
 
