@@ -43,19 +43,16 @@ html lang="ja"
     = stylesheet_link_tag 'main'
     link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"
 
-    link rel="alternate" type="application/rss+xml" title="#{data.site.title} RSS" href="#{data.site.feed}"
+    link rel="alternate" type="application/atom+xml" title="#{data.site.title} RSS" href="/feed"
 
   body class="#{page_classes}"
     script src="/assets/js/external/analytics.js" async="async"
 
     header[role="banner"]
       div.row
-        div.columns.large-11.medium-10.small-12
+        div.columns.large-12.medium-12.small-12
           h1
             a[href="/"] #{data.site.title}
-        div.feed.columns.large-1.medium-2
-          a href="//cloud.feedly.com/#subscription%2Ffeed%2Fhttp%3A%2F%2Fblog.o2p.jp%2Ffeed.xml" target="blank"
-            span.fa.fa-rss
 
     main[role="main"]
       div.row
