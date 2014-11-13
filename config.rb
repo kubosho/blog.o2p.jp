@@ -69,7 +69,7 @@ activate :blog do |blog|
   blog.calendar_template = 'calendar.html'
 
   blog.taglink = 'tag/:tag.html'
-  blog.permalink = 'entry/:year/:month/:day/:title.html'
+  blog.permalink = ':year/:month/:day/:title.html'
   blog.year_link = "archive/:year.html"
   blog.month_link = "archive/:year/:month.html"
   blog.day_link = "archive/:year/:month/:day.html"
