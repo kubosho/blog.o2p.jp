@@ -16,7 +16,9 @@ C86でも[「シュタゲで分かるGit」をテーマにした「Steins;Git」
 - 頒布場所: M-62a
 - 頒布部数: 50部
 - ページ数: 68ページ
+  - 初版から +18ページ
 - 値段: 1,000円
+  - ページ数は増えましたが、値段は据え置きです
 - ハッシュタグ: [#SteinsGit](https://twitter.com/search?f=realtime&q=%23SteinsGit)
 
 ---
