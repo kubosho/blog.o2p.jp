@@ -29,7 +29,7 @@ ctx = new AudioContext();
 
 今回、音を鳴らしたり、出力するために必要なAudioContextのインスタンスを作成しています。
 
-AudioContextにベンダープレフィックスが必要なのは、[Web Audio APIを触り始めた人が最初にハマりそうなところ](http://blog.o2p.jp/2014/06/18/trap-web-audio-api.html)でも書いていますが、Safari(PC, モバイル共に)がまだベンダープレフィックスを必要としているためです。また、少し古いChromeを使っている人も必要になります。とはいえ、Chromeは自動アップデートされるので今後は無視できる範囲です。
+AudioContextにベンダープレフィックスが必要なのは、[Web Audio APIを触り始めた人が最初にハマりそうなところ](http://blog.o2p.jp/2014/06/18/trap-web-audio-api)でも書いていますが、Safari(PC, モバイル共に)がまだベンダープレフィックスを必要としているためです。また、少し古いChromeを使っている人も必要になります。とはいえ、Chromeは自動アップデートされるので今後は無視できる範囲です。
 
 ### OscillatorNodeの生成
 
@@ -72,5 +72,5 @@ oscillator.start()
 ```
 
 また、サンプルも用意しておきました。リンク先を開くと正弦波(サイン波)の周波数が440Hzという音をいきなり再生するので注意してください。また、iOSは音が鳴らないと思います。
-  
+
 [createOscillator()サンプル - JS Bin](http://jsbin.com/samoxepe/4/edit?html,js,output)(音が鳴ります)

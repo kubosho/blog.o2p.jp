@@ -1,15 +1,5 @@
 doctype html
-/[if lt IE 7]
-  | <html class="no-js lt-ie9 lt-ie8 lt-ie7">
-/[if IE 7]
-  | <html class="no-js lt-ie9 lt-ie8">
-/[if IE 8]
-  | <html class="no-js lt-ie9">
-/[if gt IE 8]
-  | <html class="no-js">
-| <!--[if (gte IE 9)|!(IE)]<!-->
 html lang="ja"
-  | <!--<![endif]-->
   head
     meta charset="utf-8"
     meta name="description" content="#{data.site.subtitle}"
@@ -43,10 +33,10 @@ html lang="ja"
     = stylesheet_link_tag 'main'
     link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"
 
-    link rel="alternate" type="application/atom+xml" title="#{data.site.title} RSS" href="/feed"
+    link rel="alternate" type="application/atom+xml" title="#{data.site.title} RSS" href="/feed.xml"
 
   body class="#{page_classes}"
-    script src="/assets/js/external/analytics.js" async="async"
+    script src="/assets/js/external/analytics.js" async"
 
     header[role="banner"]
       div.row
@@ -77,4 +67,4 @@ html lang="ja"
         hr
 
         div.site-info.columns.large-12
-          a href="/privacy.html" プライバシーポリシー
+          a href="/privacy" プライバシーポリシー
